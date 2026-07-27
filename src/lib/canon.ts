@@ -5,7 +5,16 @@
 // ./canon-network (generate dall'espansione del canon).
 // =============================================================================
 
-import { networkFacilities, networkPeople, knowledgeBase } from "./canon-network";
+import {
+  networkFacilities,
+  networkPeople,
+  knowledgeBase,
+  networkSpecimens,
+  experimentsData,
+  experimentBiblio,
+  peopleEnrichment,
+  enrichmentKnowledge
+} from "./canon-network";
 
 export type Department = { id: string; nome: string; colore: string };
 export type Facility = {
@@ -17,11 +26,21 @@ export type Facility = {
 export type Person = {
   id: string; nome: string; ruolo: string; bio: string; dip: string; branch: string;
   stato: string; reportsTo: string | null; facilityId: string | null; ordine?: number;
+  competenze?: string[]; voce?: string | null; background?: string | null;
 };
 export type Specimen = {
-  id: string; codiceEsteso: string; gen: number; protocollo: string; coscienza: boolean | null;
-  nomeProprio: string | null; branch: string; stato: string; note: string; facilityId: string | null;
+  id: string; codiceEsteso: string; specie?: string | null; gen: number; protocollo: string;
+  coscienza: boolean | null; nomeProprio: string | null; branch: string; stato: string;
+  note: string; facilityId: string | null;
 };
+export type BiblioRef = { autori: string; anno: string; titolo: string; fonte: string; url?: string };
+export type Experiment = {
+  id: string; codice: string; titolo: string; facilityId: string | null; protocollo: string | null;
+  obiettivo: string; metodo: string | null; risultato: string | null; stato: string;
+  anno: string | null; branch: string; ordine?: number;
+  abstract?: string | null; autori?: string[]; bibliografia?: BiblioRef[];
+};
+export type PersonEnrichment = { bio?: string; competenze?: string[]; voce?: string; background?: string };
 export type Protocol = { codice: string; nome: string; tratto: string; note: string };
 export type Generation = { gen: number; titolo: string; testo: string; branch: string };
 export type Kpi = { etichetta: string; valore: string; nota: string };
@@ -171,7 +190,13 @@ const canonPeople: Person[] = [
     bio: "Ex-conduttore cinofilo che ha perso il proprio cane. Deve guadagnarsi il posto di Alpha del branco." }
 ];
 
-export const people: Person[] = [...canonPeople, ...networkPeople];
+// applica l'arricchimento (bio estese, competenze, voce, background) dove presente
+function enrich(p: Person): Person {
+  const e = peopleEnrichment[p.id];
+  if (!e) return p;
+  return { ...p, bio: e.bio || p.bio, competenze: e.competenze, voce: e.voce, background: e.background };
+}
+export const people: Person[] = [...canonPeople, ...networkPeople].map(enrich);
 
 // --- Protocolli A–H ---------------------------------------------------------
 export const protocols: Protocol[] = [
@@ -197,7 +222,7 @@ export const generations: Generation[] = [
 ];
 
 // --- Esemplari --------------------------------------------------------------
-export const specimens: Specimen[] = [
+const baseSpecimens: Specimen[] = [
   { id: "47B", codiceEsteso: "4-07-B-ATC", gen: 4, protocollo: "B", nomeProprio: "Galileo", coscienza: true, branch: "47b", facilityId: "VILLA", stato: "attivo",
     note: "Protagonista/narratore. Pienamente cosciente — unico. Freddo, non prova affetto. Coscienza inspiegabile: effetto collaterale non progettato." },
   { id: "41C", codiceEsteso: "4-01-C-GCA", gen: 4, protocollo: "C", nomeProprio: null, coscienza: false, branch: "47b", facilityId: "VILLA", stato: "attivo",
@@ -223,6 +248,29 @@ export const specimens: Specimen[] = [
   { id: "89G", codiceEsteso: "8-09-G-AAT", gen: 8, protocollo: "G", nomeProprio: "Grom", coscienza: null, branch: "varani", facilityId: "N6", stato: "proposto",
     note: "Veterano del branco." }
 ];
+
+// specie inferita per gli esemplari canonici (le altre arrivano già con `specie`)
+const SPECIE_BASE: Record<string, string> = { "47b": "Iguana verde", varani: "Varano" };
+const baseWithSpecie: Specimen[] = baseSpecimens.map((s) => ({ ...s, specie: s.specie || SPECIE_BASE[s.branch] || null }));
+
+export const specimens: Specimen[] = [...baseWithSpecie, ...networkSpecimens];
+
+// --- Esperimenti (uniti a bibliografia/abstract + autori dai personaggi) ----
+function autoriPerFacility(facilityId: string | null): string[] {
+  if (!facilityId) return [];
+  const team = people.filter((p) => p.facilityId === facilityId && p.stato !== "in memoria");
+  return team.slice(0, 3).map((p) => p.nome);
+}
+export const experiments: Experiment[] = experimentsData.map((e, i) => {
+  const b = experimentBiblio[e.id] || {};
+  return {
+    ...e,
+    ordine: i,
+    autori: autoriPerFacility(e.facilityId),
+    abstract: b.abstract ?? null,
+    bibliografia: b.bibliografia ?? []
+  };
+});
 
 // --- KPI --------------------------------------------------------------------
 export const kpis: Kpi[] = [
@@ -262,11 +310,30 @@ export const glossary: GlossaryTerm[] = [
 
 export const meta = { revisione: "2026-07-27", fonte: "47B-universe · canon/facts.yaml + bibbie" };
 
-// --- Base di conoscenza per il RAG (chunk canonici) -------------------------
-export const knowledge: Doc[] = knowledgeBase;
+// --- Base di conoscenza per il RAG (chunk canonici + generati) --------------
+const experimentDocs: Doc[] = experiments.map((e) => ({
+  id: `esp-${e.id}`,
+  categoria: "esperimento",
+  titolo: `${e.codice} · ${e.titolo}`,
+  testo:
+    `Esperimento ${e.codice} presso la struttura ${e.facilityId} (${e.anno}, stato: ${e.stato}). ` +
+    `Obiettivo: ${e.obiettivo} Metodo: ${e.metodo}. Risultato: ${e.risultato}` +
+    (e.autori && e.autori.length ? ` Autori: ${e.autori.join(", ")}.` : "")
+}));
+
+const specimenDocs: Doc[] = specimens
+  .filter((s) => s.nomeProprio && s.nomeProprio !== "—")
+  .map((s) => ({
+    id: `esemplare-${s.id}`,
+    categoria: "specie",
+    titolo: `Esemplare ${s.id}${s.nomeProprio ? ` «${s.nomeProprio}»` : ""}`,
+    testo: `${s.id} (${s.specie}, gen ${s.gen}, protocollo ${s.protocollo}, struttura ${s.facilityId}). ${s.note}`
+  }));
+
+export const knowledge: Doc[] = [...knowledgeBase, ...enrichmentKnowledge, ...experimentDocs, ...specimenDocs];
 
 // Oggetto unico comodo per il seed.
 export const canon = {
   company, mission, programmaSigma, conformita, departments, facilities, people,
-  protocols, generations, specimens, kpis, milestones, glossary, knowledge, meta
+  protocols, generations, specimens, experiments, kpis, milestones, glossary, knowledge, meta
 };

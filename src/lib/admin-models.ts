@@ -22,13 +22,20 @@ export const MODELS: Record<string, ModelDef> = {
   },
   people: {
     delegate: "person", idField: "id", idType: "string", autoId: false, orderBy: "ordine",
-    fields: { id: "string", nome: "string", ruolo: "string", bio: "string", dip: "string", branch: "string",
+    fields: { id: "string", nome: "string", ruolo: "string", bio: "string", competenze: "string[]",
+      voce: "string", background: "string", dip: "string", branch: "string",
       stato: "string", reportsTo: "string", facilityId: "string", ordine: "int" }
   },
   specimens: {
     delegate: "specimen", idField: "id", idType: "string", autoId: false, orderBy: "ordine",
-    fields: { id: "string", codiceEsteso: "string", gen: "int", protocollo: "string", coscienza: "bool3",
+    fields: { id: "string", codiceEsteso: "string", specie: "string", gen: "int", protocollo: "string", coscienza: "bool3",
       nomeProprio: "string", branch: "string", stato: "string", note: "string", facilityId: "string", ordine: "int" }
+  },
+  experiments: {
+    delegate: "experiment", idField: "id", idType: "string", autoId: false, orderBy: "ordine",
+    fields: { id: "string", codice: "string", titolo: "string", facilityId: "string", protocollo: "string",
+      obiettivo: "string", metodo: "string", risultato: "string", stato: "string", anno: "string",
+      branch: "string", abstract: "string", autori: "string[]", ordine: "int" }
   },
   protocols: {
     delegate: "protocol", idField: "codice", idType: "string", autoId: false, orderBy: "codice",

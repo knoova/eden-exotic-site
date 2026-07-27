@@ -43,6 +43,9 @@ model Person {
   nome       String
   ruolo      String
   bio        String
+  competenze String[]  @default([])
+  voce       String?
+  background String?
   dip        String // id dipartimento
   branch     String
   stato      String    @default("attivo")
@@ -56,6 +59,7 @@ model Person {
 model Specimen {
   id           String    @id // es. "47B"
   codiceEsteso String
+  specie       String? // nome comune della specie
   gen          Int
   protocollo   String
   coscienza    Boolean? // null = ignoto / in emersione
@@ -66,6 +70,24 @@ model Specimen {
   ordine       Int       @default(0)
   facility     Facility? @relation(fields: [facilityId], references: [id])
   facilityId   String?
+}
+
+model Experiment {
+  id           String   @id
+  codice       String
+  titolo       String
+  facilityId   String?
+  protocollo   String?
+  obiettivo    String
+  metodo       String?
+  risultato    String?
+  stato        String   @default("in corso")
+  anno         String?
+  branch       String   @default("core")
+  abstract     String?
+  autori       String[] @default([])
+  bibliografia Json?
+  ordine       Int      @default(0)
 }
 
 model Protocol {

@@ -74,6 +74,20 @@ export async function getGlossary(): Promise<C.GlossaryTerm[]> {
   }, C.glossary);
 }
 
+export async function getExperiments(): Promise<C.Experiment[]> {
+  return safe(async () => {
+    const r = await prisma.experiment.findMany({ orderBy: { ordine: "asc" } });
+    return r.length ? (r as unknown as C.Experiment[]) : C.experiments;
+  }, C.experiments);
+}
+
+export async function getExperiment(id: string): Promise<C.Experiment | null> {
+  return safe(async () => {
+    const r = await prisma.experiment.findUnique({ where: { id } });
+    return (r as unknown as C.Experiment) ?? C.experiments.find((e) => e.id === id) ?? null;
+  }, C.experiments.find((e) => e.id === id) ?? null);
+}
+
 async function getSetting<T>(key: string, fallback: T): Promise<T> {
   return safe(async () => {
     const r = await prisma.setting.findUnique({ where: { key } });

@@ -57,6 +57,18 @@ export async function seedDatabase(): Promise<void> {
     await prisma.specimen.upsert({ where: { id: s.id }, update: data, create: data });
   }
 
+  // Esperimenti
+  for (let i = 0; i < canon.experiments.length; i++) {
+    const e = canon.experiments[i];
+    const data = {
+      id: e.id, codice: e.codice, titolo: e.titolo, facilityId: e.facilityId,
+      protocollo: e.protocollo, obiettivo: e.obiettivo, metodo: e.metodo, risultato: e.risultato,
+      stato: e.stato, anno: e.anno, branch: e.branch, abstract: e.abstract ?? null,
+      autori: e.autori ?? [], bibliografia: (e.bibliografia ?? []) as any, ordine: i
+    };
+    await prisma.experiment.upsert({ where: { id: e.id }, update: data, create: data });
+  }
+
   // KPI / Traguardi / Glossario (id autoincrement): reset e ricrea
   await prisma.kpi.deleteMany();
   await prisma.kpi.createMany({ data: canon.kpis.map((k, i) => ({ ...k, ordine: i })) });

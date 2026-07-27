@@ -95,7 +95,10 @@ export const PANELS: Panel[] = [
       { name: "id", label: "ID", help: "slug univoco", type: "text" },
       { name: "nome", label: "Nome", type: "text" },
       { name: "ruolo", label: "Ruolo", type: "text", full: true },
-      { name: "bio", label: "Biografia", type: "textarea", rows: 3, full: true },
+      { name: "bio", label: "Biografia", type: "textarea", rows: 4, full: true },
+      { name: "competenze", label: "Competenze", help: "una per riga", type: "lines", rows: 3, full: true },
+      { name: "voce", label: "Voce / registro", type: "textarea", rows: 2, full: true },
+      { name: "background", label: "Background", type: "textarea", rows: 2, full: true },
       { name: "facilityId", label: "Struttura", type: "select", options: facOpts },
       { name: "dip", label: "Dipartimento", type: "select", options: depOpts },
       { name: "reportsTo", label: "Riporta a", type: "select", options: peopleOpts },
@@ -136,6 +139,7 @@ export const PANELS: Panel[] = [
     fields: [
       { name: "id", label: "Codice breve", type: "text" },
       { name: "codiceEsteso", label: "Codice esteso", type: "text" },
+      { name: "specie", label: "Specie", type: "text" },
       { name: "nomeProprio", label: "Nome proprio", help: "— se assente", type: "text" },
       { name: "gen", label: "Generazione", type: "number" },
       { name: "protocollo", label: "Protocollo", type: "select", options: protoOpts },
@@ -144,6 +148,25 @@ export const PANELS: Panel[] = [
       { name: "facilityId", label: "Struttura", type: "select", options: facOpts },
       { name: "stato", label: "Stato", type: "text" },
       { name: "note", label: "Note", type: "textarea", rows: 3, full: true },
+      { name: "ordine", label: "Ordine", type: "number" }
+    ] },
+
+  { group: "Programma", key: "experiments", label: "Esperimenti", kind: "list", model: "experiments",
+    title: (i) => `${i.codice} · ${i.titolo}`, cols: [{ k: "codice", h: "Cod." }, { k: "titolo", h: "Titolo" }, { k: "stato", h: "Stato" }],
+    fields: [
+      { name: "id", label: "ID", help: "slug univoco", type: "text" },
+      { name: "codice", label: "Codice", type: "text" },
+      { name: "titolo", label: "Titolo", type: "text", full: true },
+      { name: "facilityId", label: "Struttura", type: "select", options: facOpts },
+      { name: "protocollo", label: "Protocollo", type: "select", options: protoOpts },
+      { name: "anno", label: "Anno", type: "text" },
+      { name: "stato", label: "Stato", type: "select", options: [{ value: "in corso", label: "In corso" }, { value: "concluso", label: "Concluso" }, { value: "sospeso", label: "Sospeso" }, { value: "pianificato", label: "Pianificato" }] },
+      { name: "branch", label: "Ramo", type: "select", options: BRANCHES },
+      { name: "obiettivo", label: "Obiettivo", type: "textarea", rows: 2, full: true },
+      { name: "metodo", label: "Metodo", type: "textarea", rows: 2, full: true },
+      { name: "risultato", label: "Risultato", type: "textarea", rows: 2, full: true },
+      { name: "abstract", label: "Abstract", type: "textarea", rows: 5, full: true },
+      { name: "autori", label: "Autori", help: "uno per riga", type: "lines", rows: 3, full: true },
       { name: "ordine", label: "Ordine", type: "number" }
     ] },
 

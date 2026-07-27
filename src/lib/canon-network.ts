@@ -3,7 +3,11 @@
 // Espansione del canon (rev. 2026-07-27). Siti "new" in stato "proposto",
 // in attesa di revisione umana. N.4 e N.6 hanno team già canonici (in canon.ts).
 // =============================================================================
-import type { Facility, Person, Doc } from "./canon";
+import type { Facility, Person, Doc, Specimen, Experiment, PersonEnrichment } from "./canon";
+import { networkSpecimens } from "./canon-specimens";
+import { experimentsData, experimentBiblio } from "./canon-experiments";
+import { peopleEnrichment, enrichmentKnowledge } from "./canon-enrichment";
+export { networkSpecimens, experimentsData, experimentBiblio, peopleEnrichment, enrichmentKnowledge };
 
 export const networkFacilities: Facility[] = [
   { id: "N1", numero: 1, nome: "Biobanca N.1", paese: "Svizzera", citta: "Basilea", continente: "Europa", lat: 47.5596, lng: 7.5886,

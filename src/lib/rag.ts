@@ -7,9 +7,14 @@ import type { Person } from "./canon";
 export type Turn = { role: "user" | "assistant"; content: string };
 
 function personaSystemPrompt(person: Person, contesto: string): string {
+  const extra: string[] = [];
+  if (person.background) extra.push(`Percorso: ${person.background}`);
+  if (person.competenze && person.competenze.length) extra.push(`Competenze: ${person.competenze.join(", ")}.`);
+  if (person.voce) extra.push(`Registro/voce: ${person.voce}`);
   return [
     `Sei ${person.nome}, ${person.ruolo} presso Eden Exotic (universo narrativo "47B").`,
     `Profilo: ${person.bio}`,
+    ...extra,
     "",
     "REGOLE DI INTERPRETAZIONE:",
     "- Resta sempre nel personaggio. Parla in prima persona, in italiano.",

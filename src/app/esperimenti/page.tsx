@@ -1,4 +1,5 @@
 export const dynamic = "force-dynamic";
+import Link from "next/link";
 import {
   getProtocols,
   getGenerations,
@@ -6,22 +7,26 @@ import {
   getGlossary,
   getFacilities,
   getSigma,
-  getConformita
+  getConformita,
+  getExperiments
 } from "@/lib/content";
 import { SpecimenTable } from "./SpecimenTable";
+import { StatoBadge } from "../components/badges";
 
 export const metadata = { title: "Esperimenti" };
 
 export default async function EsperimentiPage() {
-  const [protocols, generations, specimens, glossary, facilities, sigma, conformita] = await Promise.all([
+  const [protocols, generations, specimens, glossary, facilities, sigma, conformita, experiments] = await Promise.all([
     getProtocols(),
     getGenerations(),
     getSpecimens(),
     getGlossary(),
     getFacilities(),
     getSigma(),
-    getConformita()
+    getConformita(),
+    getExperiments()
   ]);
+  const facName = (id: string | null) => facilities.find((f) => f.id === id)?.nome || id || "—";
 
   return (
     <>
@@ -93,6 +98,63 @@ export default async function EsperimentiPage() {
             Lo stato cognitivo è una classificazione interna. La singolarità degli esemplari coscienti resta
             materia riservata.
           </p>
+        </div>
+      </section>
+
+      <section className="section section--paper2">
+        <div className="wrap">
+          <div className="section-head">
+            <span className="eyebrow">Archivio degli esperimenti</span>
+            <h2>{experiments.length} studi, {facilities.filter((f) => f.numero > 0).length} strutture</h2>
+            <p>
+              Ogni studio ha un abstract e una bibliografia; il rapporto è scaricabile in PDF, firmato dagli
+              autori della struttura.
+            </p>
+          </div>
+          <div className="table-wrap">
+            <table className="reg">
+              <thead>
+                <tr>
+                  <th>Codice</th>
+                  <th>Studio</th>
+                  <th>Struttura</th>
+                  <th>Autori</th>
+                  <th>Stato</th>
+                  <th>PDF</th>
+                </tr>
+              </thead>
+              <tbody>
+                {experiments.map((e) => (
+                  <tr key={e.id}>
+                    <td>
+                      <span className="chip-code">{e.codice}</span>
+                    </td>
+                    <td className="nm">
+                      <Link href={`/esperimenti/${e.id}`} style={{ color: "var(--forest-2)" }}>
+                        {e.titolo}
+                      </Link>
+                      <div className="muted" style={{ fontSize: ".82rem", fontWeight: 400 }}>
+                        {e.anno} · Prot. {e.protocollo || "—"}
+                      </div>
+                    </td>
+                    <td>{facName(e.facilityId)}</td>
+                    <td className="muted" style={{ fontSize: ".84rem", minWidth: 160 }}>
+                      {(e.autori || []).slice(0, 2).join(", ")}
+                      {(e.autori || []).length > 2 ? " et al." : ""}
+                    </td>
+                    <td>
+                      <StatoBadge s={e.stato} />
+                    </td>
+                    <td>
+                      <a className="badge badge-plain" href={`/api/experiments/${e.id}/pdf`} target="_blank" rel="noreferrer">
+                        ⬇ PDF
+                      </a>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
 
