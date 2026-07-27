@@ -65,9 +65,9 @@ export const company = {
   principi: [
     "Un solo standard, tre climi operativi: freddo, temperato, estremo.",
     "Scienza reale e verificata: nessuna scorciatoia non documentata.",
-    "Ogni potenziamento amplifica un tratto naturale già esistente.",
-    "Tracciabilità e conformità CITES su ogni esemplare.",
-    "Nessuna promessa che i dati non possano sostenere."
+    "Amplificare, non inventare: ogni potenziamento estende un tratto naturale già esistente.",
+    "Tracciabilità totale: conformità CITES documentata su ogni esemplare.",
+    "Solo ciò che i dati sostengono: nessuna promessa oltre l'evidenza."
   ]
 };
 
