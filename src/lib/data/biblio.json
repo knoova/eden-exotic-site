@@ -1,1 +1,1433 @@
-{}
+{
+ "exp-n1-crio-vetrificazione-germinale": {
+  "abstract": "Contesto: La conservazione a lungo termine del germoplasma di rettili minacciati richiede protocolli che evitino la nucleazione di ghiaccio intracellulare, principale causa di danno durante il congelamento. Metodo: Ovociti e frammenti di tessuto gonadico di iguana sono stati sottoposti a vetrificazione mediante crioprotettori penetranti combinati (etilene glicole e dimetilsolfossido) ad alta concentrazione, con raffreddamento ultrarapido per immersione diretta in azoto liquido a -196°C e riscaldamento rapido controllato. La vitalità post-scongelamento è stata valutata con saggi di integrità di membrana, potenziale di membrana mitocondriale e ripresa metabolica. Risultati: Il 71% degli ovociti ha mantenuto integrità morfologica e di membrana; tuttavia una quota rilevante ha mostrato depolarizzazione mitocondriale residua ed elevata produzione di specie reattive dell'ossigeno, indicando stress ossidativo non del tutto prevenuto. Conclusioni: La vetrificazione consente una crioconservazione priva di ghiaccio efficace per le linee germinali rettiliane, ma la riduzione del danno mitocondriale richiede l'ottimizzazione delle rampe termiche e l'integrazione di antiossidanti nel mezzo crioprotettore.",
+  "bibliografia": [
+   {
+    "autori": "Rall W.F., Fahy G.M.",
+    "anno": "1985",
+    "titolo": "Ice-free cryopreservation of mouse embryos at -196 °C by vitrification",
+    "fonte": "Nature 313(6003):573-575",
+    "url": "https://doi.org/10.1038/313573a0"
+   },
+   {
+    "autori": "Kuwayama M., Vajta G., Kato O., Leibo S.P.",
+    "anno": "2005",
+    "titolo": "Highly efficient vitrification method for cryopreservation of human oocytes",
+    "fonte": "Reproductive BioMedicine Online 11(3):300-308",
+    "url": "https://doi.org/10.1016/S1472-6483(10)60837-1"
+   },
+   {
+    "autori": "Fahy G.M., Wowk B.",
+    "anno": "2015",
+    "titolo": "Principles of cryopreservation by vitrification",
+    "fonte": "Methods in Molecular Biology 1257:21-82 (Springer)",
+    "url": "https://doi.org/10.1007/978-1-4939-2193-5_2"
+   },
+   {
+    "autori": "Comizzoli P.",
+    "anno": "2017",
+    "titolo": "Biobanking and fertility preservation for rare and endangered species",
+    "fonte": "Animal Reproduction 14(1):30-33",
+    "url": "https://doi.org/10.21451/1984-3143-AR889"
+   }
+  ]
+ },
+ "exp-n1-archivio-referenza-genomica": {
+  "abstract": "Contesto: Il tracciamento delle linee potenziate tra le facility richiede genomi di riferimento completi e verificabili. Metodo: Abbiamo sequenziato 214 campioni multispecie con tecnologia a lettura lunga Oxford Nanopore, eseguendo assemblaggio de novo (rilevamento e correzione degli overlap, assemblaggio e lucidatura del consenso) e annotazione strutturale e funzionale; ogni genoma è stato indicizzato con hash crittografici per garantire integrità e non ripudio dei depositi. Risultati: Sono stati depositati 214 genomi annotati con continuità a livello cromosomico. L'analisi comparativa ha evidenziato in alcune linee della facility N6 varianti strutturali e a singolo nucleotide assenti nei registri di origine, compatibili con eventi di editing o di ricombinazione non documentati. Conclusioni: L'archivio fornisce un riferimento condiviso e a prova di manomissione per la sorveglianza genomica; le discrepanze rilevate nelle linee N6 richiedono verifica incrociata con la catena di custodia e con i registri sperimentali.",
+  "bibliografia": [
+   {
+    "autori": "Loman N.J., Quick J., Simpson J.T.",
+    "anno": "2015",
+    "titolo": "A complete bacterial genome assembled de novo using only nanopore sequencing data",
+    "fonte": "Nature Methods 12(8):733-735",
+    "url": "https://doi.org/10.1038/nmeth.3444"
+   },
+   {
+    "autori": "Koren S., Walenz B.P., Berlin K., Miller J.R., Bergman N.H., Phillippy A.M.",
+    "anno": "2017",
+    "titolo": "Canu: scalable and accurate long-read assembly via adaptive k-mer weighting and repeat separation",
+    "fonte": "Genome Research 27(5):722-736",
+    "url": "https://doi.org/10.1101/gr.215087.116"
+   },
+   {
+    "autori": "Wang Y., Zhao Y., Bollas A., Wang Y., Au K.F.",
+    "anno": "2021",
+    "titolo": "Nanopore sequencing technology, bioinformatics and applications",
+    "fonte": "Nature Biotechnology 39(11):1348-1365",
+    "url": "https://doi.org/10.1038/s41587-021-01108-x"
+   },
+   {
+    "autori": "Ozercan H.I., Ileri A.M., Ayday E., Alkan C.",
+    "anno": "2018",
+    "titolo": "Realizing the potential of blockchain technologies in genomics",
+    "fonte": "Genome Research 28(9):1255-1263",
+    "url": "https://doi.org/10.1101/gr.207464.116"
+   }
+  ]
+ },
+ "exp-n1-stabilita-dna-decennale": {
+  "abstract": "Contesto: La definizione dei cicli di riverifica dei campioni archiviati richiede stime quantitative della degradazione del DNA in funzione della temperatura di stoccaggio. Metodo: Aliquote di DNA genomico sono state conservate in parallelo a -80°C e in azoto liquido; a intervalli programmati la frammentazione è stata misurata mediante elettroforesi capillare, calcolando indici di integrità e tassi di rottura della catena secondo un modello di degradazione di tipo Arrhenius. Risultati: A dieci anni, i campioni in azoto liquido mostravano una frammentazione ridotta di circa il 40% rispetto a quelli a -80°C. Lo stoccaggio a -80°C è risultato adeguato entro i cinque anni, oltre i quali l'accumulo di rotture supera le soglie accettabili per le applicazioni a valle. Conclusioni: Per l'archiviazione decennale e oltre si raccomanda l'azoto liquido; per i campioni a -80°C si stabiliscono cicli di riverifica e rigenerazione quinquennali.",
+  "bibliografia": [
+   {
+    "autori": "Bonnet J., Colotte M., Coudy D., Couallier V., Portier J., Morin B., Tuffet S.",
+    "anno": "2010",
+    "titolo": "Chain and conformation stability of solid-state DNA: implications for room temperature storage",
+    "fonte": "Nucleic Acids Research 38(5):1531-1546",
+    "url": "https://doi.org/10.1093/nar/gkp1060"
+   },
+   {
+    "autori": "Grass R.N., Heckel R., Puddu M., Paunescu D., Stark W.J.",
+    "anno": "2015",
+    "titolo": "Robust chemical preservation of digital information on DNA in silica with error-correcting codes",
+    "fonte": "Angewandte Chemie International Edition 54(8):2552-2555",
+    "url": "https://doi.org/10.1002/anie.201411378"
+   },
+   {
+    "autori": "Babel M., Mamilos A., Seitz S., et al.",
+    "anno": "2020",
+    "titolo": "Compared DNA and RNA quality of breast cancer biobanking samples after long-term storage protocols in -80 °C and liquid nitrogen",
+    "fonte": "Scientific Reports 10:14404",
+    "url": "https://doi.org/10.1038/s41598-020-71441-9"
+   },
+   {
+    "autori": "Kelly R., Albert M., de Ladurantaye M., et al.",
+    "anno": "2019",
+    "titolo": "RNA and DNA integrity remain stable in frozen tissue after long-term storage at cryogenic temperatures: a report from the Ontario Tumour Bank",
+    "fonte": "Biopreservation and Biobanking 17(4):327-336",
+    "url": "https://doi.org/10.1089/bio.2018.0095"
+   }
+  ]
+ },
+ "exp-n1-catena-custodia-campioni": {
+  "abstract": "Contesto: La movimentazione dei materiali biologici tra le sedi richiede garanzie di integrità e non ripudio. Metodo: Abbiamo implementato un sistema di etichettatura basato su registro append-only, in cui ogni evento di custodia è concatenato mediante hash crittografici e marca temporale, con verifica a doppia chiave alla consegna. L'integrità della catena è garantita dall'impossibilità computazionale di retrodatare o alterare le voci senza invalidare la sequenza. Risultati: Il sistema è stato introdotto in produzione su tutti i trasferimenti; il confronto automatico tra provenienza dichiarata e registro ha fatto emergere due discrepanze storiche di provenienza, ora in fase di chiarimento congiunto con la facility N9. Conclusioni: L'adozione di un registro a prova di manomissione con marca temporale rafforza la tracciabilità e consente il rilevamento retroattivo di anomalie; l'integrazione con l'archivio genomico permette la verifica incrociata dell'identità dei campioni.",
+  "bibliografia": [
+   {
+    "autori": "Haber S., Stornetta W.S.",
+    "anno": "1991",
+    "titolo": "How to time-stamp a digital document",
+    "fonte": "Journal of Cryptology 3(2):99-111",
+    "url": "https://doi.org/10.1007/BF00196791"
+   },
+   {
+    "autori": "Kuo T.T., Kim H.E., Ohno-Machado L.",
+    "anno": "2017",
+    "titolo": "Blockchain distributed ledger technologies for biomedical and health care applications",
+    "fonte": "Journal of the American Medical Informatics Association 24(6):1211-1220",
+    "url": "https://doi.org/10.1093/jamia/ocx068"
+   },
+   {
+    "autori": "Ozercan H.I., Ileri A.M., Ayday E., Alkan C.",
+    "anno": "2018",
+    "titolo": "Realizing the potential of blockchain technologies in genomics",
+    "fonte": "Genome Research 28(9):1255-1263",
+    "url": "https://doi.org/10.1101/gr.207464.116"
+   },
+   {
+    "autori": "Nakamoto S.",
+    "anno": "2008",
+    "titolo": "Bitcoin: A Peer-to-Peer Electronic Cash System",
+    "fonte": "White paper (bitcoin.org)",
+    "url": "https://bitcoin.org/bitcoin.pdf"
+   }
+  ]
+ },
+ "exp-n2-visione-composita": {
+  "abstract": "Contesto: I ragni saltatori (Salticidae) esibiscono un'acuità visiva eccezionale per la loro taglia, mediata dagli occhi anteriori mediali (principali), la cui retina a boomerang è organizzata in quattro strati fotorecettoriali serviti da un lungo tubo oculare mobile. Come questa architettura, priva di una fovea ad ampio campo, generi una percezione unificata resta poco chiarito. Metodo: Abbiamo combinato microscopia ottica del tubo oculare, elettroretinografia dei retini principali e presentazione di stimoli mobili in arena, registrando le risposte oculomotorie mediate dai muscoli retinici durante il tracciamento del bersaglio. Risultati: Le registrazioni evidenziano uno scanning retinico attivo: il retino principale spazza ritmicamente la scena con movimenti torsionali e latero-mediali, campionando sequenzialmente porzioni contigue del campo visivo anziché acquisire un fotogramma statico. L'integrazione temporale di questi campioni, coadiuvata dagli occhi laterali che rilevano il movimento, ricostruisce una rappresentazione ad alta risoluzione. Conclusioni: La visione salticide è un processo attivo e seriale in cui la scena viene assemblata nel tempo, non catturata in un istante, un modello percettivo economico e coerente con l'anatomia a strati del sistema.",
+  "bibliografia": [
+   {
+    "autori": "Nagata T. et al.",
+    "anno": "2012",
+    "titolo": "Depth Perception from Image Defocus in a Jumping Spider",
+    "fonte": "Science 335(6067):469-471",
+    "url": "https://doi.org/10.1126/science.1211667"
+   },
+   {
+    "autori": "Land M.F.",
+    "anno": "1969",
+    "titolo": "Structure of the retinae of the principal eyes of jumping spiders (Salticidae) in relation to visual optics",
+    "fonte": "Journal of Experimental Biology 51(2):443-470",
+    "url": "https://journals.biologists.com/jeb/article/51/2/443/21599"
+   },
+   {
+    "autori": "Land M.F.",
+    "anno": "1969",
+    "titolo": "Movements of the retinae of jumping spiders (Salticidae) in response to visual stimuli",
+    "fonte": "Journal of Experimental Biology 51(2):471-493",
+    "url": "https://journals.biologists.com/jeb/article/51/2/471/21596"
+   },
+   {
+    "autori": "Harland D.P., Jackson R.R.",
+    "anno": "2004",
+    "titolo": "Portia perceptions: the umwelt of an araneophagic jumping spider",
+    "fonte": "in Complex Worlds from Simpler Nervous Systems, MIT Press, pp. 5-40",
+    "url": "https://mitpress.mit.edu/9780262162234/complex-worlds-from-simpler-nervous-systems/"
+   }
+  ]
+ },
+ "exp-n2-seta-dragline-ricombinante": {
+  "abstract": "Contesto: La seta dragline dei ragni deve gran parte della sua eccezionale tenacità alle spidroine maggiori (MaSp1, MaSp2), proteine ripetitive con blocchi poli-alanina cristallini e regioni glicina-ricche amorfe. Riprodurre in modo ricombinante fibre con l'equilibrio nativo tra resistenza a trazione ed elasticità rimane una sfida biotecnologica. Metodo: Abbiamo espresso costrutti spidroinici ad alto peso molecolare in linee cellulari eterologhe, purificato le proteine e prodotto fibre mediante filatura umida; le proprietà meccaniche sono state caratterizzate con prove di trazione e nanoindentazione, correlandole al contenuto in foglietti beta valutato spettroscopicamente. Risultati: Le fibre ottimizzate mostrano una tenacità superiore del 18% rispetto al filato del ceppo selvatico, mantenendo un'estensibilità comparabile grazie a un'accresciuta frazione cristallina orientata. Tuttavia il processo di filatura resta instabile su scala, con variabilità di diametro e difetti che limitano la riproducibilità. Conclusioni: L'ingegnerizzazione delle regioni terminali e delle condizioni di filatura migliora la tenacità senza sacrificare l'elasticità, ma il controllo del self-assembly resta il collo di bottiglia per la produzione industriale.",
+  "bibliografia": [
+   {
+    "autori": "Xia X.X. et al.",
+    "anno": "2010",
+    "titolo": "Native-sized recombinant spider silk protein produced in metabolically engineered Escherichia coli results in a strong fiber",
+    "fonte": "PNAS 107(32):14059-14063",
+    "url": "https://doi.org/10.1073/pnas.1003366107"
+   },
+   {
+    "autori": "Gosline J.M. et al.",
+    "anno": "1999",
+    "titolo": "The mechanical design of spider silks: from fibroin sequence to mechanical function",
+    "fonte": "Journal of Experimental Biology 202(23):3295-3303",
+    "url": "https://journals.biologists.com/jeb/article/202/23/3295/8324"
+   },
+   {
+    "autori": "Vollrath F., Knight D.P.",
+    "anno": "2001",
+    "titolo": "Liquid crystalline spinning of spider silk",
+    "fonte": "Nature 410(6828):541-548",
+    "url": "https://doi.org/10.1038/35069000"
+   },
+   {
+    "autori": "Rising A., Johansson J.",
+    "anno": "2015",
+    "titolo": "Toward spinning artificial spider silk",
+    "fonte": "Nature Chemical Biology 11(5):309-315",
+    "url": "https://doi.org/10.1038/nchembio.1789"
+   }
+  ]
+ },
+ "exp-n2-rete-sensoriale-distribuita": {
+  "abstract": "Contesto: Molti ragni percepiscono le prede quasi esclusivamente tramite vibrazioni trasmesse dal substrato serico. La tela non è un semplice mezzo passivo ma una struttura meccanica accordabile che filtra e propaga i segnali prima che raggiungano i meccanocettori (sensilli a fessura) delle zampe, estendendo la percezione oltre il corpo dell'animale. Metodo: Mediante vibrometria laser Doppler abbiamo misurato la trasmissione di stimoli controllati iniettati nella tela, confrontando onde trasversali e longitudinali su un ampio intervallo di frequenze, e correlando la risposta predatoria dell'animale con l'analisi spettrale dei segnali in arrivo all'hub. Risultati: La tela si comporta da filtro meccanico sintonizzato: le componenti longitudinali si propagano con minore attenuazione e conservano maggiore informazione direzionale, mentre tensione della seta e architettura modulano selettivamente le bande trasmesse. Il ragno regola questi parametri, pre-elaborando l'informazione a monte del sistema nervoso. Conclusioni: La percezione vibrazionale è distribuita: parte dell'elaborazione del segnale è delegata alle proprietà materiali e geometriche della tela, un esempio di computazione morfologica esterna al sistema nervoso.",
+  "bibliografia": [
+   {
+    "autori": "Masters W.M., Markl H.",
+    "anno": "1981",
+    "titolo": "Vibration signal transmission in spider orb webs",
+    "fonte": "Science 213(4505):363-365",
+    "url": "https://doi.org/10.1126/science.213.4505.363"
+   },
+   {
+    "autori": "Landolfa M.A., Barth F.G.",
+    "anno": "1996",
+    "titolo": "Vibrations in the orb web of the spider Nephila clavipes: cues for discrimination and orientation",
+    "fonte": "Journal of Comparative Physiology A 179(4):493-508",
+    "url": "https://doi.org/10.1007/BF00192316"
+   },
+   {
+    "autori": "Mortimer B. et al.",
+    "anno": "2016",
+    "titolo": "Tuning the instrument: sonic properties in the spider's web",
+    "fonte": "Journal of The Royal Society Interface 13(122):20160341",
+    "url": "https://doi.org/10.1098/rsif.2016.0341"
+   },
+   {
+    "autori": "Barth F.G.",
+    "anno": "2004",
+    "titolo": "Spider mechanoreceptors",
+    "fonte": "Current Opinion in Neurobiology 14(4):415-422",
+    "url": "https://doi.org/10.1016/j.conb.2004.07.005"
+   }
+  ]
+ },
+ "exp-n2-micro-sorveglianza-biomimetica": {
+  "abstract": "Contesto: I tricobotri e i sensilli a fessura dei ragni costituiscono rilevatori di flusso d'aria e di vibrazioni con sensibilità prossima al limite termico e consumo energetico trascurabile, poiché l'informazione è trasdotta passivamente dalla meccanica del pelo. Questi organi rappresentano un modello ideale per sensori artificiali a bassissima potenza. Metodo: Abbiamo condotto un reverse engineering morfometrico e meccanico dei tricobotri, ricavandone i parametri di deflessione in funzione di velocità e frequenza del flusso, e prototipato array MEMS con peli capacitivi ispirati a tale dinamica, testandone la risposta in galleria a flusso controllato. Risultati: Il prototipo rileva sorgenti di movimento fino a due metri di distanza con soglie coerenti con i modelli idromeccanici del pelo filiforme, riproducendo la selettività direzionale osservata in natura. Il potenziale impiego dual-use è stato registrato e sottoposto a revisione etica interna. Conclusioni: La trasduzione passiva biomimetica consente rilevatori vibrazionali e di flusso ad altissima efficienza; le implicazioni applicative richiedono tuttavia una valutazione responsabile degli usi.",
+  "bibliografia": [
+   {
+    "autori": "Barth F.G.",
+    "anno": "2002",
+    "titolo": "A Spider's World: Senses and Behavior",
+    "fonte": "Springer-Verlag, Berlino",
+    "url": "https://doi.org/10.1007/978-3-662-04899-3"
+   },
+   {
+    "autori": "Barth F.G.",
+    "anno": "2004",
+    "titolo": "Spider mechanoreceptors",
+    "fonte": "Current Opinion in Neurobiology 14(4):415-422",
+    "url": "https://doi.org/10.1016/j.conb.2004.07.005"
+   },
+   {
+    "autori": "Krijnen G.J.M. et al.",
+    "anno": "2006",
+    "titolo": "MEMS based hair flow-sensors as model systems for acoustic perception studies",
+    "fonte": "Nanotechnology 17(4):S84-S89",
+    "url": "https://doi.org/10.1088/0957-4484/17/4/013"
+   },
+   {
+    "autori": "Tao J., Yu X.B.",
+    "anno": "2012",
+    "titolo": "Hair flow sensors: from bio-inspiration to bio-mimicking - a review",
+    "fonte": "Smart Materials and Structures 21(11):113001",
+    "url": "https://doi.org/10.1088/0964-1726/21/11/113001"
+   }
+  ]
+ },
+ "exp-n3-rigenerazione-arto-completa": {
+  "abstract": "Contesto: L'axolotl (Ambystoma mexicanum) rigenera arti completi dopo amputazione ricostruendo fedelmente l'asse prossimo-distale. Le cellule del blastema conservano la memoria della loro posizione d'origine, ma i segnali che stabiliscono l'identità posizionale lungo l'asse restano oggetto di studio. Metodo: Abbiamo marcato sottopopolazioni cellulari con reporter fluorescenti e seguito la ricrescita mediante imaging longitudinale in vivo, manipolando farmacologicamente la via dell'acido retinoico per verificarne l'effetto sull'identità prossimo-distale del rigenerato. Risultati: L'imaging conferma che le cellule del connettivo dominano il blastema mantenendo informazione posizionale; l'esposizione ad acido retinoico esogeno prossimalizza il rigenerato, inducendo strutture più prossimali del sito di amputazione, mentre il gradiente endogeno di segnalazione retinoica risulta necessario a ripristinare la corretta sequenza prossimo-distale. Conclusioni: Il ripristino dell'asse prossimo-distale dipende da un gradiente di segnalazione dell'acido retinoico che istruisce l'identità posizionale delle cellule blastemali, coerentemente con il modello classico della prossimalizzazione retinoide e con i dati moderni di tracciamento cellulare.",
+  "bibliografia": [
+   {
+    "autori": "Maden M.",
+    "anno": "1982",
+    "titolo": "Vitamin A and pattern formation in the regenerating limb",
+    "fonte": "Nature 295(5851):672-675",
+    "url": "https://doi.org/10.1038/295672a0"
+   },
+   {
+    "autori": "Kragl M. et al.",
+    "anno": "2009",
+    "titolo": "Cells keep a memory of their tissue origin during axolotl limb regeneration",
+    "fonte": "Nature 460(7251):60-65",
+    "url": "https://doi.org/10.1038/nature08152"
+   },
+   {
+    "autori": "Gerber T. et al.",
+    "anno": "2018",
+    "titolo": "Single-cell analysis uncovers convergence of cell identities during axolotl limb regeneration",
+    "fonte": "Science 362(6413):eaaq0681",
+    "url": "https://doi.org/10.1126/science.aaq0681"
+   },
+   {
+    "autori": "Nacu E., Tanaka E.M.",
+    "anno": "2011",
+    "titolo": "Limb regeneration: a new development?",
+    "fonte": "Annual Review of Cell and Developmental Biology 27:409-440",
+    "url": "https://doi.org/10.1146/annurev-cellbio-092910-154115"
+   }
+  ]
+ },
+ "exp-n3-riprogrammazione-blastema": {
+  "abstract": "Contesto: La formazione del blastema richiede che cellule mature in prossimità della ferita rientrino in un programma progenitore. Identificare i segnali molecolari precoci che innescano questa dedifferenziazione è cruciale per comprendere la rigenerazione epimorfica. Metodo: Abbiamo eseguito sequenziamento dell'RNA a singola cellula (scRNA-seq) del moncone di axolotl nelle prime 96 ore post-amputazione, ricostruendo le traiettorie trascrizionali delle popolazioni del connettivo e del sistema immunitario innato durante l'attivazione del blastema. Risultati: L'analisi isola una firma trascrizionale precoce dominata da geni di risposta immunitaria e da segnalazione Wnt/beta-catenina, con i tipi cellulari del connettivo che convergono verso uno stato progenitore relativamente omogeneo simile all'abbozzo embrionale. L'infiltrazione macrofagica precede e accompagna questa transizione. Conclusioni: L'attivazione del blastema è un programma multifasico in cui segnali immunitari e via Wnt cooperano nel riprogrammare le cellule del connettivo verso la multipotenza, indicando bersagli molecolari candidati per innescare la rigenerazione.",
+  "bibliografia": [
+   {
+    "autori": "Kawakami Y. et al.",
+    "anno": "2006",
+    "titolo": "Wnt/beta-catenin signaling regulates vertebrate limb regeneration",
+    "fonte": "Genes & Development 20(23):3232-3237",
+    "url": "https://doi.org/10.1101/gad.1475106"
+   },
+   {
+    "autori": "Godwin J.W. et al.",
+    "anno": "2013",
+    "titolo": "Macrophages are required for adult salamander limb regeneration",
+    "fonte": "PNAS 110(23):9415-9420",
+    "url": "https://doi.org/10.1073/pnas.1300290110"
+   },
+   {
+    "autori": "Gerber T. et al.",
+    "anno": "2018",
+    "titolo": "Single-cell analysis uncovers convergence of cell identities during axolotl limb regeneration",
+    "fonte": "Science 362(6413):eaaq0681",
+    "url": "https://doi.org/10.1126/science.aaq0681"
+   },
+   {
+    "autori": "Kragl M. et al.",
+    "anno": "2009",
+    "titolo": "Cells keep a memory of their tissue origin during axolotl limb regeneration",
+    "fonte": "Nature 460(7251):60-65",
+    "url": "https://doi.org/10.1038/nature08152"
+   }
+  ]
+ },
+ "exp-n3-rigenerazione-cardiaca": {
+  "abstract": "Contesto: A differenza del cuore dei mammiferi, che risponde all'infarto con fibrosi permanente, gli anfibi urodeli rigenerano il miocardio danneggiato con minima cicatrice. Il meccanismo poggia sulla capacità dei cardiomiociti adulti di rientrare nel ciclo cellulare e proliferare. Metodo: Abbiamo indotto una criolesione ventricolare controllata e seguito il recupero mediante istologia, quantificazione della deposizione di collagene e marcatura della proliferazione dei cardiomiociti, valutando la funzione contrattile a 60 giorni. Risultati: A 60 giorni il tessuto mostra recupero funzionale con deposizione di collagene minima e transitoria; la riparazione è sostenuta da una sottopopolazione di cardiomiociti proliferanti e da un rimodellamento della matrice extracellulare mediato dai macrofagi, senza formazione di cicatrice stabile. Il meccanismo antifibrotico specifico resta da isolare. Conclusioni: La rigenerazione cardiaca dell'axolotl combina proliferazione dei cardiomiociti e controllo immunitario della fibrosi, in linea con quanto osservato in tritoni e zebrafish, offrendo un modello per strategie antifibrotiche nel cuore dei mammiferi.",
+  "bibliografia": [
+   {
+    "autori": "Oberpriller J.O., Oberpriller J.C.",
+    "anno": "1974",
+    "titolo": "Response of the adult newt ventricle to injury",
+    "fonte": "Journal of Experimental Zoology 187(2):249-253",
+    "url": "https://doi.org/10.1002/jez.1401870208"
+   },
+   {
+    "autori": "Bettencourt-Dias M. et al.",
+    "anno": "2003",
+    "titolo": "Heterogeneous proliferative potential in regenerative adult newt cardiomyocytes",
+    "fonte": "Journal of Cell Science 116(19):4001-4009",
+    "url": "https://doi.org/10.1242/jcs.00698"
+   },
+   {
+    "autori": "Poss K.D., Wilson L.G., Keating M.T.",
+    "anno": "2002",
+    "titolo": "Heart regeneration in zebrafish",
+    "fonte": "Science 298(5601):2188-2190",
+    "url": "https://doi.org/10.1126/science.1077857"
+   },
+   {
+    "autori": "Godwin J.W. et al.",
+    "anno": "2017",
+    "titolo": "Heart regeneration in the salamander relies on macrophage-mediated control of fibroblast activation and the extracellular landscape",
+    "fonte": "npj Regenerative Medicine 2:22",
+    "url": "https://doi.org/10.1038/s41536-017-0027-y"
+   }
+  ]
+ },
+ "exp-n3-crispr-guarigione-cicatrizzante": {
+  "abstract": "Contesto: La rigenerazione perfetta dell'axolotl è associata a una ridotta responsività alla segnalazione del TGF-beta e a una matrice extracellulare meno fibrotica. Poiché il TGF-beta è un regolatore centrale della cicatrizzazione, silenziarne selettivamente le vie profibrotiche potrebbe estendere la guarigione senza cicatrice ad altri tessuti. Metodo: Mediante CRISPR-Cas9 abbiamo eseguito knockout mirati di regolatori della via TGF-beta e confrontato la qualità del tessuto cutaneo riparato per architettura del collagene, contenuto di fibronectina e tenascina-C e proprietà tensili, rispetto a controlli non editati. Risultati: L'attenuazione della segnalazione profibrotica riduce marcatamente la cicatrice cutanea, con deposizione di matrice più ordinata e simil-dermica; tuttavia emergono effetti collaterali sulla resistenza tensile del tessuto neoformato, indicando un compromesso tra assenza di cicatrice e integrità meccanica. Conclusioni: La modulazione della via TGF-beta è sufficiente a spostare la riparazione verso un fenotipo rigenerativo, ma il ripristino delle proprietà meccaniche richiede un controllo fine e bilanciato della segnalazione, coerente con il ruolo del TGF-beta nella rigenerazione e nella cicatrizzazione.",
+  "bibliografia": [
+   {
+    "autori": "Shah M., Foreman D.M., Ferguson M.W.J.",
+    "anno": "1995",
+    "titolo": "Neutralisation of TGF-beta1 and TGF-beta2 or exogenous addition of TGF-beta3 to cutaneous rat wounds reduces scarring",
+    "fonte": "Journal of Cell Science 108(3):985-1002",
+    "url": "https://doi.org/10.1242/jcs.108.3.985"
+   },
+   {
+    "autori": "Levesque M. et al.",
+    "anno": "2007",
+    "titolo": "Transforming Growth Factor-beta Signaling Is Essential for Limb Regeneration in Axolotls",
+    "fonte": "PLoS ONE 2(11):e1227",
+    "url": "https://doi.org/10.1371/journal.pone.0001227"
+   },
+   {
+    "autori": "Seifert A.W. et al.",
+    "anno": "2012",
+    "titolo": "Skin Regeneration in Adult Axolotls: A Blueprint for Scar-Free Healing in Vertebrates",
+    "fonte": "PLoS ONE 7(4):e32875",
+    "url": "https://doi.org/10.1371/journal.pone.0032875"
+   },
+   {
+    "autori": "Denis J.-F. et al.",
+    "anno": "2013",
+    "titolo": "Axolotl as a Model to Study Scarless Wound Healing in Vertebrates: Role of the TGF-beta Signaling Pathway",
+    "fonte": "Advances in Wound Care 2(5):250-260",
+    "url": "https://doi.org/10.1089/wound.2012.0371"
+   }
+  ]
+ },
+ "exp-n4-labirinto-radiale-iguane": {
+  "abstract": "Contesto: La memoria di lavoro spaziale, ben documentata in mammiferi e uccelli, è stata a lungo ritenuta limitata nei rettili. Studi recenti su lucertole e testuggini indicano invece capacità spaziali robuste quando i paradigmi rodenti vengono adattati alla biologia del taxon. Metodo: Abbiamo testato le iguane in un labirinto a otto bracci radiali con ricompensa alimentare, controllando le tracce olfattive e conteggiando gli ingressi ripetuti in bracci già visitati come indice di memoria di lavoro spaziale, con analisi delle strategie di navigazione tramite cue distali. Risultati: Le iguane evitano i bracci già visitati con accuratezza dell'82%, ben oltre il livello di caso, senza dipendere da segnali olfattivi, e impiegano cue extramaze distali per orientarsi, indicando l'uso di una rappresentazione spaziale piuttosto che di una semplice strategia di risposta. Conclusioni: Le iguane possiedono una memoria di lavoro spaziale robusta paragonabile a quella osservata in altri amnioti, a sostegno della crescente evidenza che la cognizione spaziale dei rettili sia stata storicamente sottostimata.",
+  "bibliografia": [
+   {
+    "autori": "Mueller-Paul J. et al.",
+    "anno": "2012",
+    "titolo": "Radial-arm-maze behavior of the red-footed tortoise (Geochelone carbonaria)",
+    "fonte": "Journal of Comparative Psychology 126(3):305-317",
+    "url": "https://doi.org/10.1037/a0026881"
+   },
+   {
+    "autori": "LaDage L.D. et al.",
+    "anno": "2012",
+    "titolo": "Spatial memory: are lizards really deficient?",
+    "fonte": "Biology Letters 8(6):939-941",
+    "url": "https://doi.org/10.1098/rsbl.2012.0527"
+   },
+   {
+    "autori": "Wilkinson A., Coward S., Hall G.",
+    "anno": "2009",
+    "titolo": "Visual and response-based navigation in the tortoise (Geochelone carbonaria)",
+    "fonte": "Animal Cognition 12(6):779-787",
+    "url": "https://doi.org/10.1007/s10071-009-0237-9"
+   },
+   {
+    "autori": "Font E.",
+    "anno": "2019",
+    "titolo": "Rapid learning of a spatial memory task in a lacertid lizard (Podarcis liolepis)",
+    "fonte": "Behavioural Processes 169:103963",
+    "url": "https://doi.org/10.1016/j.beproc.2019.103963"
+   }
+  ]
+ },
+ "exp-n4-apprendimento-sociale": {
+  "abstract": "Contesto: L'apprendimento sociale, un tempo ritenuto prerogativa di specie sociali di mammiferi e uccelli, è stato dimostrato anche in rettili non sociali, sfidando l'idea che sia un adattamento alla vita di gruppo. Metodo: Abbiamo sottoposto le iguane a un compito di apertura di uno sportello scorrevole, confrontando gruppi osservatori, esposti a un conspecifico dimostratore, con gruppi di controllo ingenui; una condizione di controllo fantasma ha isolato l'effetto della semplice esaltazione dello stimolo. Risultati: Gli osservatori risolvono il compito più rapidamente e con meno tentativi rispetto ai controlli ingenui, e le prestazioni non sono spiegabili dalla sola esaltazione locale o emulazione dell'obiettivo, indicando trasmissione sociale dell'informazione. L'effetto risulta modulato dall'età dei soggetti. Conclusioni: Questi risultati forniscono un primo indizio di apprendimento sociale per osservazione in questi rettili, coerente con le evidenze di imitazione e flessibilità comportamentale già riportate in altri squamati, e suggeriscono che i meccanismi dell'apprendimento sociale siano evolutivamente antichi.",
+  "bibliografia": [
+   {
+    "autori": "Wilkinson A., Kuenstner K., Mueller J., Huber L.",
+    "anno": "2010",
+    "titolo": "Social learning in a non-social reptile (Geochelone carbonaria)",
+    "fonte": "Biology Letters 6(5):614-616",
+    "url": "https://doi.org/10.1098/rsbl.2010.0092"
+   },
+   {
+    "autori": "Kis A., Huber L., Wilkinson A.",
+    "anno": "2015",
+    "titolo": "Social learning by imitation in a reptile (Pogona vitticeps)",
+    "fonte": "Animal Cognition 18(1):325-331",
+    "url": "https://doi.org/10.1007/s10071-014-0803-7"
+   },
+   {
+    "autori": "Noble D.W.A., Byrne R.W., Whiting M.J.",
+    "anno": "2014",
+    "titolo": "Age-dependent social learning in a lizard",
+    "fonte": "Biology Letters 10(7):20140430",
+    "url": "https://doi.org/10.1098/rsbl.2014.0430"
+   },
+   {
+    "autori": "Leal M., Powell B.J.",
+    "anno": "2012",
+    "titolo": "Behavioural flexibility and problem-solving in a tropical lizard",
+    "fonte": "Biology Letters 8(1):28-30",
+    "url": "https://doi.org/10.1098/rsbl.2011.0480"
+   }
+  ]
+ },
+ "exp-n4-autocontrollo-gratificazione": {
+  "abstract": "Contesto: Il controllo inibitorio, ovvero la capacità di sopprimere una risposta prepotente per ottenere un vantaggio differito, è un componente centrale della funzione esecutiva. Le sue basi comparative attraverso i vertebrati sono state collegate alle dimensioni assolute del cervello, ma i dati sui rettili restano scarsi. Metodo: Abbiamo valutato le iguane in un compito di scelta ritardata, in cui la quantità di cibo cresceva in funzione del tempo di attesa, e in una variante del compito del cilindro per misurare l'inibizione di una risposta motoria diretta verso la ricompensa. Risultati: Alcuni individui tollerano attese fino a 30 secondi prima di rispondere, con forte variabilità interindividuale; le prestazioni nel compito del cilindro mostrano inibizione contesto-specifica e sono influenzate da bias di apprendimento, in linea con i livelli moderati riportati in altri squamati. Conclusioni: Le iguane esibiscono un controllo inibitorio misurabile ma variabile, coerente con l'ipotesi che la capacità inibitoria scali con le dimensioni encefaliche e con la natura contesto-dipendente dell'inibizione della risposta nei rettili.",
+  "bibliografia": [
+   {
+    "autori": "MacLean E.L. et al.",
+    "anno": "2014",
+    "titolo": "The evolution of self-control",
+    "fonte": "PNAS 111(20):E2140-E2148",
+    "url": "https://doi.org/10.1073/pnas.1323533111"
+   },
+   {
+    "autori": "Szabo B., Noble D.W.A., Whiting M.J.",
+    "anno": "2020",
+    "titolo": "Are lizards capable of inhibitory control? Performance on a semi-transparent version of the cylinder task in five species of Australian skinks",
+    "fonte": "Behavioral Ecology and Sociobiology 74(10):118",
+    "url": "https://doi.org/10.1007/s00265-020-02897-y"
+   },
+   {
+    "autori": "Szabo B. et al.",
+    "anno": "2019",
+    "titolo": "Context-specific response inhibition and differential impact of a learning bias in a lizard",
+    "fonte": "Animal Cognition 22(3):317-329",
+    "url": "https://doi.org/10.1007/s10071-019-01245-6"
+   },
+   {
+    "autori": "Leal M., Powell B.J.",
+    "anno": "2012",
+    "titolo": "Behavioural flexibility and problem-solving in a tropical lizard",
+    "fonte": "Biology Letters 8(1):28-30",
+    "url": "https://doi.org/10.1098/rsbl.2011.0480"
+   }
+  ]
+ },
+ "exp-n4-riconoscimento-individuale": {
+  "abstract": "Contesto: Il riconoscimento individuale, alla base di gerarchie di dominanza, territorialità e relazioni tipo vicino-nemico, è stato documentato in diverse lucertole che discriminano conspecifici familiari e ignoti principalmente tramite segnali chimici. Metodo: Abbiamo impiegato un paradigma di abituazione-disabituazione presentando alle iguane stimoli olfattivi e visivi di individui noti e ignoti, quantificando la frequenza e la durata dell'esplorazione, in particolare i saggi con la lingua diretti verso le marcature odorose. Risultati: I soggetti mostrano una risposta di disabituazione selettiva verso individui nuovi, esaminandone più a lungo i segnali chimici rispetto a quelli familiari, indicando la capacità di riconoscere singoli conspecifici e di ricordarne l'identità. Alcuni soggetti manifestano comportamenti non spiegabili col solo condizionamento associativo. Conclusioni: Le iguane distinguono individui specifici sulla base di firme chimiche e ne ritengono l'identità nel tempo, coerentemente con l'evidenza di riconoscimento individuale mediato da marcature odorose nei rettili squamati e con la crescente rivalutazione della loro cognizione sociale.",
+  "bibliografia": [
+   {
+    "autori": "Aragon P., Lopez P., Martin J.",
+    "anno": "2001",
+    "titolo": "Discrimination of femoral gland secretions from familiar and unfamiliar conspecifics by male Iberian rock-lizards, Lacerta monticola",
+    "fonte": "Journal of Herpetology 35(2):346-350",
+    "url": "https://doi.org/10.2307/1566130"
+   },
+   {
+    "autori": "Lopez P., Martin J.",
+    "anno": "2002",
+    "titolo": "Chemical rival recognition decreases aggression levels in male Iberian wall lizards, Podarcis hispanica",
+    "fonte": "Behavioral Ecology and Sociobiology 51(5):461-465",
+    "url": "https://doi.org/10.1007/s00265-002-0447-5"
+   },
+   {
+    "autori": "Carazo P., Font E., Desfilis E.",
+    "anno": "2008",
+    "titolo": "Beyond 'nasty neighbours' and 'dear enemies'? Individual recognition by scent marks in a lizard (Podarcis hispanica)",
+    "fonte": "Animal Behaviour 76(6):1953-1963",
+    "url": "https://doi.org/10.1016/j.anbehav.2008.08.018"
+   },
+   {
+    "autori": "Matsubara S., Deeming D.C., Wilkinson A.",
+    "anno": "2017",
+    "titolo": "Cold-blooded cognition: new directions in reptile cognition",
+    "fonte": "Current Opinion in Behavioral Sciences 16:126-130",
+    "url": "https://doi.org/10.1016/j.cobeha.2017.06.006"
+   }
+  ]
+ },
+ "exp-n5-proteomica-veleno": {
+  "abstract": "Obiettivo. Costruire un catalogo comparato delle tossine dei principali serpenti da laboratorio di Eden Exotic (universo 47B) per identificare bersagli farmacologici sfruttabili. Metodo. I veleni sono stati frazionati mediante RP-HPLC e le singole frazioni analizzate per spettrometria di massa in tandem (bottom-up e top-down), con assegnazione delle famiglie tossiniche e mappatura dei domini proteici attivi tramite ricerca in banche dati proteomiche dedicate. Risultati. Sono state risolte 47 famiglie di tossine ricorrenti, dominate da fosfolipasi A2, metalloproteasi, serina-proteasi e tossine a tre dita; l'analisi quantitativa ha evidenziato marcata variabilità interspecifica dei profili di abbondanza. Tre peptidi a tre dita a bassa abbondanza hanno mostrato affinità per canali del dolore in saggi preliminari, configurandosi come candidati analgesici. Conclusioni. La proteomica comparata fornisce una mappa razionale del veleno come libreria di ligandi bioattivi e indirizza la selezione dei bersagli terapeutici, in linea con l'approccio venomico consolidato in letteratura.",
+  "bibliografia": [
+   {
+    "autori": "Calvete J.J.",
+    "anno": "2018",
+    "titolo": "Snake venomics – from low-resolution toxin-pattern recognition to toxin-resolved venom proteomes with absolute quantification",
+    "fonte": "Expert Review of Proteomics 15(7):555-568",
+    "url": "https://doi.org/10.1080/14789450.2018.1500904"
+   },
+   {
+    "autori": "Calvete J.J. et al.",
+    "anno": "2007",
+    "titolo": "Snake venomics. Strategy and applications",
+    "fonte": "Journal of Mass Spectrometry 42(11):1405-1414",
+    "url": "https://doi.org/10.1002/jms.1242"
+   },
+   {
+    "autori": "Tasoulis T., Isbister G.K.",
+    "anno": "2017",
+    "titolo": "A Review and Database of Snake Venom Proteomes",
+    "fonte": "Toxins 9(9):290",
+    "url": "https://doi.org/10.3390/toxins9090290"
+   },
+   {
+    "autori": "Nirthanan S.",
+    "anno": "2020",
+    "titolo": "Snake three-finger α-neurotoxins and nicotinic acetylcholine receptors: molecules, mechanisms and medicine",
+    "fonte": "Biochemical Pharmacology 181:114168",
+    "url": "https://doi.org/10.1016/j.bcp.2020.114168"
+   }
+  ]
+ },
+ "exp-n5-peptide-antipertensivo": {
+  "abstract": "Obiettivo. Sviluppare un candidato antipertensivo derivato dai peptidi potenzianti la bradichinina (BPP) del veleno, sfruttandone l'attività inibitoria sull'enzima di conversione dell'angiotensina (ACE). Metodo. Analoghi ricchi in prolina sono stati prodotti per sintesi peptidica in fase solida e saggiati per inibizione dell'ACE su preparati tissutali e linee cellulari, con determinazione delle costanti di inibizione e valutazione della stabilità in siero; la farmacocinetica è stata stimata in modelli in vivo. Risultati. Un analogo strutturalmente ottimizzato ha mostrato inibizione potente e stabile dell'ACE in vitro, con potenziamento della risposta vasodepressoria alla bradichinina coerente con il meccanismo dei BPP che portò allo sviluppo del captopril. La resa in vivo è risultata tuttavia limitata da rapida degradazione e biodisponibilità orale insufficiente. Conclusioni. Il veleno conferma il proprio valore come fonte di scaffold per inibitori dell'ACE; l'ottimizzazione farmacocinetica resta il principale ostacolo alla traslazione terapeutica.",
+  "bibliografia": [
+   {
+    "autori": "Ferreira S.H., Bartelt D.C., Greene L.J.",
+    "anno": "1970",
+    "titolo": "Isolation of bradykinin-potentiating peptides from Bothrops jararaca venom",
+    "fonte": "Biochemistry 9(13):2583-2593",
+    "url": "https://doi.org/10.1021/bi00815a005"
+   },
+   {
+    "autori": "Ondetti M.A., Rubin B., Cushman D.W.",
+    "anno": "1977",
+    "titolo": "Design of specific inhibitors of angiotensin-converting enzyme: new class of orally active antihypertensive agents",
+    "fonte": "Science 196(4288):441-444",
+    "url": "https://doi.org/10.1126/science.191908"
+   },
+   {
+    "autori": "Cushman D.W., Ondetti M.A.",
+    "anno": "1991",
+    "titolo": "History of the design of captopril and related inhibitors of angiotensin converting enzyme",
+    "fonte": "Hypertension 17(4):589-592",
+    "url": "https://doi.org/10.1161/01.HYP.17.4.589"
+   },
+   {
+    "autori": "Camargo A.C.M. et al.",
+    "anno": "2012",
+    "titolo": "Bradykinin-potentiating peptides: Beyond captopril",
+    "fonte": "Toxicon 59(4):516-523",
+    "url": "https://doi.org/10.1016/j.toxicon.2011.07.013"
+   }
+  ]
+ },
+ "exp-n5-antiveleno-ricombinante": {
+  "abstract": "Obiettivo. Produrre un antisiero sintetico ad ampio spettro, efficace contro veleni di più specie e privo del ricorso all'immunizzazione animale. Metodo. Tossine ricombinanti rappresentative (tossine a tre dita, alfa-neurotossine a catena lunga, metalloproteasi) sono state usate come antigeni per la selezione di frammenti anticorpali umani da librerie phage display; i migliori leganti sono stati riformattati come IgG e testati in saggi di neutralizzazione in vitro e in modelli murini. Risultati. Un anticorpo monoclonale umano ampiamente neutralizzante ha bloccato alfa-neurotossine di due generi di elapidi con neutralizzazione crociata a basso rapporto molare, prolungando la sopravvivenza degli animali trattati. La copertura verso le metalloproteasi emorragiche è rimasta parziale, indicando la necessità di un cocktail oligoclonale. Conclusioni. La tecnologia phage display consente antiveleni ricombinanti umani sicuri e riproducibili; l'estensione dello spettro alle tossine ad azione tissutale richiede la combinazione di più anticorpi complementari.",
+  "bibliografia": [
+   {
+    "autori": "Ledsgaard L. et al.",
+    "anno": "2023",
+    "titolo": "Discovery and optimization of a broadly-neutralizing human monoclonal antibody against long-chain α-neurotoxins from snakes",
+    "fonte": "Nature Communications 14:682",
+    "url": "https://doi.org/10.1038/s41467-023-36393-4"
+   },
+   {
+    "autori": "Laustsen A.H. et al.",
+    "anno": "2018",
+    "titolo": "In vivo neutralization of dendrotoxin-mediated neurotoxicity of black mamba venom by oligoclonal human IgG antibodies",
+    "fonte": "Nature Communications 9:3928",
+    "url": "https://doi.org/10.1038/s41467-018-06086-4"
+   },
+   {
+    "autori": "Tasoulis T., Isbister G.K.",
+    "anno": "2017",
+    "titolo": "A Review and Database of Snake Venom Proteomes",
+    "fonte": "Toxins 9(9):290",
+    "url": "https://doi.org/10.3390/toxins9090290"
+   },
+   {
+    "autori": "Nirthanan S.",
+    "anno": "2020",
+    "titolo": "Snake three-finger α-neurotoxins and nicotinic acetylcholine receptors: molecules, mechanisms and medicine",
+    "fonte": "Biochemical Pharmacology 181:114168",
+    "url": "https://doi.org/10.1016/j.bcp.2020.114168"
+   }
+  ]
+ },
+ "exp-n5-neurotossina-dual-use": {
+  "abstract": "Obiettivo. Caratterizzare velocità di insorgenza e reversibilità del blocco neuromuscolare indotto dalle alfa-neurotossine, per definire il profilo tempo-effetto e i margini di sicurezza. Metodo. Preparati nervo-muscolo isolati sono stati impiegati in registrazioni elettrofisiologiche (voltage clamp e potenziali di placca) durante applicazione di alfa-neurotossine a catena corta e lunga; le curve di inibizione delle correnti indotte da acetilcolina sono state modellate secondo cinetiche di legame al recettore nicotinico muscolare, stimando costanti di associazione e dissociazione. Risultati. Le tossine a catena corta hanno mostrato insorgenza rapida con recupero lento e parziale del recettore muscolare, mentre alcune varianti hanno esibito reversibilità più marcata. Il modello cinetico ha riprodotto il profilo tempo-effetto osservato e i valori di IC50 nell'ordine nanomolare. Conclusioni. È stato definito un quadro quantitativo del blocco neuromuscolare; per la natura dual-use dei dati, il fascicolo è sottoposto a revisione ristretta con la sede N10 prima di ogni ulteriore diffusione.",
+  "bibliografia": [
+   {
+    "autori": "Rahman M.M. et al.",
+    "anno": "2022",
+    "titolo": "The molecular mechanism of snake short-chain α-neurotoxin binding to muscle-type nicotinic acetylcholine receptors",
+    "fonte": "Nature Communications 13:4869",
+    "url": "https://doi.org/10.1038/s41467-022-32174-7"
+   },
+   {
+    "autori": "Nirthanan S., Gwee M.C.E.",
+    "anno": "2004",
+    "titolo": "Three-finger α-neurotoxins and the nicotinic acetylcholine receptor, forty years on",
+    "fonte": "Journal of Pharmacological Sciences 94(1):1-17",
+    "url": "https://doi.org/10.1254/jphs.94.1"
+   },
+   {
+    "autori": "Nirthanan S.",
+    "anno": "2020",
+    "titolo": "Snake three-finger α-neurotoxins and nicotinic acetylcholine receptors: molecules, mechanisms and medicine",
+    "fonte": "Biochemical Pharmacology 181:114168",
+    "url": "https://doi.org/10.1016/j.bcp.2020.114168"
+   },
+   {
+    "autori": "Ledsgaard L. et al.",
+    "anno": "2023",
+    "titolo": "Discovery and optimization of a broadly-neutralizing human monoclonal antibody against long-chain α-neurotoxins from snakes",
+    "fonte": "Nature Communications 14:682",
+    "url": "https://doi.org/10.1038/s41467-023-36393-4"
+   }
+  ]
+ },
+ "exp-n6-forza-morso-varani": {
+  "abstract": "Obiettivo. Quantificare la forza del morso e la resistenza muscoloscheletrica dei varani sotto carico, integrando misure dirette e modellazione strutturale. Metodo. Trasduttori di forza applicati al morso hanno registrato i picchi durante prese volontarie, mentre videografia ad alta velocità ha ricostruito la cinematica di predazione; modelli tridimensionali del cranio derivati da tomografia sono stati analizzati con il metodo degli elementi finiti per valutare la distribuzione degli sforzi durante morso e trazione. Risultati. La forza specifica misurata è risultata superiore del 25% alle stime allometriche per la taglia; l'analisi strutturale ha però evidenziato che il cranio non è ottimizzato per morsi ad alta forza assoluta, bensì per resistere agli sforzi torsionali e di trazione della strategia grip-and-rip. Conclusioni. Nei varani la prestazione predatoria dipende dall'accoppiamento tra muscolatura potente e architettura cranica specializzata per il tirare, più che dalla sola forza di chiusura, coerentemente con i modelli biomeccanici noti per Varanus.",
+  "bibliografia": [
+   {
+    "autori": "Moreno K., Wroe S. et al.",
+    "anno": "2008",
+    "titolo": "Cranial performance in the Komodo dragon (Varanus komodoensis) as revealed by high-resolution 3-D finite element analysis",
+    "fonte": "Journal of Anatomy 212(6):736-746",
+    "url": "https://doi.org/10.1111/j.1469-7580.2008.00899.x"
+   },
+   {
+    "autori": "D'Amore D.C. et al.",
+    "anno": "2011",
+    "titolo": "The effects of biting and pulling on the forces generated during feeding in the Komodo dragon (Varanus komodoensis)",
+    "fonte": "PLoS ONE 6(10):e26226",
+    "url": "https://doi.org/10.1371/journal.pone.0026226"
+   },
+   {
+    "autori": "Fry B.G. et al.",
+    "anno": "2009",
+    "titolo": "A central role for venom in predation by Varanus komodoensis and the extinct giant Varanus (Megalania) priscus",
+    "fonte": "PNAS 106(22):8969-8974",
+    "url": "https://doi.org/10.1073/pnas.0810883106"
+   },
+   {
+    "autori": "Clemente C.J., Withers P.C., Thompson G.G.",
+    "anno": "2009",
+    "titolo": "Metabolic rate and endurance capacity in Australian varanid lizards (Squamata: Varanidae: Varanus)",
+    "fonte": "Biological Journal of the Linnean Society 97(3):664-676",
+    "url": "https://doi.org/10.1111/j.1095-8312.2009.01207.x"
+   }
+  ]
+ },
+ "exp-n6-resilienza-ipossia": {
+  "abstract": "Obiettivo. Valutare la resistenza dei varani a sforzo prolungato in ambienti a basso ossigeno e i meccanismi che ne sostengono l'endurance. Metodo. Gli animali sono stati sottoposti a prove su tapis roulant in camera a ossigeno controllato, con monitoraggio della ventilazione, misura del consumo massimo di ossigeno e campionamento del lattato ematico durante esercizio e recupero. Risultati. I varani hanno mantenuto un elevato tasso metabolico massimo positivamente correlato all'endurance; in ipossia moderata la ventilazione è stata sostenuta dalla pompa gulare a pressione positiva, che affianca la respirazione costale. Il recupero del lattato è risultato più rapido rispetto ai controlli, coerentemente con l'efficienza ventilatoria accessoria. Conclusioni. La pompa gulare rappresenta un adattamento chiave che, disaccoppiando ventilazione e locomozione, attenua il vincolo assiale e migliora la tolleranza allo sforzo in condizioni di ossigeno ridotto, in accordo con la fisiologia nota dei varanidi.",
+  "bibliografia": [
+   {
+    "autori": "Owerkowicz T., Farmer C.G., Hicks J.W., Brainerd E.L.",
+    "anno": "1999",
+    "titolo": "Contribution of gular pumping to lung ventilation in monitor lizards",
+    "fonte": "Science 284(5420):1661-1663",
+    "url": "https://doi.org/10.1126/science.284.5420.1661"
+   },
+   {
+    "autori": "Clemente C.J., Withers P.C., Thompson G.G.",
+    "anno": "2009",
+    "titolo": "Metabolic rate and endurance capacity in Australian varanid lizards (Squamata: Varanidae: Varanus)",
+    "fonte": "Biological Journal of the Linnean Society 97(3):664-676",
+    "url": "https://doi.org/10.1111/j.1095-8312.2009.01207.x"
+   },
+   {
+    "autori": "Bennett A.F.",
+    "anno": "1978",
+    "titolo": "Activity metabolism in the lower vertebrates",
+    "fonte": "Annual Review of Physiology 40:447-469",
+    "url": "https://doi.org/10.1146/annurev.ph.40.030178.002311"
+   },
+   {
+    "autori": "Bickler P.E., Buck L.T.",
+    "anno": "2007",
+    "titolo": "Hypoxia tolerance in reptiles, amphibians, and fishes: life with variable oxygen availability",
+    "fonte": "Annual Review of Physiology 69:145-170",
+    "url": "https://doi.org/10.1146/annurev.physiol.69.031905.162529"
+   }
+  ]
+ },
+ "exp-n6-termoregolazione-estrema": {
+  "abstract": "Obiettivo. Determinare la finestra termica operativa entro cui i varani mantengono piena capacità motoria e definire la soglia critica di collasso della coordinazione. Metodo. La temperatura corporea è stata registrata per telemetria durante prove di locomozione a temperature crescenti; velocità di sprint, frequenza e lunghezza del passo sono state misurate con videografia, e la performance rapportata a curve termiche di prestazione con stima dei coefficienti Q10. Risultati. La prestazione motoria è rimasta stabile fino a circa 40 gradi, con bassa dipendenza termica nell'intervallo preferito, seguita da un calo brusco della coordinazione oltre la soglia critica, in accordo con la forma asimmetrica delle curve termiche di prestazione. La potenza muscolare si è mostrata il principale fattore limitante alle alte temperature. Conclusioni. I varani dispongono di un ampio plateau termico di piena efficienza motoria ma di un margine ristretto oltre l'optimum, il che vincola l'impiego in ambienti termici estremi, coerentemente con la letteratura sulla dipendenza termica della locomozione nei sauri.",
+  "bibliografia": [
+   {
+    "autori": "Marsh R.L., Bennett A.F.",
+    "anno": "1986",
+    "titolo": "Thermal dependence of sprint performance of the lizard Sceloporus occidentalis",
+    "fonte": "Journal of Experimental Biology 126:79-87",
+    "url": "https://doi.org/10.1242/jeb.126.1.79"
+   },
+   {
+    "autori": "Swoap S.J., Johnson T.P., Josephson R.K., Bennett A.F.",
+    "anno": "1993",
+    "titolo": "Temperature, muscle power output and limitations on burst locomotor performance of the lizard Dipsosaurus dorsalis",
+    "fonte": "Journal of Experimental Biology 174:185-197",
+    "url": "https://doi.org/10.1242/jeb.174.1.185"
+   },
+   {
+    "autori": "Bennett A.F.",
+    "anno": "1978",
+    "titolo": "Activity metabolism in the lower vertebrates",
+    "fonte": "Annual Review of Physiology 40:447-469",
+    "url": "https://doi.org/10.1146/annurev.ph.40.030178.002311"
+   },
+   {
+    "autori": "Clemente C.J., Withers P.C., Thompson G.G.",
+    "anno": "2009",
+    "titolo": "Metabolic rate and endurance capacity in Australian varanid lizards (Squamata: Varanidae: Varanus)",
+    "fonte": "Biological Journal of the Linnean Society 97(3):664-676",
+    "url": "https://doi.org/10.1111/j.1095-8312.2009.01207.x"
+   }
+  ]
+ },
+ "exp-n6-integrazione-operativa-carico": {
+  "abstract": "Obiettivo. Studiare la portata di carico sostenibile dai varani e l'affaticamento associato, in vista di impieghi operativi supervisionati. Metodo. Gli animali hanno percorso tracciati strumentati indossando imbragature con masse incrementali; sono stati registrati costo metabolico, endurance su pista circolare, cinematica del passo e recupero del lattato, con valutazione parallela di indicatori di benessere. Risultati. Il carico sostenibile senza compromissione della locomozione si è attestato attorno al 15% del peso corporeo; oltre tale soglia l'endurance è calata rapidamente e il costo metabolico è cresciuto in modo non lineare, con segni di affaticamento muscoloscheletrico. L'elevato tasso metabolico massimo dei varanidi ha comunque permesso prestazioni superiori a quelle attese per la taglia. Conclusioni. Esiste una soglia di carico oltre la quale il rapporto costo-prestazione degrada bruscamente; alla luce delle obiezioni interne sul benessere animale, il protocollo è stato rivisto per limitare masse e durata delle prove entro margini fisiologici conservativi.",
+  "bibliografia": [
+   {
+    "autori": "Clemente C.J., Withers P.C., Thompson G.G.",
+    "anno": "2009",
+    "titolo": "Metabolic rate and endurance capacity in Australian varanid lizards (Squamata: Varanidae: Varanus)",
+    "fonte": "Biological Journal of the Linnean Society 97(3):664-676",
+    "url": "https://doi.org/10.1111/j.1095-8312.2009.01207.x"
+   },
+   {
+    "autori": "Owerkowicz T., Farmer C.G., Hicks J.W., Brainerd E.L.",
+    "anno": "1999",
+    "titolo": "Contribution of gular pumping to lung ventilation in monitor lizards",
+    "fonte": "Science 284(5420):1661-1663",
+    "url": "https://doi.org/10.1126/science.284.5420.1661"
+   },
+   {
+    "autori": "Bennett A.F.",
+    "anno": "1978",
+    "titolo": "Activity metabolism in the lower vertebrates",
+    "fonte": "Annual Review of Physiology 40:447-469",
+    "url": "https://doi.org/10.1146/annurev.ph.40.030178.002311"
+   },
+   {
+    "autori": "Marsh R.L., Bennett A.F.",
+    "anno": "1986",
+    "titolo": "Thermal dependence of sprint performance of the lizard Sceloporus occidentalis",
+    "fonte": "Journal of Experimental Biology 126:79-87",
+    "url": "https://doi.org/10.1242/jeb.126.1.79"
+   }
+  ]
+ },
+ "exp-n7-osmoregolazione-marina": {
+  "abstract": "Obiettivo. Chiarire come le tartarughe marine mantengano l'equilibrio idrico-salino in acqua ipersalina, quantificando la capacità escretoria delle ghiandole del sale. Metodo. Sotto carico osmotico controllato (iniezione di soluzioni saline) è stato misurato il tasso di secrezione delle ghiandole lacrimali del sale, con determinazione della concentrazione osmotica e delle velocità di escrezione di sodio e potassio nelle lacrime; parametri ematici come ematocrito e sodiemia hanno tracciato la risposta sistemica. Risultati. La secrezione ghiandolare ha raggiunto concentrazioni marcatamente ipertoniche rispetto al plasma e all'acqua di mare, con capacità escretoria superiore alle stime; la modulazione della risposta al carico è apparsa sotto controllo ormonale più fine del previsto. In assenza di accesso all'acqua marina si è osservata rapida disidratazione con incremento di ematocrito e sodiemia. Conclusioni. Le ghiandole del sale extrarenali costituiscono il meccanismo primario di osmoregolazione dei rettili marini, con una regolazione dinamica che eccede le previsioni dei modelli classici.",
+  "bibliografia": [
+   {
+    "autori": "Schmidt-Nielsen K., Fänge R.",
+    "anno": "1958",
+    "titolo": "Salt Glands in Marine Reptiles",
+    "fonte": "Nature 182:783-785",
+    "url": "https://doi.org/10.1038/182783a0"
+   },
+   {
+    "autori": "Marshall A.T., Saddlier S.R.",
+    "anno": "1989",
+    "titolo": "Secretory capacity of the lachrymal salt gland of hatchling sea turtles, Chelonia mydas",
+    "fonte": "Journal of Comparative Physiology B 159:317-322",
+    "url": "https://doi.org/10.1007/BF00691014"
+   },
+   {
+    "autori": "Reina R.D., Jones T.T., Spotila J.R.",
+    "anno": "2002",
+    "titolo": "Salt and water regulation by the leatherback sea turtle Dermochelys coriacea",
+    "fonte": "Journal of Experimental Biology 205(13):1853-1860",
+    "url": "https://doi.org/10.1242/jeb.205.13.1853"
+   }
+  ]
+ },
+ "exp-n7-navigazione-magnetica": {
+  "abstract": "Obiettivo. Verificare se le tartarughe marine giovani utilizzino il campo geomagnetico come mappa per l'orientamento a lungo raggio, oltre che come bussola. Metodo. In vasca circolare, gli individui sono stati esposti a campi magnetici replicanti la firma (intensità e inclinazione) di località distinte lungo la rotta migratoria; la direzione di nuoto è stata registrata e analizzata con statistica circolare per verificarne la coerenza con la posizione geografica simulata. Risultati. Le tartarughe hanno modificato la rotta in modo coerente con la latitudine e la posizione simulate dai campi imposti, orientandosi come se dovessero rientrare sulla traiettoria migratoria corretta. Ciò conferma la capacità di estrarre informazione posizionale bicoordinata dal campo terrestre, distinta dalla semplice informazione direzionale. Conclusioni. I risultati sostengono l'esistenza di una vera mappa magnetica nei rettili marini, in cui elementi geomagnetici fungono da marcatori di navigazione, coerentemente con le evidenze sperimentali consolidate sul loggerhead e sulla Chelonia mydas.",
+  "bibliografia": [
+   {
+    "autori": "Lohmann K.J., Lohmann C.M.F., Ehrhart L.M., Bagley D.A., Swing T.",
+    "anno": "2004",
+    "titolo": "Geomagnetic map used in sea-turtle navigation",
+    "fonte": "Nature 428:909-910",
+    "url": "https://doi.org/10.1038/428909a"
+   },
+   {
+    "autori": "Lohmann K.J., Cain S.D., Dodge S.A., Lohmann C.M.F.",
+    "anno": "2001",
+    "titolo": "Regional magnetic fields as navigational markers for sea turtles",
+    "fonte": "Science 294(5541):364-366",
+    "url": "https://doi.org/10.1126/science.1064557"
+   },
+   {
+    "autori": "Lohmann K.J., Lohmann C.M.F., Putman N.F.",
+    "anno": "2008",
+    "titolo": "Geomagnetic Navigation and Magnetic Maps in Sea Turtles",
+    "fonte": "Navigation 55(3):185-195",
+    "url": "https://doi.org/10.1002/j.2161-4296.2008.tb00422.x"
+   }
+  ]
+ },
+ "exp-n7-longevita-senescenza-trascurabile": {
+  "abstract": "Obiettivo. Individuare i meccanismi cellulari alla base della lunghissima longevità dei rettili marini e testare l'ipotesi di senescenza trascurabile. Metodo. Su coorti di età molto diverse sono state misurate la lunghezza dei telomeri e le difese antiossidanti tissutali, insieme a marcatori di danno ossidativo; i tassi di mortalità e i profili biochimici sono stati confrontati tra classi d'età per stimare la dinamica di invecchiamento. Risultati. L'erosione telomerica è risultata minima e le difese antiossidanti costitutive elevate anche negli individui più anziani, con basso danno ossidativo. I tassi di senescenza sono apparsi rallentati o trascurabili in gran parte del campione, pur non escludendo un declino tardivo di sopravvivenza osservato in popolazioni naturali. Conclusioni. La longevità eccezionale dei testudinati sembra sostenuta da un'efficiente gestione dello stress ossidativo e da una lenta attrizione telomerica, coerentemente con le evidenze comparative che collocano molte specie tra gli organismi a senescenza lenta o trascurabile.",
+  "bibliografia": [
+   {
+    "autori": "da Silva R. et al.",
+    "anno": "2022",
+    "titolo": "Slow and negligible senescence among testudines challenges evolutionary theories of senescence",
+    "fonte": "Science 376(6600):1466-1470",
+    "url": "https://doi.org/10.1126/science.abl7811"
+   },
+   {
+    "autori": "Warner D.A., Miller D.A.W., Bronikowski A.M., Janzen F.J.",
+    "anno": "2016",
+    "titolo": "Decades of field data reveal that turtles senesce in the wild",
+    "fonte": "PNAS 113(23):6502-6507",
+    "url": "https://doi.org/10.1073/pnas.1600035113"
+   },
+   {
+    "autori": "Bickler P.E., Buck L.T.",
+    "anno": "2007",
+    "titolo": "Hypoxia tolerance in reptiles, amphibians, and fishes: life with variable oxygen availability",
+    "fonte": "Annual Review of Physiology 69:145-170",
+    "url": "https://doi.org/10.1146/annurev.physiol.69.031905.162529"
+   }
+  ]
+ },
+ "exp-n7-immersione-metabolismo": {
+  "abstract": "Obiettivo. Comprendere come la funzione tissutale sia preservata durante immersioni prolungate a basso ossigeno nei rettili marini. Metodo. Durante immersioni sperimentali, frequenza cardiaca e attività locomotoria sono state monitorate per telemetria, con campionamento seriale dei gas ematici e degli indicatori di metabolismo anaerobico; le risposte cardiovascolari sono state correlate a profondità e durata dei tuffi. Risultati. Si è osservata bradicardia profonda durante le immersioni più lunghe, con caduta transitoria della frequenza cardiaca e ridistribuzione del flusso ematico verso gli organi critici, a tutela delle riserve di ossigeno prevalentemente polmonari. La depressione metabolica e le difese antiossidanti hanno limitato il danno da riossigenazione al risalire. Alcune vie citoprotettive attivate sono risultate condivise con i pattern di tolleranza all'ipossia dell'axolotl studiato nella sede N3. Conclusioni. La tolleranza all'apnea dei rettili marini combina bradicardia riflessa, ridistribuzione circolatoria e soppressione metabolica, in linea con i meccanismi noti di resistenza all'ipossia e all'anossia nei rettili.",
+  "bibliografia": [
+   {
+    "autori": "Saito A., Kinoshita C., Sakai K., Sato K., Sakamoto K.Q.",
+    "anno": "2024",
+    "titolo": "Heart rate reduction during voluntary deep diving in free-ranging loggerhead sea turtles",
+    "fonte": "Journal of Experimental Biology 227(5):jeb246334",
+    "url": "https://doi.org/10.1242/jeb.246334"
+   },
+   {
+    "autori": "Jackson D.C.",
+    "anno": "2002",
+    "titolo": "Hibernating without oxygen: physiological adaptations of the painted turtle",
+    "fonte": "Journal of Physiology 543(3):731-737",
+    "url": "https://doi.org/10.1113/jphysiol.2002.024729"
+   },
+   {
+    "autori": "Bickler P.E., Buck L.T.",
+    "anno": "2007",
+    "titolo": "Hypoxia tolerance in reptiles, amphibians, and fishes: life with variable oxygen availability",
+    "fonte": "Annual Review of Physiology 69:145-170",
+    "url": "https://doi.org/10.1146/annurev.physiol.69.031905.162529"
+   },
+   {
+    "autori": "Storey K.B.",
+    "anno": "2007",
+    "titolo": "Anoxia tolerance in turtles: Metabolic regulation and gene expression",
+    "fonte": "Comparative Biochemistry and Physiology A 147(2):263-276",
+    "url": "https://doi.org/10.1016/j.cbpa.2006.03.019"
+   }
+  ]
+ },
+ "exp-n8-cromatofori-nanocristalli": {
+  "abstract": "Contesto. Presso la facility N8 di Eden Exotic (universo 47B) si è indagato il substrato fisico del cambiamento cromatico rapido nei camaleonti, distinguendo il contributo dei pigmenti da quello del colore strutturale. Metodi. Campioni cutanei di soggetti stimolati in condizioni controllate sono stati analizzati mediante microscopia elettronica a trasmissione e spettrofotometria a riflettanza, correlando la geometria del reticolo di nanocristalli di guanina negli iridofori con gli spettri misurati durante transizioni indotte. Risultati. La variazione cromatica non è spiegata dalla sola dispersione o aggregazione dei pigmenti: gli animali modulano attivamente la spaziatura tra i nanocristalli nello strato superficiale di iridofori, spostando il picco di riflettanza dal verde-blu al giallo-arancio in accordo con la teoria dei cristalli fotonici. Uno strato profondo di iridofori con cristalli più grandi riflette la componente vicino-infrarossa. Conclusioni. Il colore dei camaleonti è prevalentemente strutturale e sotto controllo fisiologico attivo; il modello a doppio strato riconcilia mimetismo, segnalazione e protezione termica, e fornisce la base meccanicistica per i protocolli comportamentali della facility N8.",
+  "bibliografia": [
+   {
+    "autori": "Teyssier J. et al.",
+    "anno": "2015",
+    "titolo": "Photonic crystals cause active colour change in chameleons",
+    "fonte": "Nature Communications 6:6368",
+    "url": "https://doi.org/10.1038/ncomms7368"
+   },
+   {
+    "autori": "Saenko S.V. et al.",
+    "anno": "2013",
+    "titolo": "Precise colocalization of interacting structural and pigmentary elements generates extensive color pattern variation in Phelsuma lizards",
+    "fonte": "BMC Biology 11:105",
+    "url": "https://doi.org/10.1186/1741-7007-11-105"
+   },
+   {
+    "autori": "Vukusic P. & Sambles J.R.",
+    "anno": "2003",
+    "titolo": "Photonic structures in biology",
+    "fonte": "Nature 424(6950):852-855",
+    "url": "https://doi.org/10.1038/nature01941"
+   },
+   {
+    "autori": "Stuart-Fox D. & Moussalli A.",
+    "anno": "2008",
+    "titolo": "Selection for social signalling drives the evolution of chameleon colour change",
+    "fonte": "PLoS Biology 6(1):e25",
+    "url": "https://doi.org/10.1371/journal.pbio.0060025"
+   }
+  ]
+ },
+ "exp-n8-mimetismo-adattivo": {
+  "abstract": "Contesto. La facility N8 ha quantificato velocità e fedeltà con cui i camaleonti adattano la livrea allo sfondo (background matching), valutando le prestazioni dal punto di vista dei predatori. Metodi. I soggetti sono stati esposti in arene a sfondi naturali e artificiali; la riflettanza cutanea è stata registrata con spettrofotometria calibrata e i valori proiettati in spazi cromatici che modellano la visione di predatori aviari e serpenti, calcolando distanze percettive (JND) tra animale e sfondo. Risultati. Su substrati naturali (corteccia, fogliame) l'adattamento è rapido ed efficace, riducendo il contrasto sotto la soglia di discriminazione dei predatori simulati entro pochi minuti. Su pattern artificiali ad alto contrasto la corrispondenza resta parziale, coerentemente con l'ipotesi che il sistema sia ottimizzato per statistiche cromatiche naturali. Le risposte risultano inoltre predatore-specifiche. Conclusioni. Il mimetismo dei camaleonti è un processo attivo e sensibile al contesto, ma vincolato dal repertorio cromatico evoluto; i risultati definiscono i limiti operativi da considerare nei programmi di rilascio e reintroduzione della facility N8.",
+  "bibliografia": [
+   {
+    "autori": "Stevens M. & Merilaita S.",
+    "anno": "2009",
+    "titolo": "Animal camouflage: current issues and new perspectives",
+    "fonte": "Philosophical Transactions of the Royal Society B 364(1516):423-427",
+    "url": "https://doi.org/10.1098/rstb.2008.0217"
+   },
+   {
+    "autori": "Stuart-Fox D., Moussalli A. & Whiting M.J.",
+    "anno": "2008",
+    "titolo": "Predator-specific camouflage in chameleons",
+    "fonte": "Biology Letters 4(4):326-329",
+    "url": "https://doi.org/10.1098/rsbl.2008.0173"
+   },
+   {
+    "autori": "Stuart-Fox D. & Moussalli A.",
+    "anno": "2008",
+    "titolo": "Selection for social signalling drives the evolution of chameleon colour change",
+    "fonte": "PLoS Biology 6(1):e25",
+    "url": "https://doi.org/10.1371/journal.pbio.0060025"
+   },
+   {
+    "autori": "Teyssier J. et al.",
+    "anno": "2015",
+    "titolo": "Photonic crystals cause active colour change in chameleons",
+    "fonte": "Nature Communications 6:6368",
+    "url": "https://doi.org/10.1038/ncomms7368"
+   }
+  ]
+ },
+ "exp-n8-segnalazione-sociale-colore": {
+  "abstract": "Contesto. Presso N8 si è verificato se il cambiamento cromatico dei camaleonti serva, oltre al mimetismo, alla comunicazione tra individui, distinguendo le due funzioni. Metodi. Durante incontri territoriali standardizzati con manichini colorati calibrati, i pattern cromatici dei fianchi, della testa e delle strisce laterali sono stati registrati con imaging multispettrale e analizzati per luminanza, saturazione e velocità di variazione, correlandoli all'esito comportamentale del conflitto. Risultati. I colori accesi esibiti sui fianchi e sulla testa durante l'escalation predicono l'esito degli scontri: individui che raggiungono maggiore brillanza cefalica e maggiore velocità di viraggio vincono più frequentemente, mentre i perdenti adottano livree sommesse. Regioni corporee diverse veicolano informazioni distinte (motivazione ad avvicinarsi vs. capacità competitiva). Questi segnali operano su scale cromatiche e spaziali diverse da quelle impiegate per il background matching. Conclusioni. Il colore nei camaleonti ha una funzione segnaletica sociale distinta dal mimetismo; la doppia funzione, mediata dallo stesso apparato di iridofori, informa i protocolli di gestione sociale in cattività della facility N8.",
+  "bibliografia": [
+   {
+    "autori": "Ligon R.A. & McGraw K.J.",
+    "anno": "2013",
+    "titolo": "Chameleons communicate with complex colour changes during contests: different body regions convey different information",
+    "fonte": "Biology Letters 9(6):20130892",
+    "url": "https://doi.org/10.1098/rsbl.2013.0892"
+   },
+   {
+    "autori": "Stuart-Fox D. & Moussalli A.",
+    "anno": "2008",
+    "titolo": "Selection for social signalling drives the evolution of chameleon colour change",
+    "fonte": "PLoS Biology 6(1):e25",
+    "url": "https://doi.org/10.1371/journal.pbio.0060025"
+   },
+   {
+    "autori": "Stuart-Fox D., Moussalli A. & Whiting M.J.",
+    "anno": "2008",
+    "titolo": "Predator-specific camouflage in chameleons",
+    "fonte": "Biology Letters 4(4):326-329",
+    "url": "https://doi.org/10.1098/rsbl.2008.0173"
+   },
+   {
+    "autori": "Teyssier J. et al.",
+    "anno": "2015",
+    "titolo": "Photonic crystals cause active colour change in chameleons",
+    "fonte": "Nature Communications 6:6368",
+    "url": "https://doi.org/10.1038/ncomms7368"
+   }
+  ]
+ },
+ "exp-n8-conservazione-reintroduzione": {
+  "abstract": "Contesto. La facility N8 ha valutato l'idoneità alla reintroduzione di camaleonti allevati in cattività, verificando la conservazione delle capacità mimetiche e antipredatorie necessarie in natura. Metodi. In condizioni seminaturali sono state confrontate risposte cromatiche allo sfondo, latenza al cambiamento di livrea e comportamenti antipredatori (immobilità, oscillazione, fuga) tra soggetti captivi e selvatici, con stimoli predatori simulati e analisi colorimetrica calibrata sulla visione dei predatori. Risultati. I captivi mostrano risposte cromatiche più lente e meno complete e un repertorio antipredatorio attenuato rispetto ai selvatici, coerentemente con la deprivazione sensoriale e la ridotta esposizione a predatori tipiche dell'ambiente controllato. Le differenze si riducono dopo un programma di arricchimento ambientale con substrati variabili e addestramento antipredatorio. Conclusioni. La cattività erode ma non elimina le competenze mimetiche; il condizionamento antipredatorio pre-rilascio e l'arricchimento sono raccomandati per allineare i soggetti agli standard di sopravvivenza selvatici, in linea con le migliori pratiche della biologia della reintroduzione adottate dalla facility N8.",
+  "bibliografia": [
+   {
+    "autori": "Griffin A.S., Blumstein D.T. & Evans C.S.",
+    "anno": "2000",
+    "titolo": "Training captive-bred or translocated animals to avoid predators",
+    "fonte": "Conservation Biology 14(5):1317-1326",
+    "url": "https://doi.org/10.1046/j.1523-1739.2000.99326.x"
+   },
+   {
+    "autori": "Seddon P.J., Armstrong D.P. & Maloney R.F.",
+    "anno": "2007",
+    "titolo": "Developing the science of reintroduction biology",
+    "fonte": "Conservation Biology 21(2):303-312",
+    "url": "https://doi.org/10.1111/j.1523-1739.2006.00627.x"
+   },
+   {
+    "autori": "Stuart-Fox D., Moussalli A. & Whiting M.J.",
+    "anno": "2008",
+    "titolo": "Predator-specific camouflage in chameleons",
+    "fonte": "Biology Letters 4(4):326-329",
+    "url": "https://doi.org/10.1098/rsbl.2008.0173"
+   },
+   {
+    "autori": "Stevens M. & Merilaita S.",
+    "anno": "2009",
+    "titolo": "Animal camouflage: current issues and new perspectives",
+    "fonte": "Philosophical Transactions of the Royal Society B 364(1516):423-427",
+    "url": "https://doi.org/10.1098/rstb.2008.0217"
+   }
+  ]
+ },
+ "exp-n9-modello-adattamento-freddo": {
+  "abstract": "Contesto: La tolleranza al freddo nelle specie ectoterme dipende da adattamenti molecolari quali proteine antigelo, nucleatori del ghiaccio e rimodellamento del metabolismo lipidico. Metodo: Abbiamo addestrato modelli di apprendimento automatico su dati genomici comparativi e fenotipi termici noti, integrando selezione delle feature e validazione incrociata per predire le varianti geniche associate alla tolleranza termica. Risultati: Il modello ha raggiunto un'accuratezza predittiva del 78%, assegnando peso predominante a geni codificanti proteine antigelo e a vie del metabolismo lipidico e della risposta allo stress ossidativo. Le predizioni sono coerenti con i meccanismi noti di sopravvivenza al congelamento nei vertebrati ectotermi. Conclusioni: L'approccio consente di prioritizzare i bersagli genetici per la tolleranza al freddo; la validazione sperimentale e l'ampliamento del set di specie sono necessari per ridurre il sovradattamento e migliorare la trasferibilità tra taxa.",
+  "bibliografia": [
+   {
+    "autori": "Libbrecht M.W., Noble W.S.",
+    "anno": "2015",
+    "titolo": "Machine learning applications in genetics and genomics",
+    "fonte": "Nature Reviews Genetics 16(6):321-332",
+    "url": "https://doi.org/10.1038/nrg3920"
+   },
+   {
+    "autori": "Storey K.B., Storey J.M.",
+    "anno": "2017",
+    "titolo": "Molecular physiology of freeze tolerance in vertebrates",
+    "fonte": "Physiological Reviews 97(2):623-665",
+    "url": "https://doi.org/10.1152/physrev.00016.2016"
+   },
+   {
+    "autori": "Duman J.G.",
+    "anno": "2001",
+    "titolo": "Antifreeze and ice nucleator proteins in terrestrial arthropods",
+    "fonte": "Annual Review of Physiology 63:327-357",
+    "url": "https://doi.org/10.1146/annurev.physiol.63.1.327"
+   },
+   {
+    "autori": "Storey K.B., Storey J.M.",
+    "anno": "2013",
+    "titolo": "Molecular biology of freezing tolerance",
+    "fonte": "Comprehensive Physiology 3(3):1283-1308",
+    "url": "https://doi.org/10.1002/cphy.c130007"
+   }
+  ]
+ },
+ "exp-n9-predizione-effetti-editing": {
+  "abstract": "Contesto: La riduzione degli effetti fuori bersaglio è essenziale per la sicurezza degli interventi CRISPR-Cas9 pianificati nelle altre sedi. Metodo: Abbiamo modellato in silico l'attività di taglio di sgRNA candidati mediante reti neurali profonde addestrate su dati sperimentali di clivaggio genome-wide, integrando la predizione dell'efficacia on-target e del profilo off-target in un unico flusso di progettazione delle guide. Risultati: Nei disegni sperimentali sottoposti a verifica, la selezione delle guide guidata dal modello ha ridotto del 30% i tagli fuori bersaglio rispetto alle guide scelte con criteri convenzionali, mantenendo l'efficacia on-target. I siti off-target predetti sono stati confermati mediante sequenziamento mirato. Conclusioni: L'integrazione della predizione off-target nella progettazione delle guide riduce il rischio di editing non desiderato; la validazione sperimentale sistematica resta necessaria, poiché una frazione dei siti off-target non è catturata dai soli metodi computazionali.",
+  "bibliografia": [
+   {
+    "autori": "Tsai S.Q., Zheng Z., Nguyen N.T., et al.",
+    "anno": "2015",
+    "titolo": "GUIDE-seq enables genome-wide profiling of off-target cleavage by CRISPR-Cas nucleases",
+    "fonte": "Nature Biotechnology 33(2):187-197",
+    "url": "https://doi.org/10.1038/nbt.3117"
+   },
+   {
+    "autori": "Doench J.G., Fusi N., Sullender M., et al.",
+    "anno": "2016",
+    "titolo": "Optimized sgRNA design to maximize activity and minimize off-target effects of CRISPR-Cas9",
+    "fonte": "Nature Biotechnology 34(2):184-191",
+    "url": "https://doi.org/10.1038/nbt.3437"
+   },
+   {
+    "autori": "Listgarten J., Weinstein M., Kleinstiver B.P., et al.",
+    "anno": "2018",
+    "titolo": "Prediction of off-target activities for the end-to-end design of CRISPR guide RNAs",
+    "fonte": "Nature Biomedical Engineering 2(1):38-47",
+    "url": "https://doi.org/10.1038/s41551-017-0178-6"
+   },
+   {
+    "autori": "Chuai G., Ma H., Yan J., et al.",
+    "anno": "2018",
+    "titolo": "DeepCRISPR: optimized CRISPR guide RNA design by deep learning",
+    "fonte": "Genome Biology 19:80",
+    "url": "https://doi.org/10.1186/s13059-018-1459-4"
+   }
+  ]
+ },
+ "exp-n9-atlante-espressione-multitessuto": {
+  "abstract": "Contesto: L'integrazione dei dataset di RNA-seq generati dalle diverse facility è ostacolata da effetti batch tecnici e biologici. Metodo: Abbiamo costruito una pipeline di armonizzazione che corregge gli effetti batch mediante identificazione di vicini mutui più prossimi e proiezione in uno spazio latente condiviso, seguita da clustering non supervisionato e confronto dei moduli di espressione tra specie. Risultati: L'atlante integrato ha permesso il raggruppamento delle cellule per tipo cellulare anziché per dataset di origine. Sono emersi moduli di espressione conservati associati alla riparazione tissutale, condivisi tra axolotl, tartarughe e varani, suggerendo un programma trascrizionale rigenerativo comune. Conclusioni: L'atlante comparativo fornisce una risorsa per lo studio cross-specie della rigenerazione; l'interpretazione dei moduli conservati richiede validazione funzionale e attenzione ai limiti dell'ortologia tra taxa distanti.",
+  "bibliografia": [
+   {
+    "autori": "Stuart T., Butler A., Hoffman P., et al.",
+    "anno": "2019",
+    "titolo": "Comprehensive integration of single-cell data",
+    "fonte": "Cell 177(7):1888-1902",
+    "url": "https://doi.org/10.1016/j.cell.2019.05.031"
+   },
+   {
+    "autori": "Haghverdi L., Lun A.T.L., Morgan M.D., Marioni J.C.",
+    "anno": "2018",
+    "titolo": "Batch effects in single-cell RNA-sequencing data are corrected by matching mutual nearest neighbors",
+    "fonte": "Nature Biotechnology 36(5):421-427",
+    "url": "https://doi.org/10.1038/nbt.4091"
+   },
+   {
+    "autori": "Korsunsky I., Millard N., Fan J., et al.",
+    "anno": "2019",
+    "titolo": "Fast, sensitive and accurate integration of single-cell data with Harmony",
+    "fonte": "Nature Methods 16(12):1289-1296",
+    "url": "https://doi.org/10.1038/s41592-019-0619-0"
+   },
+   {
+    "autori": "Libbrecht M.W., Noble W.S.",
+    "anno": "2015",
+    "titolo": "Machine learning applications in genetics and genomics",
+    "fonte": "Nature Reviews Genetics 16(6):321-332",
+    "url": "https://doi.org/10.1038/nrg3920"
+   }
+  ]
+ },
+ "exp-n9-anomalie-neurali-emergenti": {
+  "abstract": "Contesto: La ricerca di correlati genomici inattesi associati a comportamenti cognitivi non previsti richiede un controllo statistico rigoroso per evitare falsi positivi. Metodo: Abbiamo condotto analisi di associazione tra varianti genetiche e fenotipi comportamentali segnalati dalle sedi, applicando stima della componente genetica della varianza, correzione per struttura di popolazione e correzione per test multipli. Risultati: È emerso un segnale debole ma ricorrente su vie dello sviluppo neurale; l'entità dell'effetto è modesta e la significatività al limite delle soglie corrette. In coerenza con la nota fragilità dei risultati a basso potere statistico, l'interpretazione è stata volutamente limitata. Conclusioni: Il segnale giustifica una replica indipendente con campioni più ampi e fenotipizzazione standardizzata prima di qualsiasi inferenza causale; allo stato attuale i risultati sono considerati generatori di ipotesi e non conclusivi.",
+  "bibliografia": [
+   {
+    "autori": "Visscher P.M., Wray N.R., Zhang Q., et al.",
+    "anno": "2017",
+    "titolo": "10 years of GWAS discovery: biology, function, and translation",
+    "fonte": "American Journal of Human Genetics 101(1):5-22",
+    "url": "https://doi.org/10.1016/j.ajhg.2017.06.005"
+   },
+   {
+    "autori": "Yang J., Lee S.H., Goddard M.E., Visscher P.M.",
+    "anno": "2011",
+    "titolo": "GCTA: a tool for genome-wide complex trait analysis",
+    "fonte": "American Journal of Human Genetics 88(1):76-82",
+    "url": "https://doi.org/10.1016/j.ajhg.2010.11.011"
+   },
+   {
+    "autori": "Ioannidis J.P.A.",
+    "anno": "2005",
+    "titolo": "Why most published research findings are false",
+    "fonte": "PLoS Medicine 2(8):e124",
+    "url": "https://doi.org/10.1371/journal.pmed.0020124"
+   },
+   {
+    "autori": "Baker M.",
+    "anno": "2016",
+    "titolo": "1,500 scientists lift the lid on reproducibility",
+    "fonte": "Nature 533(7604):452-454",
+    "url": "https://doi.org/10.1038/533452a"
+   }
+  ]
+ },
+ "exp-n10-validazione-campo-protocolli": {
+  "abstract": "Contesto: I tratti potenziati in laboratorio devono essere validati in condizioni operative reali per verificarne la stabilità. Metodo: Abbiamo eseguito prove standardizzate in ambienti controllati esterni, con misure ripetute delle prestazioni chiave, protocolli e piani di analisi pre-registrati e potenza statistica adeguata per limitare i risultati non replicabili. Risultati: La maggior parte dei tratti si è mantenuta entro gli intervalli attesi; alcune prestazioni, tuttavia, sono diminuite sotto stress ambientale non previsto, evidenziando una sensibilità al contesto non catturata dalle condizioni di laboratorio. Conclusioni: La validazione sul campo conferma la robustezza complessiva dei protocolli ma identifica fattori ambientali critici da incorporare nei modelli predittivi; la pre-registrazione e la standardizzazione delle misure sono risultate determinanti per la solidità delle conclusioni.",
+  "bibliografia": [
+   {
+    "autori": "Begley C.G., Ellis L.M.",
+    "anno": "2012",
+    "titolo": "Raise standards for preclinical cancer research",
+    "fonte": "Nature 483(7391):531-533",
+    "url": "https://doi.org/10.1038/483531a"
+   },
+   {
+    "autori": "Errington T.M., Mathur M., Soderberg C.K., et al.",
+    "anno": "2021",
+    "titolo": "Investigating the replicability of preclinical cancer biology",
+    "fonte": "eLife 10:e71601",
+    "url": "https://doi.org/10.7554/eLife.71601"
+   },
+   {
+    "autori": "Open Science Collaboration (Nosek B.A. et al.)",
+    "anno": "2015",
+    "titolo": "Estimating the reproducibility of psychological science",
+    "fonte": "Science 349(6251):aac4716",
+    "url": "https://doi.org/10.1126/science.aac4716"
+   },
+   {
+    "autori": "Ioannidis J.P.A.",
+    "anno": "2005",
+    "titolo": "Why most published research findings are false",
+    "fonte": "PLoS Medicine 2(8):e124",
+    "url": "https://doi.org/10.1371/journal.pmed.0020124"
+   }
+  ]
+ },
+ "exp-n10-sigma-integrazione-operativa": {
+  "abstract": "Contesto: L'impiego di linee dual-use in scenari applicativi reali richiede confini d'uso responsabile definiti a priori. Metodo: Il Programma Sigma ha adottato uno studio di caso strutturato con matrice di rischio, revisione etica indipendente e criteri di interruzione predefiniti, in linea con i quadri internazionali per la governance della ricerca a doppio uso. Risultati: Sono stati definiti tre livelli di autorizzazione all'uso, graduati in base al rapporto rischio-beneficio e alla reversibilità degli interventi. Il comitato etico ha respinto due proposte per rischio ritenuto sproporzionato rispetto al beneficio atteso. Conclusioni: Un processo decisionale trasparente, con soglie e criteri di interruzione espliciti, consente l'integrazione operativa supervisionata delle linee dual-use; la revisione indipendente e la documentazione delle decisioni respinte sono elementi essenziali di responsabilità e tracciabilità.",
+  "bibliografia": [
+   {
+    "autori": "National Research Council (Fink G.R., chair)",
+    "anno": "2004",
+    "titolo": "Biotechnology Research in an Age of Terrorism (The Fink Report)",
+    "fonte": "The National Academies Press, Washington DC",
+    "url": "https://doi.org/10.17226/10827"
+   },
+   {
+    "autori": "National Academies of Sciences, Engineering, and Medicine",
+    "anno": "2017",
+    "titolo": "Dual Use Research of Concern in the Life Sciences: Current Issues and Controversies",
+    "fonte": "The National Academies Press, Washington DC",
+    "url": "https://doi.org/10.17226/24761"
+   },
+   {
+    "autori": "World Health Organization",
+    "anno": "2022",
+    "titolo": "Global guidance framework for the responsible use of the life sciences: mitigating biorisks and governing dual-use research",
+    "fonte": "WHO, Geneva",
+    "url": "https://www.who.int/publications/i/item/9789240056107"
+   },
+   {
+    "autori": "Selgelid M.J.",
+    "anno": "2009",
+    "titolo": "Governance of dual-use research: an ethical dilemma",
+    "fonte": "Bulletin of the World Health Organization 87(9):720-723",
+    "url": "https://doi.org/10.2471/BLT.08.051383"
+   }
+  ]
+ },
+ "exp-n10-riproducibilita-cross-sito": {
+  "abstract": "Contesto: La credibilità dei risultati delle singole facility dipende dalla loro replicabilità con protocolli e strumenti indipendenti. Metodo: Abbiamo selezionato un campione di esperimenti e ne abbiamo tentato la replica in cieco, con team, apparecchiature e reagenti diversi dall'originale, pre-registrando protocolli e analisi. Risultati: È stato replicato il 68% degli studi selezionati. Le discrepanze si sono concentrate sulle misure comportamentali soggettive, mentre le misure molecolari e fisiologiche oggettive hanno mostrato la maggiore stabilità. La dimensione dell'effetto nelle repliche è risultata mediamente inferiore a quella originale. Conclusioni: Il tasso di replica è in linea con quanto osservato in ampi progetti di riproducibilità in ambito biomedico; si raccomanda la standardizzazione delle misure comportamentali e l'adozione sistematica della pre-registrazione per ridurre la variabilità tra sedi.",
+  "bibliografia": [
+   {
+    "autori": "Open Science Collaboration (Nosek B.A. et al.)",
+    "anno": "2015",
+    "titolo": "Estimating the reproducibility of psychological science",
+    "fonte": "Science 349(6251):aac4716",
+    "url": "https://doi.org/10.1126/science.aac4716"
+   },
+   {
+    "autori": "Baker M.",
+    "anno": "2016",
+    "titolo": "1,500 scientists lift the lid on reproducibility",
+    "fonte": "Nature 533(7604):452-454",
+    "url": "https://doi.org/10.1038/533452a"
+   },
+   {
+    "autori": "Errington T.M., Mathur M., Soderberg C.K., et al.",
+    "anno": "2021",
+    "titolo": "Investigating the replicability of preclinical cancer biology",
+    "fonte": "eLife 10:e71601",
+    "url": "https://doi.org/10.7554/eLife.71601"
+   },
+   {
+    "autori": "Begley C.G., Ellis L.M.",
+    "anno": "2012",
+    "titolo": "Raise standards for preclinical cancer research",
+    "fonte": "Nature 483(7391):531-533",
+    "url": "https://doi.org/10.1038/483531a"
+   }
+  ]
+ },
+ "exp-n10-quadro-etico-dual-use": {
+  "abstract": "Contesto: La valutazione dei rischi e dei benefici delle linee a doppio uso richiede un processo decisionale trasparente e condiviso. Metodo: Abbiamo applicato un metodo Delphi con esperti interni ed esterni, iterando questionari con feedback controllato fino a definire soglie di accettabilità condivise e criteri espliciti di reporting del consenso. Risultati: Il processo ha prodotto un quadro decisionale adottato come standard aziendale, con soglie graduate di accettabilità e obbligo di documentazione delle decisioni. Permangono disaccordi documentati sul peso da attribuire ai rischi remoti, a bassa probabilità ma alto impatto. Conclusioni: Il metodo Delphi fornisce un percorso strutturato e riproducibile per il consenso esperto sulla ricerca dual-use, in coerenza con i quadri internazionali di governance; la trasparente registrazione dei dissensi residui è parte integrante della responsabilità decisionale.",
+  "bibliografia": [
+   {
+    "autori": "Dalkey N., Helmer O.",
+    "anno": "1963",
+    "titolo": "An experimental application of the Delphi method to the use of experts",
+    "fonte": "Management Science 9(3):458-467",
+    "url": "https://doi.org/10.1287/mnsc.9.3.458"
+   },
+   {
+    "autori": "Diamond I.R., Grant R.C., Feldman B.M., et al.",
+    "anno": "2014",
+    "titolo": "Defining consensus: a systematic review recommends methodologic criteria for reporting of Delphi studies",
+    "fonte": "Journal of Clinical Epidemiology 67(4):401-409",
+    "url": "https://doi.org/10.1016/j.jclinepi.2013.12.002"
+   },
+   {
+    "autori": "National Academies of Sciences, Engineering, and Medicine",
+    "anno": "2017",
+    "titolo": "Dual Use Research of Concern in the Life Sciences: Current Issues and Controversies",
+    "fonte": "The National Academies Press, Washington DC",
+    "url": "https://doi.org/10.17226/24761"
+   },
+   {
+    "autori": "World Health Organization",
+    "anno": "2022",
+    "titolo": "Global guidance framework for the responsible use of the life sciences: mitigating biorisks and governing dual-use research",
+    "fonte": "WHO, Geneva",
+    "url": "https://www.who.int/publications/i/item/9789240056107"
+   }
+  ]
+ },
+ "exp-n11-mimica-vocale-corvidi": {
+  "abstract": "Contesto. La facility N11 di Eden Exotic (universo 47B) ha studiato la capacità di corvidi e pappagalli, entrambi apprenditori vocali aperti, di imitare e riprodurre suoni nuovi. Metodi. I soggetti sono stati esposti a stimoli acustici controllati (fonemi sintetici e vocalizzazioni eterospecifiche) secondo un calendario ripetuto; le produzioni sono state acquisite e confrontate con i modelli tramite analisi spettrografica, misure di somiglianza spettro-temporale e test di ritenzione a distanza di settimane. Risultati. Entrambi i taxa riproducono fedelmente fonemi complessi entro poche settimane, con miglioramento progressivo della somiglianza e stabilizzazione del template appreso; la ritenzione a lungo termine è elevata anche in assenza di rinforzo continuo. La flessibilità vocale è coerente con il continuum di apprendimento vocale che accomuna uccelli canori, pappagalli e uomo. Conclusioni. Corvidi e pappagalli della facility N11 mostrano apprendimento vocale aperto e memoria acustica robusta, requisiti per i successivi esperimenti su firme individuali, referenzialità e trasmissione culturale dei repertori.",
+  "bibliografia": [
+   {
+    "autori": "Pepperberg I.M.",
+    "anno": "1999",
+    "titolo": "The Alex Studies: Cognitive and Communicative Abilities of Grey Parrots",
+    "fonte": "Harvard University Press",
+    "url": "https://www.hup.harvard.edu/books/9780674008069"
+   },
+   {
+    "autori": "Petkov C.I. & Jarvis E.D.",
+    "anno": "2012",
+    "titolo": "Birds, primates, and spoken language origins: behavioral phenotypes and neurobiological substrates",
+    "fonte": "Frontiers in Evolutionary Neuroscience 4:12",
+    "url": "https://doi.org/10.3389/fnevo.2012.00012"
+   },
+   {
+    "autori": "Marler P. & Tamura M.",
+    "anno": "1964",
+    "titolo": "Culturally transmitted patterns of vocal behavior in sparrows",
+    "fonte": "Science 146(3650):1483-1486",
+    "url": "https://doi.org/10.1126/science.146.3650.1483"
+   },
+   {
+    "autori": "Berg K.S. et al.",
+    "anno": "2012",
+    "titolo": "Vertical transmission of learned signatures in a wild parrot",
+    "fonte": "Proceedings of the Royal Society B 279(1728):585-591",
+    "url": "https://doi.org/10.1098/rspb.2011.0932"
+   }
+  ]
+ },
+ "exp-n11-firma-vocale-identita": {
+  "abstract": "Contesto. La facility N11 ha verificato se gli uccelli usino richiami distintivi come etichette vocali per identificare individui specifici. Metodi. I richiami di contatto di una popolazione marcata sono stati registrati e classificati con modelli acustici automatici; test di playback hanno misurato la risposta selettiva dei soggetti alla propria firma e a quelle di conspecifici noti e sconosciuti, valutando latenza, orientamento e vocalizzazione di risposta. Risultati. Sono state identificate firme vocali individuali stabili, apprese durante lo sviluppo; i soggetti rispondono in modo selettivo alla propria etichetta e mostrano matching vocale durante le interazioni, imitando il richiamo dell'individuo indirizzato. Questo uso di etichette vocali apprese per rivolgersi a individui specifici richiama fenomeni documentati nei pappagalli selvatici e nei tursiopi. Conclusioni. Gli uccelli della facility N11 possiedono un sistema di identità vocale basato su firme apprese e condivise, che funge da nome individuale all'interno della rete sociale; il risultato fonda i test di comunicazione referenziale successivi.",
+  "bibliografia": [
+   {
+    "autori": "Wanker R., Sugama Y. & Prinage S.",
+    "anno": "2005",
+    "titolo": "Vocal labelling of family members in spectacled parrotlets, Forpus conspicillatus",
+    "fonte": "Animal Behaviour 70(1):111-118",
+    "url": "https://doi.org/10.1016/j.anbehav.2004.09.022"
+   },
+   {
+    "autori": "Berg K.S. et al.",
+    "anno": "2012",
+    "titolo": "Vertical transmission of learned signatures in a wild parrot",
+    "fonte": "Proceedings of the Royal Society B 279(1728):585-591",
+    "url": "https://doi.org/10.1098/rspb.2011.0932"
+   },
+   {
+    "autori": "King S.L. & Janik V.M.",
+    "anno": "2013",
+    "titolo": "Bottlenose dolphins can use learned vocal labels to address each other",
+    "fonte": "PNAS 110(32):13216-13221",
+    "url": "https://doi.org/10.1073/pnas.1304459110"
+   },
+   {
+    "autori": "Balsby T.J.S. & Bradbury J.W.",
+    "anno": "2009",
+    "titolo": "Vocal matching by orange-fronted conures (Aratinga canicularis)",
+    "fonte": "Behavioural Processes 82(2):133-139",
+    "url": "https://doi.org/10.1016/j.beproc.2009.06.005"
+   }
+  ]
+ },
+ "exp-n11-comunicazione-referenziale": {
+  "abstract": "Contesto. La facility N11 ha valutato se le vocalizzazioni possano riferirsi a oggetti o eventi specifici del contesto, ovvero se sostengano una comunicazione referenziale. Metodi. In compiti di scambio e richiesta di oggetti, i soggetti hanno appreso associazioni tra vocalizzazioni dedicate e referenti; sono stati misurati accuratezza della richiesta dell'oggetto corretto, generalizzazione a esemplari nuovi e robustezza in array casuali, con controlli per l'apprendimento associativo non referenziale. Risultati. Alcuni soggetti richiedono l'oggetto corretto emettendo richiami dedicati e generalizzano a nuovi esemplari, indicando un uso funzionalmente referenziale del segnale analogo all'etichettatura vocale documentata nei pappagalli grigi e alla comunicazione semantica dei richiami di allarme. La robustezza resta variabile tra individui e sotto verifica statistica. Conclusioni. Il repertorio vocale degli uccelli della facility N11 può codificare referenti esterni oltre allo stato emotivo del segnalatore, sebbene la referenzialità piena richieda ulteriori controlli; i risultati collocano questi taxa entro il quadro della comunicazione referenziale animale.",
+  "bibliografia": [
+   {
+    "autori": "Pepperberg I.M.",
+    "anno": "1999",
+    "titolo": "The Alex Studies: Cognitive and Communicative Abilities of Grey Parrots",
+    "fonte": "Harvard University Press",
+    "url": "https://www.hup.harvard.edu/books/9780674008069"
+   },
+   {
+    "autori": "Seyfarth R.M., Cheney D.L. & Marler P.",
+    "anno": "1980",
+    "titolo": "Vervet monkey alarm calls: semantic communication in a free-ranging primate",
+    "fonte": "Animal Behaviour 28(4):1070-1094",
+    "url": "https://doi.org/10.1016/S0003-3472(80)80097-2"
+   },
+   {
+    "autori": "Suzuki T.N., Wheatcroft D. & Griesser M.",
+    "anno": "2018",
+    "titolo": "Alarm calls evoke a visual search image of a predator in birds",
+    "fonte": "PNAS 115(7):1541-1545",
+    "url": "https://doi.org/10.1073/pnas.1718884115"
+   },
+   {
+    "autori": "King S.L. & Janik V.M.",
+    "anno": "2013",
+    "titolo": "Bottlenose dolphins can use learned vocal labels to address each other",
+    "fonte": "PNAS 110(32):13216-13221",
+    "url": "https://doi.org/10.1073/pnas.1304459110"
+   }
+  ]
+ },
+ "exp-n11-cultura-vocale-trasmissione": {
+  "abstract": "Contesto. La facility N11 ha osservato come i repertori vocali si propaghino e mutino attraverso i gruppi nel tempo, cercando evidenze di trasmissione culturale e formazione di dialetti. Metodi. Un monitoraggio acustico longitudinale di gruppi stabili ha raccolto migliaia di richiami; le reti di somiglianza acustica tra individui e nel tempo sono state ricostruite con classificazione automatica, tracciando la comparsa e la diffusione di varianti vocali e la loro deriva. Risultati. È documentata la diffusione di varianti vocali tra individui socialmente connessi, con convergenza all'interno dei sottogruppi e divergenza tra gruppi separati, producendo derive che ricordano dialetti locali. La trasmissione segue le vie sociali più che quelle genetiche, coerentemente con l'apprendimento vocale culturale descritto negli uccelli canori e nei pappagalli selvatici. Conclusioni. I repertori vocali della facility N11 sono tradizioni apprese, dinamiche e strutturate socialmente; la comparsa di dialetti fornisce un modello sperimentale per studiare l'evoluzione culturale della comunicazione e informa la gestione dei gruppi in cattività.",
+  "bibliografia": [
+   {
+    "autori": "Marler P. & Tamura M.",
+    "anno": "1964",
+    "titolo": "Culturally transmitted patterns of vocal behavior in sparrows",
+    "fonte": "Science 146(3650):1483-1486",
+    "url": "https://doi.org/10.1126/science.146.3650.1483"
+   },
+   {
+    "autori": "Berg K.S. et al.",
+    "anno": "2012",
+    "titolo": "Vertical transmission of learned signatures in a wild parrot",
+    "fonte": "Proceedings of the Royal Society B 279(1728):585-591",
+    "url": "https://doi.org/10.1098/rspb.2011.0932"
+   },
+   {
+    "autori": "Petkov C.I. & Jarvis E.D.",
+    "anno": "2012",
+    "titolo": "Birds, primates, and spoken language origins: behavioral phenotypes and neurobiological substrates",
+    "fonte": "Frontiers in Evolutionary Neuroscience 4:12",
+    "url": "https://doi.org/10.3389/fnevo.2012.00012"
+   },
+   {
+    "autori": "Balsby T.J.S. & Bradbury J.W.",
+    "anno": "2009",
+    "titolo": "Vocal matching by orange-fronted conures (Aratinga canicularis)",
+    "fonte": "Behavioural Processes 82(2):133-139",
+    "url": "https://doi.org/10.1016/j.beproc.2009.06.005"
+   }
+  ]
+ }
+}
