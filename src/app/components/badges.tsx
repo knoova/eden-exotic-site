@@ -7,11 +7,21 @@ export function ConsBadge({ c }: { c: boolean | null }) {
   return <span className="badge badge-plain">Nella norma</span>;
 }
 
+// Stato di una struttura (ciclo di vita reale) o di un esperimento.
+const STATO: Record<string, [string, string]> = {
+  operativo: ["Operativa", "badge-yes"],
+  costruzione: ["In costruzione", "badge-null"],
+  pianificata: ["Pianificata", "badge-proposto"],
+  dismissione: ["In dismissione", "badge-riservato"],
+  dismessa: ["Dismessa", "badge-dismessa"],
+  riservato: ["Riservata", "badge-riservato"],
+  "in memoria": ["In memoria", "badge-riservato"],
+  proposto: ["In valutazione", "badge-proposto"]
+};
+
 export function StatoBadge({ s }: { s: string }) {
-  if (s === "proposto") return <span className="badge badge-proposto badge-plain">Proposto</span>;
-  if (s === "in memoria") return <span className="badge badge-riservato badge-plain">In memoria</span>;
-  if (s === "riservato") return <span className="badge badge-riservato badge-plain">Riservato</span>;
-  if (s === "operativo") return <span className="badge badge-yes badge-plain">Operativo</span>;
+  const m = STATO[s];
+  if (m) return <span className={`badge ${m[1]} badge-plain`}>{m[0]}</span>;
   const cap = s ? s.charAt(0).toUpperCase() + s.slice(1) : "";
   return <span className="badge badge-plain">{cap}</span>;
 }

@@ -14,14 +14,19 @@ const TIPO_LABEL: Record<string, string> = {
   validazione: "Validazione",
   stazione: "Allevamento + campo",
   direzione: "Direzione",
-  satellite: "Satellite"
+  satellite: "Satellite",
+  logistica: "Logistica & quarantena",
+  ufficio: "Ufficio",
+  bioproduzione: "Bioproduzione",
+  storico: "Sito storico"
 };
 
 export default async function RetePage() {
   const [facilities, people] = await Promise.all([getFacilities(), getPeople()]);
   const rete = facilities.filter((f) => f.numero > 0).sort((a, b) => a.numero - b.numero);
-  const core = facilities.filter((f) => f.numero === 0);
+  const core = facilities.filter((f) => f.numero === 0).sort((a, b) => (a.ordine ?? 0) - (b.ordine ?? 0));
   const teamCount = (id: string) => people.filter((p) => p.facilityId === id).length;
+  const continenti = new Set(facilities.map((f) => f.continente).filter((c) => c && c !== "—")).size;
 
   const FacilityCard = ({ f }: { f: (typeof facilities)[number] }) => (
     <article id={f.id} className={`facility${f.stato === "riservato" ? " riservato" : ""}`}>
@@ -61,11 +66,12 @@ export default async function RetePage() {
         <div className="wrap">
           <div className="section-head" style={{ maxWidth: 860 }}>
             <span className="eyebrow">Rete globale</span>
-            <h1>Undici strutture, cinque continenti.</h1>
+            <h1>{rete.length} nodi, {facilities.length} strutture, {continenti} continenti.</h1>
             <p className="lead">
-              Ogni struttura è dedicata a una specie o a un tema. Alcune allevano, altre fanno ricerca —
-              biobanca, bioinformatica, validazione. La numerazione è sparsa per scelta: alcuni nodi restano
-              riservati.
+              Oltre ai nodi numerati N.x — alcuni operativi, altri in costruzione, pianificati o in
+              dismissione — la rete comprende la direzione, gli uffici regionali, la logistica, un archivio
+              ridondante e alcuni siti storici ormai dismessi. La numerazione è sparsa per scelta: alcuni nodi
+              restano riservati.
             </p>
           </div>
           <WorldMap facilities={rete} />
@@ -86,8 +92,8 @@ export default async function RetePage() {
         <section className="section section--paper2">
           <div className="wrap">
             <div className="section-head">
-              <span className="eyebrow">Oltre la rete numerata</span>
-              <h2>Direzione &amp; satelliti</h2>
+              <span className="eyebrow">Oltre i nodi numerati</span>
+              <h2>Direzione, uffici e siti di supporto</h2>
             </div>
             <div className="grid grid-2">
               {core.map((f) => (
@@ -98,6 +104,9 @@ export default async function RetePage() {
                   </div>
                   <div className="place mt-1">{f.citta && f.citta !== "—" ? `${f.citta} · ` : ""}{f.paese}</div>
                   <p className="mt-1">{f.descrizione}</p>
+                  <div className="tag-row mt-2">
+                    <StatoBadge s={f.stato} />
+                  </div>
                 </div>
               ))}
             </div>

@@ -110,6 +110,7 @@ p { max-width:68ch; } a { transition:color .18s ease; }
 .badge-null { color:var(--brass); border-color:rgba(169,134,63,.4); background:rgba(169,134,63,.08); }
 .badge-riservato { color:var(--danger); border-color:rgba(138,59,59,.35); background:rgba(138,59,59,.06); }
 .badge-proposto { color:#7a6b3a; border-color:rgba(122,107,58,.35); }
+.badge-dismessa { color:var(--muted); border-color:var(--line-2); border-style:dashed; opacity:.75; }
 .badge-plain::before { display:none; }
 
 .code { font-family:var(--mono); font-size:.92rem; letter-spacing:.02em; }
@@ -177,7 +178,10 @@ table.reg td .nm { font-family:var(--serif); font-weight:600; }
 .map-wrap svg { display:block; width:100%; height:auto; }
 .map-dot { fill:var(--brass-2); stroke:#0e1c16; stroke-width:1.4; cursor:pointer; transition:.15s; }
 .map-dot:hover { fill:#fff; r:7; }
-.map-dot.reserved { fill:var(--danger); }
+.map-dot.stato-riservato { fill:var(--danger); }
+.map-dot.stato-costruzione, .map-dot.stato-pianificata, .map-dot.stato-dismissione { fill:var(--dark-bg); stroke:var(--brass-2); stroke-width:1.6; }
+.map-dot.stato-pianificata { stroke-dasharray:2 2; }
+.map-dot.stato-dismissione { stroke:#b98a5a; }
 .map-label { fill:#cdd8ce; font-family:var(--mono); font-size:8px; letter-spacing:.05em; }
 .map-legend { display:flex; gap:1.2rem; flex-wrap:wrap; padding:1rem 1.2rem; color:#b9c7bd; font-size:.82rem; border-top:1px solid var(--dark-line); }
 .map-legend span { display:inline-flex; align-items:center; gap:.45rem; }

@@ -15,6 +15,7 @@ import {
   peopleEnrichment,
   enrichmentKnowledge
 } from "./canon-network";
+import { extraFacilities } from "./canon-extra";
 
 export type Department = { id: string; nome: string; colore: string };
 export type Facility = {
@@ -146,7 +147,7 @@ const coreFacilities: Facility[] = [
   }
 ];
 
-export const facilities: Facility[] = [...coreFacilities, ...networkFacilities].sort(
+export const facilities: Facility[] = [...coreFacilities, ...networkFacilities, ...extraFacilities].sort(
   (a, b) => (a.ordine ?? a.numero) - (b.ordine ?? b.numero)
 );
 
@@ -274,7 +275,7 @@ export const experiments: Experiment[] = experimentsData.map((e, i) => {
 
 // --- KPI --------------------------------------------------------------------
 export const kpis: Kpi[] = [
-  { etichetta: "Strutture nella rete", valore: "11", nota: "N.1–N.11 in cinque continenti" },
+  { etichetta: "Strutture nel mondo", valore: "25", nota: "11 nodi numerati + direzione, uffici, logistica e siti storici" },
   { etichetta: "Riduzione tempo di incubazione", valore: "−64%", nota: "32 gg 14 h 17 min vs ~90 gg naturali (Iguana iguana)" },
   { etichetta: "Deviazione std. di schiusa (Gen 4)", valore: "< 0,3", nota: "La migliore mai registrata" },
   { etichetta: "Attività motoria neonatale", valore: "+42%", nota: "vs media della generazione precedente" },
