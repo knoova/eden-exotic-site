@@ -26,3 +26,6 @@ yarn-error.log*
 
 # docker volumes locali
 /data/
+
+# TypeScript incremental build info
+tsconfig.tsbuildinfo
