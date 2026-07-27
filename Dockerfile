@@ -11,6 +11,8 @@ RUN apt-get update -y && apt-get install -y --no-install-recommends openssl ca-c
 # --- dipendenze ------------------------------------------------------------
 FROM base AS deps
 COPY package.json package-lock.json* ./
+# lo schema serve al postinstall (prisma generate)
+COPY prisma ./prisma
 RUN npm install --no-audit --no-fund
 
 # --- build -----------------------------------------------------------------
