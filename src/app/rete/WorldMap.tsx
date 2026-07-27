@@ -67,11 +67,11 @@ export function WorldMap({ facilities }: { facilities: Facility[] }) {
 
         {/* nodi della rete */}
         {nodes.map(({ f, x, y }) => {
-          const reserved = f.stato === "riservato";
+          const glow = f.stato === "operativo";
           return (
             <a key={f.id} href={`#${f.id}`}>
-              <circle cx={x} cy={y} r={11} fill="url(#mapNode)" opacity={reserved ? 0 : 0.7} />
-              <circle className={`map-dot${reserved ? " reserved" : ""}`} cx={x} cy={y} r={4.5}>
+              {glow && <circle cx={x} cy={y} r={11} fill="url(#mapNode)" opacity={0.7} />}
+              <circle className={`map-dot stato-${f.stato}`} cx={x} cy={y} r={4.5}>
                 <title>
                   {f.id} · {f.paese} — {f.specie}
                 </title>
@@ -85,10 +85,13 @@ export function WorldMap({ facilities }: { facilities: Facility[] }) {
       </svg>
       <div className="map-legend">
         <span>
-          <i style={{ background: "var(--brass-2)" }} /> Struttura operativa / proposta
+          <i style={{ background: "var(--brass-2)" }} /> Operativa
         </span>
         <span>
-          <i style={{ background: "var(--danger)" }} /> Ubicazione riservata
+          <i style={{ background: "transparent", border: "1.5px solid var(--brass-2)" }} /> In costruzione / pianificata
+        </span>
+        <span>
+          <i style={{ background: "var(--danger)" }} /> Riservata
         </span>
         <span style={{ marginLeft: "auto", opacity: 0.7 }}>Proiezione Equal Earth · coste Natural Earth</span>
       </div>
