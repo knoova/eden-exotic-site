@@ -16,6 +16,7 @@ import {
   enrichmentKnowledge
 } from "./canon-network";
 import { extraFacilities } from "./canon-extra";
+import { extraPeople } from "./canon-extra-people";
 
 export type Department = { id: string; nome: string; colore: string };
 export type Facility = {
@@ -197,7 +198,7 @@ function enrich(p: Person): Person {
   if (!e) return p;
   return { ...p, bio: e.bio || p.bio, competenze: e.competenze, voce: e.voce, background: e.background };
 }
-export const people: Person[] = [...canonPeople, ...networkPeople].map(enrich);
+export const people: Person[] = [...canonPeople, ...networkPeople, ...extraPeople].map(enrich);
 
 // --- Protocolli A–H ---------------------------------------------------------
 export const protocols: Protocol[] = [
