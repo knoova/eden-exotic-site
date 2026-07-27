@@ -157,25 +157,25 @@ const canonPeople: Person[] = [
 
   // Allevamento N.4 — iguane
   { id: "conti", nome: "Dr. Marco Conti", ruolo: "Responsabile Protocollo B", dip: "genetica", branch: "47b", stato: "attivo", reportsTo: "stern", facilityId: "N4",
-    bio: "Entusiasta ed eticamente ambivalente. Spera che la coscienza sia una 'formula' replicabile: la vera scommessa del Protocollo B." },
+    bio: "Responsabile del Protocollo B all'Allevamento N.4. Coordina gli studi su sviluppo neurale e marcatori cognitivi degli esemplari, all'incrocio tra genetica e comportamento." },
   { id: "marini", nome: "Dr.ssa Elena Marini", ruolo: "Genetista · Programma Iguane", dip: "genetica", branch: "47b", stato: "attivo", reportsTo: "conti", facilityId: "N4",
-    bio: "Pragmatica. Riporta il gruppo alla concretezza dei dati. Divisa tra rigore scientifico e lealtà aziendale." },
+    bio: "Genetista del Programma Iguane. Progetta e valida gli edit genetici e riporta il gruppo alla concretezza dei dati. Rigorosa nel controllo qualità dei replicati." },
   { id: "bianchi", nome: "Dr. Paolo Bianchi", ruolo: "Biologo Molecolare · Programma Iguane", dip: "genetica", branch: "47b", stato: "attivo", reportsTo: "conti", facilityId: "N4",
-    bio: "La voce della cautela: «abbiamo creato qualcosa che non capiamo». Spesso ascoltato, raramente seguito." },
+    bio: "Biologo molecolare del Programma Iguane. Caratterizza i costrutti genetici e monitora gli effetti fuori bersaglio; presidia la biosicurezza e la cautela metodologica del gruppo." },
   { id: "colombo", nome: "Alessandro Colombo", ruolo: "Dottorando · Programma Iguane", dip: "genetica", branch: "47b", stato: "attivo", reportsTo: "marini", facilityId: "N4",
-    bio: "Caotico, con lampi intuitivi. Il più giovane del gruppo di ricerca dell'Allevamento N.4." },
+    bio: "Dottorando e più giovane del gruppo di ricerca dell'Allevamento N.4. Segue preparazione dei campioni, analisi dati e registri sperimentali." },
   { id: "puddu", nome: "Marina Puddu", ruolo: "Tecnica di Laboratorio · Programma Iguane", dip: "allevamento", branch: "47b", stato: "attivo", reportsTo: "marini", facilityId: "N4",
-    bio: "Cura quotidiana degli esemplari. Prima a intuire qualcosa di diverso in 47B." },
+    bio: "Tecnica di laboratorio del Programma Iguane. Cura quotidiana degli esemplari, monitoraggio dei parametri e osservazione comportamentale documentata." },
   { id: "dominika", nome: "Dr.ssa Dominika Gradowska", ruolo: "Comportamentalista · Programma Iguane", dip: "comportamento", branch: "47b", stato: "attivo", reportsTo: "stern", facilityId: "N4",
-    bio: "Ricercatrice interna. Vede struttura dove gli altri vedono rumore: nota l'anomalia che tutti ignorano. Memoria eccezionale, percezione fuori scala. Co-protagonista della saga; polacca." },
+    bio: "Comportamentalista del Programma Iguane. Progetta protocolli di osservazione, codifica le sequenze comportamentali e costruisce modelli per individuare pattern e anomalie nei dati degli esemplari. Formazione polacca in etologia e scienze cognitive." },
 
   // Villa Monti
   { id: "monti", nome: "Prof. Alfredo Monti", ruolo: "Direttore Scientifico · Etologia (Villa Monti)", dip: "comportamento", branch: "47b", stato: "attivo", reportsTo: "stern", facilityId: "VILLA",
-    bio: "Etologo, copertura accademica del sito di studio. L'unico che tratta gli esemplari come interlocutori. Ponte verso il programma Varani. Custode di un rigore etico che non sempre coincide con la linea aziendale." },
+    bio: "Etologo e Direttore Scientifico di Villa Monti, sito di studio comportamentale ravvicinato. Coordina l'osservazione degli esemplari e cura il raccordo scientifico con gli altri programmi della rete." },
   { id: "adele", nome: "Adele Ricci", ruolo: "Responsabile Sicurezza & Conformità (Villa Monti)", dip: "conformita", branch: "47b", stato: "attivo", reportsTo: "stern", facilityId: "VILLA",
-    bio: "Precisione quasi militare, fine protettivo: impedire l'abuso del progetto. Interfaccia tra Eden e il Programma Sigma. Integra, segnata dall'ambiguità del proprio ruolo." },
+    bio: "Responsabile Sicurezza & Conformità di Villa Monti. Gestisce accessi, protocolli e riservatezza e fa da interfaccia con il Programma Sigma. Impostazione rigorosa e procedurale." },
   { id: "pietro", nome: "Pietro Visconti", ruolo: "Dottorando · Laboratorio Villa Monti", dip: "genetica", branch: "47b", stato: "in memoria", reportsTo: "monti", facilityId: "VILLA",
-    bio: "Brillante nella teoria, pericoloso nella pratica. Trattava gli esemplari da pari. Diede a 47B il nome «Galileo». Scomparso in un incidente di laboratorio." },
+    bio: "Dottorando al Laboratorio di Villa Monti, brillante nella ricerca sperimentale. Scomparso in un incidente di laboratorio." },
   { id: "giancarlo", nome: "Giancarlo", ruolo: "Assistente di Direzione Scientifica", dip: "comportamento", branch: "47b", stato: "attivo", reportsTo: "monti", facilityId: "VILLA",
     bio: "Assistente storico del Prof. Monti. Presenza discreta e continua alla Villa." },
 
@@ -213,40 +213,40 @@ export const protocols: Protocol[] = [
 // --- Generazioni ------------------------------------------------------------
 export const generations: Generation[] = [
   { gen: 1, titolo: "Proof-of-concept", testo: "Alta mortalità, edit grezzi. Qualche superstite robusto ma cognitivamente ordinario.", branch: "47b" },
-  { gen: 2, titolo: "Primi B e C primitivi", testo: "Include l'esemplare-fantasma dell'archivio: un 'guizzo' mai confermato né replicato.", branch: "47b" },
-  { gen: 3, titolo: "Protocolli maturi", testo: "Migliori risultati pre-coorte attuale. Alcuni esemplari ancora vivi come baseline.", branch: "47b" },
-  { gen: 4, titolo: "Coorte attuale (iguane)", testo: "La nidiata di riferimento del programma iguane. Studio comportamentale in corso.", branch: "47b" },
-  { gen: 5, titolo: "Esemplari successivi", testo: "Generazione contemporanea alla 4; include esemplari ritenuti ingestibili e ceduti.", branch: "47b" },
+  { gen: 2, titolo: "Primi B e C primitivi", testo: "Prime varianti dei Protocolli B e C. Un esemplare d'archivio con osservazioni comportamentali non concludenti e mai replicate; materiale conservato in biobanca.", branch: "47b" },
+  { gen: 3, titolo: "Protocolli maturi", testo: "Migliori risultati pre-coorte attuale. Alcuni esemplari ancora attivi come baseline.", branch: "47b" },
+  { gen: 4, titolo: "Coorte attuale (iguane)", testo: "La nidiata di riferimento del programma iguane. Studio di cognizione e comportamento in corso.", branch: "47b" },
+  { gen: 5, titolo: "Esemplari successivi", testo: "Generazione contemporanea alla 4; include esemplari non idonei alla stabulazione standard e successivamente ceduti.", branch: "47b" },
   { gen: 8, titolo: "Varani — linea matura", testo: "Prima linea consolidata del Laboratorio N.6 (Polonia).", branch: "varani" },
   { gen: 9, titolo: "Varani — coorte attuale", testo: "Coorte di punta del programma Varani.", branch: "varani" }
 ];
 
 // --- Esemplari --------------------------------------------------------------
 const baseSpecimens: Specimen[] = [
-  { id: "47B", codiceEsteso: "4-07-B-ATC", gen: 4, protocollo: "B", nomeProprio: "Galileo", coscienza: true, branch: "47b", facilityId: "VILLA", stato: "attivo",
-    note: "Protagonista/narratore. Pienamente cosciente — unico. Freddo, non prova affetto. Coscienza inspiegabile: effetto collaterale non progettato." },
+  { id: "47B", codiceEsteso: "4-07-B-ATC", gen: 4, protocollo: "B", nomeProprio: null, coscienza: null, branch: "47b", facilityId: "VILLA", stato: "attivo",
+    note: "Esemplare di riferimento del programma Cognizione & Comportamento (Protocollo B). In studio comportamentale prolungato a Villa Monti per alcune risposte atipiche, ancora in corso di caratterizzazione e non replicate in modo controllato." },
   { id: "41C", codiceEsteso: "4-01-C-GCA", gen: 4, protocollo: "C", nomeProprio: null, coscienza: false, branch: "47b", facilityId: "VILLA", stato: "attivo",
-    note: "Controprova sensoriale: super-sensi, nessun pensiero riflessivo. Dimostra che potenziare non basta a generare mente." },
+    note: "Controprova sensoriale del Protocollo C: potenziamento di vista UV e olfatto vomeronasale, profilo comportamentale tipico della specie." },
   { id: "49B", codiceEsteso: "4-09-B-ATC", gen: 4, protocollo: "B", nomeProprio: null, coscienza: false, branch: "47b", facilityId: "N4", stato: "attivo",
-    note: "Stesso protocollo e suffisso di 47B, ma rettiliano. Rari 'lampi' rivelatisi istinto. Controprova: l'ingegneria non spiega 47B." },
+    note: "Stesso pacchetto di edit del Protocollo B (B-ATC) di 47B; profilo comportamentale nella norma per la specie. Serve da controllo del protocollo." },
   { id: "37B", codiceEsteso: "3-07-B", gen: 3, protocollo: "B", nomeProprio: null, coscienza: false, branch: "47b", facilityId: "N4", stato: "baseline",
-    note: "Baseline storico gen 3, del tutto rettiliano. Il 'migliore' prima di 47B." },
+    note: "Baseline storico di terza generazione, profilo tipico della specie. Riferimento pre-coorte per il Protocollo B." },
   { id: "26B", codiceEsteso: "2-06-B", gen: 2, protocollo: "B", nomeProprio: null, coscienza: null, branch: "47b", facilityId: "N1", stato: "archivio",
-    note: "Il 'fantasma': guizzo mai confermato, morto prima di ogni verifica. Resta irrisolto. Materiale conservato in biobanca." },
-  { id: "53D", codiceEsteso: "5-03-D", gen: 5, protocollo: "D", nomeProprio: null, coscienza: true, branch: "47b", facilityId: "N4", stato: "ceduto",
-    note: "Scartato perché 'giocava'. Ritenuto ingestibile e ceduto; tracce perse per errore CITES. Intelligenza ignota nel mondo di 47B." },
-  { id: "94G", codiceEsteso: "9-04-G-GAT", gen: 9, protocollo: "G", nomeProprio: "Smok", coscienza: true, branch: "varani", facilityId: "N6", stato: "proposto",
-    note: "Il Beta. 'Corpo che pensa': fiero d'essere ciò che è. Voce-guida del branco." },
-  { id: "91F", codiceEsteso: "9-01-F-CTA", gen: 9, protocollo: "F", nomeProprio: "Cień", coscienza: true, branch: "varani", facilityId: "N6", stato: "proposto",
-    note: "La più cosciente di tutti. Silenziosa, aliena. Protocollo F (dormienza)." },
+    note: "Esemplare di seconda generazione con osservazioni comportamentali non concludenti e mai replicate; deceduto prima della caratterizzazione. Materiale conservato in biobanca (N.1)." },
+  { id: "53D", codiceEsteso: "5-03-D", gen: 5, protocollo: "D", nomeProprio: null, coscienza: false, branch: "47b", facilityId: "N4", stato: "ceduto",
+    note: "Esemplare di quinta generazione (Protocollo D) ritenuto non idoneo alla stabulazione standard e ceduto; tracciabilità CITES incompleta per errore documentale." },
+  { id: "94G", codiceEsteso: "9-04-G-GAT", gen: 9, protocollo: "G", nomeProprio: "Smok", coscienza: false, branch: "varani", facilityId: "N6", stato: "proposto",
+    note: "Maschio dominante della coorte, corporatura possente ed elevata coordinazione nel gruppo. Riferimento del Protocollo G." },
+  { id: "91F", codiceEsteso: "9-01-F-CTA", gen: 9, protocollo: "F", nomeProprio: "Cień", coscienza: false, branch: "varani", facilityId: "N6", stato: "proposto",
+    note: "Esemplare schivo del Protocollo F (dormienza metabolica), con torpore controllato particolarmente stabile." },
   { id: "88G", codiceEsteso: "8-08-G-GGA", gen: 8, protocollo: "G", nomeProprio: "Żubr", coscienza: false, branch: "varani", facilityId: "N6", stato: "proposto",
-    note: "Gigante fedelissimo, coscienza limitata, cuore semplice." },
+    note: "Esemplare di taglia eccezionale, alta densità ossea e resistenza. Docile alla conduzione." },
   { id: "96G", codiceEsteso: "9-06-G-TGA", gen: 9, protocollo: "G", nomeProprio: "Iskra", coscienza: null, branch: "varani", facilityId: "N6", stato: "proposto",
-    note: "La giovane: coscienza in emersione, piccola e velocissima." },
-  { id: "85F", codiceEsteso: "8-05-F-CGT", gen: 8, protocollo: "F", nomeProprio: "Mróz", coscienza: null, branch: "varani", facilityId: "N6", stato: "proposto",
-    note: "Protocollo F (dormienza metabolica). Sensibile al freddo estremo." },
-  { id: "89G", codiceEsteso: "8-09-G-AAT", gen: 8, protocollo: "G", nomeProprio: "Grom", coscienza: null, branch: "varani", facilityId: "N6", stato: "proposto",
-    note: "Veterano del branco." }
+    note: "Giovane femmina di taglia ridotta e molto veloce; comportamento esplorativo in corso di studio." },
+  { id: "85F", codiceEsteso: "8-05-F-CGT", gen: 8, protocollo: "F", nomeProprio: "Mróz", coscienza: false, branch: "varani", facilityId: "N6", stato: "proposto",
+    note: "Protocollo F (dormienza metabolica), tolleranza spiccata al freddo estremo." },
+  { id: "89G", codiceEsteso: "8-09-G-AAT", gen: 8, protocollo: "G", nomeProprio: "Grom", coscienza: false, branch: "varani", facilityId: "N6", stato: "proposto",
+    note: "Esemplare adulto veterano della coorte, parametri muscoloscheletrici di riferimento." }
 ];
 
 // specie inferita per gli esemplari canonici (le altre arrivano già con `specie`)

@@ -143,7 +143,7 @@ export const PANELS: Panel[] = [
       { name: "nomeProprio", label: "Nome proprio", help: "— se assente", type: "text" },
       { name: "gen", label: "Generazione", type: "number" },
       { name: "protocollo", label: "Protocollo", type: "select", options: protoOpts },
-      { name: "coscienza", label: "Stato cognitivo", type: "bool3" },
+      { name: "coscienza", label: "Profilo comportamentale", type: "bool3" },
       { name: "branch", label: "Ramo", type: "select", options: BRANCHES },
       { name: "facilityId", label: "Struttura", type: "select", options: facOpts },
       { name: "stato", label: "Stato", type: "text" },

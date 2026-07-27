@@ -34,7 +34,7 @@ export function SpecimenTable({ specimens, facilities }: { specimens: Specimen[]
               <th>Esteso</th>
               <th>Nome</th>
               <th>Gen · Prot.</th>
-              <th>Stato cognitivo</th>
+              <th>Profilo comportamentale</th>
               <th>Struttura</th>
               <th>Note</th>
             </tr>

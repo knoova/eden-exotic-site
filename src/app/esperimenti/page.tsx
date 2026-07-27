@@ -95,8 +95,8 @@ export default async function EsperimentiPage() {
           </div>
           <SpecimenTable specimens={specimens} facilities={facilities} />
           <p className="muted mt-2" style={{ fontSize: ".84rem" }}>
-            Lo stato cognitivo è una classificazione interna. La singolarità degli esemplari coscienti resta
-            materia riservata.
+            Il profilo comportamentale è una classificazione interna del programma Cognizione &amp; Comportamento:
+            «In studio» indica risposte atipiche in corso di caratterizzazione e non ancora replicate in modo controllato.
           </p>
         </div>
       </section>

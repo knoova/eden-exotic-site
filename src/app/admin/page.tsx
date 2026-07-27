@@ -53,7 +53,7 @@ function FieldCtl({ f, refs, value, onChange }: { f: Field; refs: Refs; value: a
     );
   else if (f.type === "select" || f.type === "bool3") {
     const opts = f.type === "bool3"
-      ? [{ value: "true", label: "Cosciente" }, { value: "false", label: "Rettiliano" }, { value: "null", label: "Ignoto / in emersione" }]
+      ? [{ value: "false", label: "Nella norma" }, { value: "null", label: "In studio (anomalia non replicata)" }, { value: "true", label: "Anomalia marcata" }]
       : resolveOptions(f, refs);
     ctl = (
       <select id={id} value={value} onChange={(e) => onChange(e.target.value)}>
@@ -272,8 +272,8 @@ function ListPanel({ panel, refs, onSaved }: { panel: Panel; refs: Refs; onSaved
 }
 
 function fmt(v: any) {
-  if (v === true) return "Cosciente";
-  if (v === false) return "Rettiliano";
+  if (v === true) return "Sì";
+  if (v === false) return "No";
   if (v == null || v === "" || v === "—") return "—";
   if (Array.isArray(v)) return v.join(", ");
   return String(v);

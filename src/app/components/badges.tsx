@@ -1,9 +1,10 @@
 import React from "react";
 
+// Profilo comportamentale pubblico: la compagnia non classifica la coscienza.
+// null = risposte atipiche ancora in fase di studio (non replicate); altrimenti "nella norma".
 export function ConsBadge({ c }: { c: boolean | null }) {
-  if (c === true) return <span className="badge badge-yes">Cosciente</span>;
-  if (c === false) return <span className="badge badge-no">Rettiliano</span>;
-  return <span className="badge badge-null">Ignoto / in emersione</span>;
+  if (c === null) return <span className="badge badge-null">In studio</span>;
+  return <span className="badge badge-plain">Nella norma</span>;
 }
 
 export function StatoBadge({ s }: { s: string }) {
