@@ -1,9 +1,8 @@
-// Popolamento del DB dal canon e (ri)costruzione dell'indice RAG su Qdrant.
+// Popolamento del DB dal canon e (ri)costruzione dell'indice RAG su pgvector.
 import { prisma } from "./db";
 import { canon } from "./canon";
 import { embed } from "./ollama";
-import { ensureCollection, upsertPoints, qdrant } from "./qdrant";
-import { env } from "./env";
+import { ensureVectorSchema, dropVectorTable, upsertEmbedding } from "./vector";
 
 /** Popola/aggiorna il database relazionale a partire dal canon. */
 export async function seedDatabase(): Promise<void> {
@@ -89,16 +88,10 @@ export async function seedDatabase(): Promise<void> {
   }
 }
 
-/** (Ri)costruisce l'indice vettoriale su Qdrant a partire dai Doc. */
+/** (Ri)costruisce l'indice vettoriale su pgvector a partire dai Doc. */
 export async function reindexRag(fresh = false): Promise<{ count: number }> {
-  if (fresh) {
-    try {
-      await qdrant().deleteCollection(env.qdrantCollection);
-    } catch {
-      /* non esisteva */
-    }
-  }
-  await ensureCollection();
+  if (fresh) await dropVectorTable();
+  await ensureVectorSchema();
 
   let docs: { id: string; categoria: string; titolo: string; testo: string }[] = [];
   try {
@@ -108,18 +101,17 @@ export async function reindexRag(fresh = false): Promise<{ count: number }> {
   }
   if (!docs.length) docs = canon.knowledge;
 
-  const points = [];
-  let idNum = 1;
+  let count = 0;
   for (const d of docs) {
     const vector = await embed(`${d.titolo}. ${d.testo}`);
-    points.push({ id: idNum++, vector, payload: { docId: d.id, categoria: d.categoria, titolo: d.titolo, testo: d.testo } });
+    await upsertEmbedding(d.id, d.categoria, d.titolo, d.testo, vector);
+    count++;
   }
-  await upsertPoints(points);
 
   try {
     await prisma.doc.updateMany({ data: { embedded: true } });
   } catch {
     /* ignora */
   }
-  return { count: points.length };
+  return { count };
 }

@@ -344,7 +344,7 @@ function SystemPanel({ onMsg, onReseed }: { onMsg: (m: string, e?: boolean) => v
         {status ? (
           <div style={{ display: "flex", gap: "1.5rem", flexWrap: "wrap" }}>
             <div>Database (Postgres) {pill(status.db)}</div>
-            <div>Vettoriale (Qdrant) {pill(status.vector)}</div>
+            <div>Vettoriale (pgvector) {pill(status.vector)}</div>
             <div>AI (Ollama) {pill(status.ai)}</div>
           </div>
         ) : <p className="muted">Impossibile leggere lo stato.</p>}
@@ -360,7 +360,7 @@ function SystemPanel({ onMsg, onReseed }: { onMsg: (m: string, e?: boolean) => v
 
       <div className="set-block">
         <h3>Indice dell&apos;AI (RAG)</h3>
-        <p>Ricostruisce gli embedding su Qdrant a partire dalla base di conoscenza. Richiede Ollama attivo con il modello di embedding.</p>
+        <p>Ricostruisce gli embedding su pgvector a partire dalla base di conoscenza. Richiede Ollama attivo con il modello di embedding.</p>
         <button className="btn btn-dark btn-sm" disabled={busy === "reindex"} onClick={() => act("reindex", "Reindicizza")}>
           {busy === "reindex" ? "Indicizzo…" : "Ricostruisci indice RAG"}
         </button>

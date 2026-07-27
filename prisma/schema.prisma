@@ -1,7 +1,7 @@
 // =============================================================================
 // Eden Exotic — schema del database relazionale (Postgres via Prisma)
 // I contenuti del sito vivono qui; il seed li popola dal canon (src/lib/canon).
-// Gli embedding del RAG vivono invece su Qdrant (database vettoriale).
+// Gli embedding del RAG vivono in pgvector (tabella doc_embedding), nello stesso Postgres.
 // =============================================================================
 
 generator client {
@@ -137,7 +137,7 @@ model GlossaryTerm {
   ordine      Int    @default(0)
 }
 
-// --- Base di conoscenza per il RAG (testo; i vettori stanno su Qdrant) -----
+// --- Base di conoscenza per il RAG (testo; i vettori stanno in pgvector (doc_embedding)) -----
 model Doc {
   id        String   @id
   categoria String

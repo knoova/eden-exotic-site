@@ -1,80 +1,19 @@
 # =============================================================================
-# Eden Exotic — stack completo per Coolify (o `docker compose up`)
-# Servizi: web (Next.js) · db (Postgres) · vector (Qdrant) · ollama (AI locale)
-# Le variabili provengono da .env (vedi .env.example).
+# Eden Exotic — stack applicativo
+# Il database (Postgres 18 + pgvector) e, se vuoi, Ollama sono forniti da te:
+# l'app si configura con UN SOLO URL (DATABASE_URL) + OLLAMA_URL.
+# Il database vettoriale del RAG vive dentro Postgres (pgvector): niente Qdrant.
 # =============================================================================
 services:
-  db:
-    image: postgres:16-alpine
-    restart: unless-stopped
-    environment:
-      POSTGRES_USER: ${POSTGRES_USER:-eden}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-eden}
-      POSTGRES_DB: ${POSTGRES_DB:-eden_exotic}
-    volumes:
-      - db_data:/var/lib/postgresql/data
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-eden} -d ${POSTGRES_DB:-eden_exotic}"]
-      interval: 5s
-      timeout: 5s
-      retries: 20
-
-  vector:
-    image: qdrant/qdrant:latest
-    restart: unless-stopped
-    volumes:
-      - qdrant_data:/qdrant/storage
-    # espone 6333 (REST) internamente alla rete compose
-
-  ollama:
-    image: ollama/ollama:latest
-    restart: unless-stopped
-    volumes:
-      - ollama_data:/root/.ollama
-    # per accelerazione GPU su host NVIDIA, decommenta:
-    # deploy:
-    #   resources:
-    #     reservations:
-    #       devices:
-    #         - driver: nvidia
-    #           count: all
-    #           capabilities: [gpu]
-
-  # scarica i modelli una volta sola, poi esce
-  ollama-init:
-    image: ollama/ollama:latest
-    depends_on:
-      - ollama
-    environment:
-      OLLAMA_HOST: http://ollama:11434
-    entrypoint: ["/bin/sh", "-c"]
-    command:
-      - >
-        echo 'Attendo Ollama...';
-        until ollama list >/dev/null 2>&1; do sleep 2; done;
-        echo 'Scarico i modelli...';
-        ollama pull ${OLLAMA_CHAT_MODEL:-llama3.2:3b};
-        ollama pull ${OLLAMA_EMBED_MODEL:-nomic-embed-text};
-        echo 'Modelli pronti.'
-    restart: "no"
-
   web:
     build:
       context: .
       dockerfile: Dockerfile
     restart: unless-stopped
-    depends_on:
-      db:
-        condition: service_healthy
-      vector:
-        condition: service_started
-      ollama:
-        condition: service_started
     environment:
-      DATABASE_URL: postgresql://${POSTGRES_USER:-eden}:${POSTGRES_PASSWORD:-eden}@db:5432/${POSTGRES_DB:-eden_exotic}?schema=public
-      QDRANT_URL: http://vector:6333
-      QDRANT_COLLECTION: ${QDRANT_COLLECTION:-eden_canon}
-      OLLAMA_URL: http://ollama:11434
+      # UN SOLO URL per il database (Postgres 18 + estensione pgvector)
+      DATABASE_URL: ${DATABASE_URL}
+      OLLAMA_URL: ${OLLAMA_URL:-http://ollama:11434}
       OLLAMA_CHAT_MODEL: ${OLLAMA_CHAT_MODEL:-llama3.2:3b}
       OLLAMA_EMBED_MODEL: ${OLLAMA_EMBED_MODEL:-nomic-embed-text}
       EMBED_DIM: ${EMBED_DIM:-768}
@@ -83,8 +22,29 @@ services:
       NODE_ENV: production
     ports:
       - "${WEB_PORT:-3000}:3000"
+    # se abiliti il servizio ollama qui sotto:
+    # depends_on: [ollama]
 
-volumes:
-  db_data:
-  qdrant_data:
-  ollama_data:
+  # --- AI locale (FACOLTATIVA) ----------------------------------------------
+  # Decommenta se NON fornisci Ollama dall'esterno. In tal caso lascia
+  # OLLAMA_URL=http://ollama:11434 (default).
+  # ollama:
+  #   image: ollama/ollama:latest
+  #   restart: unless-stopped
+  #   volumes:
+  #     - ollama_data:/root/.ollama
+  # ollama-init:
+  #   image: ollama/ollama:latest
+  #   depends_on: [ollama]
+  #   environment:
+  #     OLLAMA_HOST: http://ollama:11434
+  #   entrypoint: ["/bin/sh", "-c"]
+  #   command:
+  #     - >
+  #       until ollama list >/dev/null 2>&1; do sleep 2; done;
+  #       ollama pull ${OLLAMA_CHAT_MODEL:-llama3.2:3b};
+  #       ollama pull ${OLLAMA_EMBED_MODEL:-nomic-embed-text}
+  #   restart: "no"
+
+# volumes:
+#   ollama_data:
