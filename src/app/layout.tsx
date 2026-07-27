@@ -4,6 +4,8 @@ import "@fontsource-variable/space-grotesk";
 import "./globals.css";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
+import { getLocale } from "@/i18n/getLocale";
+import { getUI } from "@/i18n/ui";
 
 export const metadata: Metadata = {
   title: { default: "Eden Exotic — Sito ufficiale", template: "%s — Eden Exotic" },
@@ -16,10 +18,12 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const locale = getLocale();
+  const dict = getUI(locale);
   return (
-    <html lang="it">
+    <html lang={locale}>
       <body>
-        <Header />
+        <Header locale={locale} dict={dict} />
         <main>{children}</main>
         <Footer />
       </body>
