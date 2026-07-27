@@ -13,7 +13,7 @@ done
 echo "▸ Popolo il database dal canon..."
 npm run db:seed || echo "  ! seed non riuscito (continuo comunque)"
 
-echo "▸ Costruisco l'indice RAG su Qdrant (richiede Ollama + modelli)..."
+echo "▸ Costruisco l'indice RAG su pgvector (richiede Ollama + modelli)..."
 npm run rag:embed || echo "  ! embedding non riuscito ora (Ollama/modelli non pronti). Usa il pannello Admin > Sistema > Ricostruisci indice RAG."
 
 echo "▸ Avvio Next.js su :3000"

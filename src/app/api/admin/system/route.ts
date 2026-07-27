@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { isAuthed } from "@/lib/auth";
 import { seedDatabase, reindexRag } from "@/lib/seed";
 import { dbReady } from "@/lib/db";
-import { qdrantReady } from "@/lib/qdrant";
+import { vectorReady } from "@/lib/vector";
 import { ollamaReady } from "@/lib/ollama";
 
 export const runtime = "nodejs";
@@ -10,7 +10,7 @@ export const dynamic = "force-dynamic";
 
 // GET: stato dei servizi (per il pannello Sistema dell'admin)
 export async function GET() {
-  const [db, vector, ai] = await Promise.all([dbReady(), qdrantReady(), ollamaReady()]);
+  const [db, vector, ai] = await Promise.all([dbReady(), vectorReady(), ollamaReady()]);
   return NextResponse.json({ db, vector, ai });
 }
 

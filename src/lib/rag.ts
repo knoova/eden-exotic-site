@@ -1,7 +1,7 @@
-// Orchestrazione RAG: recupera contesto dal canon (Qdrant) e costruisce il
+// Orchestrazione RAG: recupera contesto dal canon (pgvector) e costruisce il
 // prompt di persona per far "parlare" un personaggio via Ollama.
 import { embed, chat, type ChatMsg } from "./ollama";
-import { searchCanon } from "./qdrant";
+import { searchCanon } from "./vector";
 import type { Person } from "./canon";
 
 export type Turn = { role: "user" | "assistant"; content: string };

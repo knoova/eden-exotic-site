@@ -23,28 +23,33 @@ che dà voce ai personaggi. I contenuti derivano dal canon del repo `47B-univers
 
 ## Architettura
 
-| Servizio | Immagine | Ruolo |
+| Componente | Fornitura | Ruolo |
 |---|---|---|
 | `web` | build locale (`Dockerfile`) | app Next.js (App Router, TypeScript) |
-| `db` | `postgres:16` | database relazionale (contenuti + log chat) via Prisma |
-| `vector` | `qdrant/qdrant` | database vettoriale (embedding del canon per il RAG) |
-| `ollama` | `ollama/ollama` | AI locale: modello chat + modello di embedding |
+| **Postgres 18 + pgvector** | fornito da te (`DATABASE_URL`) | database relazionale **e** vettoriale (embedding del RAG in `pgvector`) |
+| Ollama | fornito da te o dal servizio opzionale in compose (`OLLAMA_URL`) | AI locale: modello chat + modello di embedding |
 
-**Fonte di verità dei contenuti:** `src/lib/canon.ts` (+ `canon-network.ts`), derivato dal canon.
+**Un solo URL.** Il database relazionale e quello vettoriale sono la **stessa** istanza Postgres:
+i contenuti stanno nelle tabelle Prisma, gli embedding del RAG in una tabella `pgvector`
+(`doc_embedding`). Nessun Qdrant, nessuna credenziale Postgres separata: basta `DATABASE_URL`.
+
+**Fonte di verità dei contenuti:** `src/lib/canon.ts` (+ moduli `canon-*`), derivato dal canon.
 Il seed li copia nel database; le pagine leggono dal DB con **fallback automatico al canon** se il
-DB non è ancora popolato/raggiungibile. Il RAG usa gli stessi testi (`knowledge`) su Qdrant.
+DB non è ancora popolato/raggiungibile.
 
 ## Deploy su Coolify (consigliato)
 
-1. Crea una risorsa **Docker Compose** puntando a questo repository.
-2. Imposta le variabili d'ambiente (vedi `.env.example`): almeno `POSTGRES_PASSWORD`,
+1. Predisponi un **Postgres 18 con estensione pgvector** (immagine `pgvector/pgvector:pg18` o
+   equivalente) e, se non lo fornisci tu, abilita il servizio `ollama` opzionale in `docker-compose.yml`.
+2. Crea una risorsa **Docker Compose** puntando a questo repository.
+3. Imposta le variabili d'ambiente (vedi `.env.example`): **`DATABASE_URL`**, `OLLAMA_URL`,
    `ADMIN_PASSWORD`, `ADMIN_SECRET`. Le altre hanno default sensati.
-3. Deploy. All'avvio il container `web`:
+4. Deploy. All'avvio il container `web`:
    - applica lo schema al database (`prisma db push`),
    - popola i dati dal canon (`db:seed`),
-   - prova a costruire l'indice RAG (`rag:embed`) — richiede che i modelli Ollama siano scaricati.
-4. Il servizio `ollama-init` scarica i modelli una volta sola. Se al primo avvio l'indice RAG non è
-   pronto, aprilo dopo dal pannello **Admin → Sistema → Ricostruisci indice RAG**.
+   - crea l'estensione/tabella `pgvector` e costruisce l'indice RAG (`rag:embed`) — richiede i modelli Ollama.
+5. Se al primo avvio l'indice RAG non è pronto (modelli Ollama non ancora scaricati), rilancialo dal
+   pannello **Admin → Sistema → Ricostruisci indice RAG**.
 
 > **Nota risorse:** Ollama con `llama3.2:3b` gira anche su CPU; per risposte più rapide usa una GPU
 > (vedi la sezione commentata in `docker-compose.yml`) o un modello più piccolo via `OLLAMA_CHAT_MODEL`.
@@ -61,10 +66,10 @@ docker compose up -d --build
 
 ```bash
 npm install
-cp .env.example .env       # imposta DATABASE_URL su un Postgres locale, QDRANT_URL, OLLAMA_URL
+cp .env.example .env       # imposta DATABASE_URL (Postgres 18 + pgvector) e OLLAMA_URL
 npm run db:push            # crea lo schema
 npm run db:seed            # popola dal canon
-npm run rag:embed          # (opzionale) costruisce l'indice RAG (richiede Ollama + Qdrant)
+npm run rag:embed          # (opzionale) costruisce l'indice RAG (richiede Ollama + pgvector)
 npm run dev                # http://localhost:3000
 ```
 
@@ -75,8 +80,7 @@ admin e per rendere i contenuti modificabili, il vettoriale + Ollama per la chat
 
 Vedi `.env.example`. Le principali:
 
-- `DATABASE_URL` — connessione Postgres (Prisma).
-- `QDRANT_URL`, `QDRANT_COLLECTION` — database vettoriale.
+- `DATABASE_URL` — connessione a Postgres 18 + pgvector (relazionale **e** vettoriale).
 - `OLLAMA_URL`, `OLLAMA_CHAT_MODEL`, `OLLAMA_EMBED_MODEL`, `EMBED_DIM` — AI locale.
 - `ADMIN_PASSWORD` — passphrase dell'area admin. `ADMIN_SECRET` — firma del cookie di sessione.
 
@@ -88,7 +92,7 @@ Vedi `.env.example`. Le principali:
 | `npm run build` / `npm start` | build e avvio di produzione |
 | `npm run db:push` | applica lo schema Prisma |
 | `npm run db:seed` | popola il DB dal canon |
-| `npm run rag:embed` | (ri)costruisce l'indice RAG su Qdrant |
+| `npm run rag:embed` | (ri)costruisce l'indice RAG su pgvector |
 
 ## Nota
 
