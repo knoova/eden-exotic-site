@@ -1,0 +1,28 @@
+# dipendenze
+/node_modules
+/.pnp
+.pnp.js
+
+# next
+/.next/
+/out/
+next-env.d.ts.timestamp
+
+# produzione
+/build
+
+# ambiente
+.env
+.env*.local
+
+# prisma
+/prisma/*.db
+
+# log / os
+npm-debug.log*
+yarn-error.log*
+.DS_Store
+*.pem
+
+# docker volumes locali
+/data/

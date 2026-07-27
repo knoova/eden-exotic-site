@@ -1,0 +1,142 @@
+// =============================================================================
+// Eden Exotic — schema del database relazionale (Postgres via Prisma)
+// I contenuti del sito vivono qui; il seed li popola dal canon (src/lib/canon).
+// Gli embedding del RAG vivono invece su Qdrant (database vettoriale).
+// =============================================================================
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// --- Strutture (la rete N.1–N.11) ------------------------------------------
+model Facility {
+  id               String   @id // es. "N4"
+  numero           Int
+  nome             String
+  paese            String
+  citta            String
+  continente       String
+  lat              Float?
+  lng              Float?
+  specie           String
+  tipo             String // biobanca | allevamento | ricerca | bioinformatica | validazione | stazione
+  alleva           Boolean  @default(false)
+  tema             String
+  sommario         String
+  descrizione      String
+  protocolliChiave String[]
+  branch           String
+  stato            String   @default("operativo")
+  ordine           Int      @default(0)
+  people           Person[]
+  specimens        Specimen[]
+}
+
+// --- Persone (organigramma) ------------------------------------------------
+model Person {
+  id         String    @id // slug univoco
+  nome       String
+  ruolo      String
+  bio        String
+  dip        String // id dipartimento
+  branch     String
+  stato      String    @default("attivo")
+  reportsTo  String?
+  ordine     Int       @default(0)
+  facility   Facility? @relation(fields: [facilityId], references: [id])
+  facilityId String?
+}
+
+// --- Esemplari -------------------------------------------------------------
+model Specimen {
+  id           String    @id // es. "47B"
+  codiceEsteso String
+  gen          Int
+  protocollo   String
+  coscienza    Boolean? // null = ignoto / in emersione
+  nomeProprio  String?
+  branch       String
+  stato        String    @default("attivo")
+  note         String
+  ordine       Int       @default(0)
+  facility     Facility? @relation(fields: [facilityId], references: [id])
+  facilityId   String?
+}
+
+model Protocol {
+  codice String @id // A..H
+  nome   String
+  tratto String
+  note   String
+  ordine Int    @default(0)
+}
+
+model Generation {
+  gen    Int    @id
+  titolo String
+  testo  String
+  branch String
+  ordine Int    @default(0)
+}
+
+model Department {
+  id     String @id
+  nome   String
+  colore String
+  ordine Int    @default(0)
+}
+
+model Kpi {
+  id        Int    @id @default(autoincrement())
+  etichetta String
+  valore    String
+  nota      String
+  ordine    Int    @default(0)
+}
+
+model Milestone {
+  id     Int    @id @default(autoincrement())
+  anno   String
+  titolo String
+  testo  String
+  tipo   String @default("milestone")
+  ordine Int    @default(0)
+}
+
+model GlossaryTerm {
+  id          Int    @id @default(autoincrement())
+  termine     String
+  definizione String
+  ordine      Int    @default(0)
+}
+
+// --- Base di conoscenza per il RAG (testo; i vettori stanno su Qdrant) -----
+model Doc {
+  id        String   @id
+  categoria String
+  titolo    String
+  testo     String
+  embedded  Boolean  @default(false)
+  updatedAt DateTime @updatedAt
+}
+
+// --- Singleton (azienda, missione, sigma, conformità) come JSON ------------
+model Setting {
+  key   String @id
+  value Json
+}
+
+// --- Log delle conversazioni con i personaggi ------------------------------
+model ChatMessage {
+  id             Int      @id @default(autoincrement())
+  conversationId String
+  personId       String
+  role           String // user | assistant
+  content        String
+  createdAt      DateTime @default(now())
+}
