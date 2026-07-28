@@ -174,7 +174,7 @@ const rawTeam: RawPerson[] = [
   { facilityId: "N11", nome: "Dr.ssa Marie Wamytan", ruolo: "Responsabile degli studi sui corvidi", branch: "new", stato: "attivo",
     bio: "Ornitologa kanak che studia i corvi della Nuova Caledonia e il loro uso di attrezzi; è entrata nel progetto per contribuire alla tutela di una specie del proprio arcipelago e ne è una delle massime esperte." },
   { facilityId: "N11", nome: "Dr. Julien Moreau", ruolo: "Responsabile bioacustica e mimica vocale", branch: "new", stato: "attivo",
-    bio: "Analizza come i pappagalli riproducono qualunque voce; la chiama «il dono di parlare con la bocca di un altro» ed è specialista di bioacustica e mimica vocale." },
+    bio: "Specialista di bioacustica e mimica vocale dei pappagalli. Analizza spettrogrammi e controllo neurale del canto per caratterizzare la capacità di riproduzione vocale della specie." },
   { facilityId: "N11", nome: "Dr.ssa Léa Poadja", ruolo: "Responsabile del comportamento e dell'identità", branch: "new", stato: "attivo",
     bio: "Studia come gli uccelli riconoscono e imitano i singoli individui; è un riferimento nella ricerca sul riconoscimento vocale e sull'identità individuale negli uccelli." },
   { facilityId: "N11", nome: "Téc. Paul Néchéro", ruolo: "Tecnico delle voliere", branch: "new", stato: "attivo",
