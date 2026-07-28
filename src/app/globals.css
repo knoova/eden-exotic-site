@@ -200,12 +200,14 @@ table.reg td .nm { font-family:var(--serif); font-weight:600; }
 /* footer */
 .site-footer { background:var(--dark-bg); color:#b9c7bd; padding:3.5rem 0 2rem; margin-top:2rem; position:relative; }
 .site-footer::before { content:""; position:absolute; inset:0; background-image:var(--scale); background-size:28px 48px; opacity:.4; }
-.footer-grid { position:relative; display:grid; grid-template-columns:1.6fr 1fr 1fr; gap:2rem; }
+.footer-grid { position:relative; display:grid; grid-template-columns:1.6fr 1fr 1fr 1fr; gap:2rem; }
 .site-footer h4 { color:var(--bone); font-family:var(--mono); font-size:.72rem; letter-spacing:.18em; text-transform:uppercase; margin-bottom:1rem; font-weight:500; }
 .site-footer a { color:#b9c7bd; font-size:.92rem; display:block; padding:.22rem 0; }
 .site-footer a:hover { color:var(--brass-2); }
 .footer-brand .brand { color:var(--bone); } .footer-brand p { color:#93a598; font-size:.9rem; margin-top:.8rem; max-width:40ch; }
-.footer-bottom { position:relative; margin-top:2.5rem; padding-top:1.4rem; border-top:1px solid var(--dark-line); display:flex; flex-wrap:wrap; justify-content:space-between; gap:.6rem; font-size:.8rem; color:#7f9187; }
+.footer-book-title { color:#93a598; font-size:.82rem; margin-bottom:.5rem; max-width:22ch; }
+.footer-disclaimer { position:relative; margin-top:2.5rem; padding-top:1.4rem; border-top:1px solid var(--dark-line); font-size:.8rem; line-height:1.55; color:#93a598; max-width:80ch; }
+.footer-bottom { position:relative; margin-top:1.4rem; padding-top:1.4rem; border-top:1px solid var(--dark-line); display:flex; flex-wrap:wrap; justify-content:space-between; gap:.6rem; font-size:.8rem; color:#7f9187; }
 .footer-note { font-family:var(--mono); font-size:.72rem; letter-spacing:.06em; }
 
 /* ---------- CHAT ---------------------------------------------------------- */

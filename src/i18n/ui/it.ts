@@ -17,6 +17,13 @@ const it = {
   "footer.admin": "Area Admin",
   "footer.rights": "Tutti i diritti riservati.",
   "footer.note": "Sito ufficiale · Next.js + AI locale",
+  "footer.book": "Il libro",
+  "footer.bookTitle": "47B — Il primo esemplare",
+  "footer.bookEbook": "eBook Kindle",
+  "footer.bookPaper": "Copertina flessibile",
+  "footer.bookHard": "Copertina rigida",
+  "footer.disclaimer":
+    "Eden Exotic è un'azienda di fantasia. Questo sito è un'opera di finzione a scopo promozionale per l'universo narrativo di «47B». Personaggi, strutture, esperimenti e risultati sono immaginari.",
 
   // Common (condivise)
   "common.settore": "Settore",

@@ -4,6 +4,14 @@ import { getCompany, getFacilities } from "@/lib/content";
 import { getLocale } from "@/i18n/getLocale";
 import { makeT } from "@/i18n/ui";
 
+// Il libro che dà origine all'universo narrativo di Eden Exotic (47B), nei tre
+// formati disponibili su Amazon. I link puntano alle schede prodotto per mercato.
+const BOOK_LINKS: [string, string][] = [
+  ["footer.bookEbook", "https://kdp.amazon.com/amazon-dp-action/it/dualbookshelf.marketplacelink/B0H7TFWRS3"],
+  ["footer.bookPaper", "https://kdp.amazon.com/amazon-dp-action/it/dualbookshelf.marketplacelink/B0H7X54YNX"],
+  ["footer.bookHard", "https://kdp.amazon.com/amazon-dp-action/it/dualbookshelf.marketplacelink/B0H7TFSMWJ"]
+];
+
 export async function Footer() {
   const t = makeT(getLocale());
   const [company, facilities] = await Promise.all([getCompany(), getFacilities()]);
@@ -44,7 +52,17 @@ export async function Footer() {
               </Link>
             ))}
           </div>
+          <div>
+            <h4>{t("footer.book")}</h4>
+            <p className="footer-book-title">{t("footer.bookTitle")}</p>
+            {BOOK_LINKS.map(([label, href]) => (
+              <a key={href} href={href} target="_blank" rel="noopener noreferrer">
+                {t(label)}
+              </a>
+            ))}
+          </div>
         </div>
+        <p className="footer-disclaimer">{t("footer.disclaimer")}</p>
         <div className="footer-bottom">
           <span>
             © {new Date().getFullYear()} {company.ragioneSociale} — {t("footer.rights")}
