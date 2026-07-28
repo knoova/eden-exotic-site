@@ -1,5 +1,7 @@
 export const dynamic = "force-dynamic";
 import { getPeople, getFacilities } from "@/lib/content";
+import { getLocale } from "@/i18n/getLocale";
+import { makeT } from "@/i18n/ui";
 
 export const metadata = { title: "Organigramma" };
 
@@ -9,14 +11,15 @@ const BRANCH_COLOR: Record<string, string> = {
   varani: "#6b3f3f",
   new: "#5b7d52"
 };
-const BRANCH_LABEL: Record<string, string> = {
-  core: "Direzione / trasversale",
-  "47b": "Programma Iguane (47B)",
-  varani: "Programma Varani / Sigma",
-  new: "Nuovi programmi (proposti)"
-};
 
 export default async function OrganigrammaPage() {
+  const t = makeT(getLocale());
+  const BRANCH_LABEL: Record<string, string> = {
+    core: t("org.branch.core"),
+    "47b": t("org.branch.47b"),
+    varani: t("org.branch.varani"),
+    new: t("org.branch.new")
+  };
   const [people, facilities] = await Promise.all([getPeople(), getFacilities()]);
   const ceo = people.find((p) => p.reportsTo === null);
 
@@ -33,19 +36,16 @@ export default async function OrganigrammaPage() {
       <section className="section section--tight">
         <div className="wrap">
           <div className="section-head" style={{ maxWidth: 820 }}>
-            <span className="eyebrow">Organigramma</span>
-            <h1>Le persone dietro il programma</h1>
-            <p className="lead">
-              Genetisti, comportamentalisti, tecnici, veterinari, data scientist e responsabili della
-              sicurezza in strutture distinte nel mondo, sotto un&apos;unica direzione.
-            </p>
+            <span className="eyebrow">{t("nav.organigramma")}</span>
+            <h1>{t("org.hero.title")}</h1>
+            <p className="lead">{t("org.hero.intro")}</p>
           </div>
           {ceo && (
             <>
               <div className="org-ceo">
                 <div className="ceo-card">
                   <span className="eyebrow" style={{ justifyContent: "center" }}>
-                    Direzione Generale
+                    {t("org.ceo.eyebrow")}
                   </span>
                   <div className="person-name mt-1">{ceo.nome}</div>
                   <div className="person-role">{ceo.ruolo}</div>
@@ -56,7 +56,7 @@ export default async function OrganigrammaPage() {
                 className="center muted mt-2"
                 style={{ fontFamily: "var(--mono)", fontSize: ".78rem", letterSpacing: ".1em" }}
               >
-                ▲ OGNI STRUTTURA RIPORTA ALLA DIREZIONE
+                ▲ {t("org.ceo.nota")}
               </p>
             </>
           )}
@@ -97,10 +97,10 @@ export default async function OrganigrammaPage() {
                         {(p.stato === "proposto" || p.stato === "in memoria") && (
                           <div className="person-meta">
                             {p.stato === "proposto" && (
-                              <span className="badge badge-proposto badge-plain">Ingresso pianificato</span>
+                              <span className="badge badge-proposto badge-plain">{t("org.badge.pianificato")}</span>
                             )}
                             {p.stato === "in memoria" && (
-                              <span className="badge badge-riservato badge-plain">In memoria</span>
+                              <span className="badge badge-riservato badge-plain">{t("common.inMemoria")}</span>
                             )}
                           </div>
                         )}
