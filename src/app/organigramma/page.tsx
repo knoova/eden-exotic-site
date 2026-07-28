@@ -97,7 +97,7 @@ export default async function OrganigrammaPage() {
                         {(p.stato === "proposto" || p.stato === "in memoria") && (
                           <div className="person-meta">
                             {p.stato === "proposto" && (
-                              <span className="badge badge-proposto badge-plain">In definizione</span>
+                              <span className="badge badge-proposto badge-plain">Ingresso pianificato</span>
                             )}
                             {p.stato === "in memoria" && (
                               <span className="badge badge-riservato badge-plain">In memoria</span>
