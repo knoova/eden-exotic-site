@@ -1,17 +1,20 @@
 export const dynamic = "force-dynamic";
 import { getMission, getCompany, getSigma } from "@/lib/content";
+import { getLocale } from "@/i18n/getLocale";
+import { makeT } from "@/i18n/ui";
 
 export const metadata = { title: "Missione" };
 
 export default async function MissionePage() {
+  const t = makeT(getLocale());
   const [mission, company, sigma] = await Promise.all([getMission(), getCompany(), getSigma()]);
   return (
     <>
       <section className="section section--tight">
         <div className="wrap">
           <div className="section-head" style={{ maxWidth: 820 }}>
-            <span className="eyebrow">Missione &amp; Valori</span>
-            <h1>La resilienza, progettata.</h1>
+            <span className="eyebrow">{t("miss.hero.eyebrow")}</span>
+            <h1>{t("miss.hero.title")}</h1>
             <p className="lead">{mission.statement}</p>
           </div>
         </div>
@@ -20,11 +23,11 @@ export default async function MissionePage() {
       <section className="section">
         <div className="wrap split">
           <div>
-            <span className="eyebrow">Visione</span>
+            <span className="eyebrow">{t("miss.visione.eyebrow")}</span>
             <p className="pull mt-2">{mission.visione}</p>
           </div>
           <div className="callout classified">
-            <h3>{sigma.titolo} — nota sul duplice uso</h3>
+            <h3>{sigma.titolo} {t("miss.visione.notaDualUse")}</h3>
             <p>{mission.dualUse}</p>
             <div className="mt-2">
               <span className="badge badge-riservato">{sigma.classificazione}</span>
@@ -36,8 +39,8 @@ export default async function MissionePage() {
       <section className="section section--paper2">
         <div className="wrap">
           <div className="section-head">
-            <span className="eyebrow">Valori</span>
-            <h2>Cinque impegni</h2>
+            <span className="eyebrow">{t("miss.valori.eyebrow")}</span>
+            <h2>{t("miss.valori.title")}</h2>
           </div>
           <div className="grid grid-2">
             {mission.valori.map((v: { titolo: string; testo: string }) => (
@@ -53,8 +56,8 @@ export default async function MissionePage() {
       <section className="section">
         <div className="wrap">
           <div className="section-head">
-            <span className="eyebrow">Principi operativi</span>
-            <h2>Le regole d&apos;oro</h2>
+            <span className="eyebrow">{t("miss.principi.eyebrow")}</span>
+            <h2>{t("miss.principi.title")}</h2>
           </div>
           <div className="grid grid-2">
             {company.principi.map((p: string, i: number) => (

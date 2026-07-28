@@ -1,9 +1,12 @@
 export const dynamic = "force-dynamic";
 import { getKpis, getMilestones } from "@/lib/content";
+import { getLocale } from "@/i18n/getLocale";
+import { makeT } from "@/i18n/ui";
 
 export const metadata = { title: "Risultati" };
 
 export default async function RisultatiPage() {
+  const t = makeT(getLocale());
   const [kpis, milestones] = await Promise.all([getKpis(), getMilestones()]);
   const tl = milestones.slice().sort((a, b) => Number(a.anno) - Number(b.anno));
 
@@ -12,11 +15,9 @@ export default async function RisultatiPage() {
       <section className="section section--tight">
         <div className="wrap">
           <div className="section-head" style={{ maxWidth: 820 }}>
-            <span className="eyebrow">Risultati</span>
-            <h1>Ciò che i dati sostengono</h1>
-            <p className="lead">
-              Il nostro progresso si misura in generazioni. Ogni numero qui è verificabile e ripetibile.
-            </p>
+            <span className="eyebrow">{t("nav.risultati")}</span>
+            <h1>{t("ris.hero.title")}</h1>
+            <p className="lead">{t("ris.hero.intro")}</p>
           </div>
           <div className="kpi-grid">
             {kpis.map((k) => (
@@ -28,7 +29,7 @@ export default async function RisultatiPage() {
             ))}
           </div>
           <p className="muted mt-2" style={{ fontSize: ".86rem" }}>
-            I valori di programma riflettono la coorte di riferimento del Programma Iguane (Generazione 4).
+            {t("ris.hero.nota")}
           </p>
         </div>
       </section>
@@ -36,8 +37,8 @@ export default async function RisultatiPage() {
       <section className="section">
         <div className="wrap">
           <div className="section-head">
-            <span className="eyebrow">Cronologia</span>
-            <h2>La storia del programma</h2>
+            <span className="eyebrow">{t("ris.tl.eyebrow")}</span>
+            <h2>{t("ris.tl.title")}</h2>
           </div>
           <div className="timeline">
             {tl.map((t, i) => (

@@ -4,7 +4,28 @@ import type { Person, Facility } from "@/lib/canon";
 
 type Msg = { role: "user" | "assistant"; content: string; sources?: { titolo: string; categoria: string }[] };
 
-export function ChatClient({ people, facilities }: { people: Person[]; facilities: Facility[] }) {
+type ChatUI = {
+  scegli: string;
+  warn: string;
+  emptyActivePre: string;
+  emptyActivePost: string;
+  scrivendo: string;
+  scriviA: string;
+  invia: string;
+  emptyIdle: string;
+  errore: string;
+  erroreRete: string;
+};
+
+export function ChatClient({
+  people,
+  facilities,
+  ui
+}: {
+  people: Person[];
+  facilities: Facility[];
+  ui: ChatUI;
+}) {
   const [activeId, setActiveId] = useState<string | null>(null);
   const [messages, setMessages] = useState<Msg[]>([]);
   const [input, setInput] = useState("");
@@ -52,10 +73,10 @@ export function ChatClient({ people, facilities }: { people: Person[]; facilitie
         })
       });
       const data = await res.json();
-      if (!res.ok) throw new Error(data.error || "Errore");
+      if (!res.ok) throw new Error(data.error || ui.errore);
       setMessages((m) => [...m, { role: "assistant", content: data.reply, sources: data.sources }]);
     } catch (err: any) {
-      setMessages((m) => [...m, { role: "assistant", content: "⚠ " + (err.message || "Errore di rete") }]);
+      setMessages((m) => [...m, { role: "assistant", content: "⚠ " + (err.message || ui.erroreRete) }]);
     } finally {
       setBusy(false);
     }
@@ -64,7 +85,7 @@ export function ChatClient({ people, facilities }: { people: Person[]; facilitie
   return (
     <div className="chat-shell">
       <aside className="persona-list">
-        <div className="pl-head">Scegli un interlocutore</div>
+        <div className="pl-head">{ui.scegli}</div>
         {groups.map((g) => (
           <div key={g.f.id}>
             <div className="pl-head" style={{ position: "static", background: "var(--paper-2)" }}>
@@ -95,15 +116,11 @@ export function ChatClient({ people, facilities }: { people: Person[]; facilitie
                 {facName(active.facilityId) ? ` · ${facName(active.facilityId)}` : ""}
               </div>
             </div>
-            <div className="chat-warn">
-              Conversazione simulata da un&apos;AI locale sui dati del canon. I personaggi sono di finzione;
-              le risposte possono contenere imprecisioni.
-            </div>
+            <div className="chat-warn">{ui.warn}</div>
             <div className="chat-log" ref={logRef}>
               {messages.length === 0 && (
                 <div className="chat-empty">
-                  Fai una domanda a {active.nome.split(" ").slice(-1)[0]} — sul suo lavoro, sulla sua
-                  struttura, sul programma.
+                  {ui.emptyActivePre} {active.nome.split(" ").slice(-1)[0]} {ui.emptyActivePost}
                 </div>
               )}
               {messages.map((m, i) => (
@@ -114,27 +131,24 @@ export function ChatClient({ people, facilities }: { people: Person[]; facilitie
                   )}
                 </div>
               ))}
-              {busy && <div className="typing">{active.nome.split(" ").slice(-1)[0]} sta scrivendo…</div>}
+              {busy && <div className="typing">{active.nome.split(" ").slice(-1)[0]} {ui.scrivendo}</div>}
             </div>
             <form className="chat-form" onSubmit={send}>
               <input
                 type="text"
-                placeholder={`Scrivi a ${active.nome.split(" ").slice(-1)[0]}…`}
+                placeholder={`${ui.scriviA} ${active.nome.split(" ").slice(-1)[0]}…`}
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 disabled={busy}
               />
               <button className="btn btn-primary btn-sm" type="submit" disabled={busy || !input.trim()}>
-                Invia
+                {ui.invia}
               </button>
             </form>
           </>
         ) : (
           <div className="chat-log">
-            <div className="chat-empty">
-              Seleziona una persona dalla lista per iniziare a parlare. L&apos;AI risponde restando nel
-              personaggio, usando i fatti del canon recuperati dal database vettoriale.
-            </div>
+            <div className="chat-empty">{ui.emptyIdle}</div>
           </div>
         )}
       </section>

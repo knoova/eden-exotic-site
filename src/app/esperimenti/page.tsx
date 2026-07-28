@@ -12,10 +12,13 @@ import {
 } from "@/lib/content";
 import { SpecimenTable } from "./SpecimenTable";
 import { StatoBadge } from "../components/badges";
+import { getLocale } from "@/i18n/getLocale";
+import { makeT } from "@/i18n/ui";
 
 export const metadata = { title: "Esperimenti" };
 
 export default async function EsperimentiPage() {
+  const t = makeT(getLocale());
   const [protocols, generations, specimens, glossary, facilities, sigma, conformita, experiments] = await Promise.all([
     getProtocols(),
     getGenerations(),
@@ -33,12 +36,9 @@ export default async function EsperimentiPage() {
       <section className="section section--tight">
         <div className="wrap">
           <div className="section-head" style={{ maxWidth: 820 }}>
-            <span className="eyebrow">Esperimenti &amp; Programma</span>
-            <h1>La scienza, per intero.</h1>
-            <p className="lead">
-              Protocolli, generazioni ed esemplari. Ogni potenziamento amplifica un tratto naturale già
-              presente negli animali: nessuno mira all&apos;intelligenza.
-            </p>
+            <span className="eyebrow">{t("esp.hero.eyebrow")}</span>
+            <h1>{t("esp.hero.title")}</h1>
+            <p className="lead">{t("esp.hero.intro")}</p>
           </div>
         </div>
       </section>
@@ -46,9 +46,9 @@ export default async function EsperimentiPage() {
       <section className="section section--tight">
         <div className="wrap">
           <div className="section-head">
-            <span className="eyebrow">Protocolli A–H</span>
-            <h2>Otto piattaforme</h2>
-            <p>Ogni protocollo amplia una caratteristica naturale. Si innestano tutti sulla piattaforma di vitalità (A).</p>
+            <span className="eyebrow">{t("esp.proto.eyebrow")}</span>
+            <h2>{t("esp.proto.title")}</h2>
+            <p>{t("esp.proto.intro")}</p>
           </div>
           <div className="grid grid-2">
             {protocols.map((p) => (
@@ -68,8 +68,8 @@ export default async function EsperimentiPage() {
       <section className="section section--paper2">
         <div className="wrap">
           <div className="section-head">
-            <span className="eyebrow">Generazioni</span>
-            <h2>La linea del programma</h2>
+            <span className="eyebrow">{t("esp.gen.eyebrow")}</span>
+            <h2>{t("esp.gen.title")}</h2>
           </div>
           <div className="grid grid-3">
             {generations.map((g) => (
@@ -78,7 +78,7 @@ export default async function EsperimentiPage() {
                 <h3 className="mt-1">{g.titolo}</h3>
                 <p>{g.testo}</p>
                 <div className="mt-1">
-                  <span className="badge badge-plain">{g.branch === "varani" ? "Varani · N.6" : "Iguane"}</span>
+                  <span className="badge badge-plain">{g.branch === "varani" ? t("esp.gen.varani") : t("esp.gen.iguane")}</span>
                 </div>
               </div>
             ))}
@@ -89,14 +89,13 @@ export default async function EsperimentiPage() {
       <section className="section">
         <div className="wrap">
           <div className="section-head">
-            <span className="eyebrow">Registro esemplari</span>
-            <h2>Il catalogo</h2>
-            <p>Identificativo, codice esteso, generazione, protocollo e stato di ogni esemplare registrato.</p>
+            <span className="eyebrow">{t("esp.reg.eyebrow")}</span>
+            <h2>{t("esp.reg.title")}</h2>
+            <p>{t("esp.reg.intro")}</p>
           </div>
           <SpecimenTable specimens={specimens} facilities={facilities} />
           <p className="muted mt-2" style={{ fontSize: ".84rem" }}>
-            Il profilo comportamentale è una classificazione interna del programma Cognizione &amp; Comportamento:
-            «In studio» indica risposte atipiche in corso di caratterizzazione e non ancora replicate in modo controllato.
+            {t("esp.reg.nota")}
           </p>
         </div>
       </section>
@@ -104,23 +103,20 @@ export default async function EsperimentiPage() {
       <section className="section section--paper2">
         <div className="wrap">
           <div className="section-head">
-            <span className="eyebrow">Archivio degli esperimenti</span>
-            <h2>{experiments.length} studi, {facilities.filter((f) => f.numero > 0).length} strutture</h2>
-            <p>
-              Ogni studio ha un abstract e una bibliografia; il rapporto è scaricabile in PDF, firmato dagli
-              autori della struttura.
-            </p>
+            <span className="eyebrow">{t("esp.arch.eyebrow")}</span>
+            <h2>{experiments.length} {t("esp.arch.studi")}, {facilities.filter((f) => f.numero > 0).length} {t("rete.hero.strutture")}</h2>
+            <p>{t("esp.arch.intro")}</p>
           </div>
           <div className="table-wrap">
             <table className="reg">
               <thead>
                 <tr>
-                  <th>Codice</th>
-                  <th>Studio</th>
-                  <th>Struttura</th>
-                  <th>Autori</th>
-                  <th>Stato</th>
-                  <th>PDF</th>
+                  <th>{t("esp.arch.thCodice")}</th>
+                  <th>{t("esp.arch.thStudio")}</th>
+                  <th>{t("esp.arch.thStruttura")}</th>
+                  <th>{t("esp.arch.thAutori")}</th>
+                  <th>{t("esp.arch.thStato")}</th>
+                  <th>{t("common.pdf")}</th>
                 </tr>
               </thead>
               <tbody>
@@ -147,7 +143,7 @@ export default async function EsperimentiPage() {
                     </td>
                     <td>
                       <a className="badge badge-plain" href={`/api/experiments/${e.id}/pdf`} target="_blank" rel="noreferrer">
-                        ⬇ PDF
+                        ⬇ {t("common.pdf")}
                       </a>
                     </td>
                   </tr>
@@ -167,7 +163,7 @@ export default async function EsperimentiPage() {
             <h3 className="mt-1">{sigma.titolo}</h3>
             <p>{sigma.descrizione}</p>
             <p className="mt-1" style={{ fontSize: ".84rem" }}>
-              <strong>Supervisione:</strong> {sigma.supervisione}
+              <strong>{t("esp.sigma.supervisione")}:</strong> {sigma.supervisione}
             </p>
           </div>
           <div className="callout">
@@ -187,8 +183,8 @@ export default async function EsperimentiPage() {
       <section className="section">
         <div className="wrap">
           <div className="section-head">
-            <span className="eyebrow">Glossario</span>
-            <h2>Terminologia verificata</h2>
+            <span className="eyebrow">{t("esp.gloss.eyebrow")}</span>
+            <h2>{t("esp.gloss.title")}</h2>
           </div>
           <dl className="gloss grid grid-2">
             {glossary.map((g) => (

@@ -2,8 +2,11 @@ export const dynamic = "force-dynamic";
 import Link from "next/link";
 import { getCompany, getKpis, getFacilities } from "@/lib/content";
 import { StatoBadge } from "./components/badges";
+import { getLocale } from "@/i18n/getLocale";
+import { makeT } from "@/i18n/ui";
 
 export default async function Home() {
+  const t = makeT(getLocale());
   const [company, kpis, facilities] = await Promise.all([getCompany(), getKpis(), getFacilities()]);
   const rete = facilities.filter((f) => f.numero > 0).sort((a, b) => a.numero - b.numero);
   const stats = kpis.slice(0, 4);
@@ -12,17 +15,17 @@ export default async function Home() {
     <>
       <section className="hero">
         <div className="wrap hero-inner">
-          <span className="eyebrow">Sito ufficiale · dal {company.fondazione}</span>
+          <span className="eyebrow">{t("home.hero.eyebrow")} {company.fondazione}</span>
           <h1>
             {company.nome}. {company.payoff}
           </h1>
           <p className="lead">{company.claim}</p>
           <div className="hero-cta">
             <Link className="btn btn-primary" href="/rete">
-              La rete globale
+              {t("home.hero.ctaRete")}
             </Link>
             <Link className="btn btn-ghost" href="/chat">
-              Parla coi personaggi
+              {t("nav.chat")}
             </Link>
           </div>
         </div>
@@ -39,11 +42,11 @@ export default async function Home() {
       <section className="section">
         <div className="wrap split">
           <div>
-            <span className="eyebrow">Chi siamo</span>
+            <span className="eyebrow">{t("home.chiSiamo.eyebrow")}</span>
             <h2 className="mt-1">
-              Non inventiamo la natura.
+              {t("home.chiSiamo.title1")}
               <br />
-              La acceleriamo.
+              {t("home.chiSiamo.title2")}
             </h2>
           </div>
           <div className="prose">
@@ -51,7 +54,7 @@ export default async function Home() {
               {company.descrizione}
             </p>
             <p className="muted mt-2">
-              Settore: {company.settore}. · Sede: {company.sede}.
+              {t("common.settore")}: {company.settore}. · {t("common.sede")}: {company.sede}.
             </p>
           </div>
         </div>
@@ -60,15 +63,15 @@ export default async function Home() {
       <section className="section section--paper2">
         <div className="wrap">
           <div className="section-head">
-            <span className="eyebrow">Principi</span>
-            <h2>Ciò che ci vincola</h2>
+            <span className="eyebrow">{t("home.principi.eyebrow")}</span>
+            <h2>{t("home.principi.title")}</h2>
           </div>
           <div className="grid grid-2">
             {company.principi.map((p: string, i: number) => {
               const [h, ...rest] = p.split(":");
               return (
                 <div className="value" key={i}>
-                  <h3>{rest.length ? h : `Principio ${i + 1}`}</h3>
+                  <h3>{rest.length ? h : `${t("common.principio")} ${i + 1}`}</h3>
                   <p>{rest.length ? rest.join(":").trim() : p}</p>
                 </div>
               );
@@ -80,12 +83,9 @@ export default async function Home() {
       <section className="section">
         <div className="wrap">
           <div className="section-head">
-            <span className="eyebrow">La rete</span>
-            <h2>Undici strutture, cinque continenti</h2>
-            <p>
-              Ogni struttura è dedicata a una specie o a un tema. Alcune allevano, altre fanno ricerca. I
-              numeri sono sparsi per scelta: alcuni restano riservati.
-            </p>
+            <span className="eyebrow">{t("home.rete.eyebrow")}</span>
+            <h2>{t("home.rete.title")}</h2>
+            <p>{t("home.rete.intro")}</p>
           </div>
           <div className="facility-grid">
             {rete.slice(0, 6).map((f) => (
@@ -104,9 +104,9 @@ export default async function Home() {
                 <div className="foot">
                   <StatoBadge s={f.stato} />
                   {f.alleva ? (
-                    <span className="badge badge-plain">Alleva</span>
+                    <span className="badge badge-plain">{t("common.alleva")}</span>
                   ) : (
-                    <span className="badge badge-plain">Ricerca</span>
+                    <span className="badge badge-plain">{t("common.ricerca")}</span>
                   )}
                 </div>
               </Link>
@@ -114,10 +114,10 @@ export default async function Home() {
           </div>
           <div className="hero-cta mt-3">
             <Link className="btn btn-dark" href="/rete">
-              Esplora tutte le strutture
+              {t("home.rete.ctaEsplora")}
             </Link>
             <Link className="btn btn-line" href="/esperimenti">
-              Il programma scientifico
+              {t("home.rete.ctaProgramma")}
             </Link>
           </div>
         </div>
@@ -125,15 +125,12 @@ export default async function Home() {
 
       <section className="section section--paper2">
         <div className="wrap center" style={{ maxWidth: 760 }}>
-          <span className="eyebrow center">Una novità</span>
-          <h2 className="mt-1">Parla con chi fa Eden Exotic.</h2>
-          <p className="lead center mt-2">
-            Un'intelligenza locale dà voce alle persone del programma. Fai una domanda a Maria Stern, ad
-            Alfredo Monti, a Dominika Gradowska — o ai responsabili delle strutture nel mondo.
-          </p>
+          <span className="eyebrow center">{t("home.chat.eyebrow")}</span>
+          <h2 className="mt-1">{t("home.chat.title")}</h2>
+          <p className="lead center mt-2">{t("home.chat.lead")}</p>
           <div className="hero-cta" style={{ justifyContent: "center" }}>
             <Link className="btn btn-primary" href="/chat">
-              Apri la conversazione
+              {t("home.chat.cta")}
             </Link>
           </div>
         </div>
