@@ -16,6 +16,13 @@ const en = {
   "footer.admin": "Admin area",
   "footer.rights": "All rights reserved.",
   "footer.note": "Official site · Next.js + local AI",
+  "footer.book": "The book",
+  "footer.bookTitle": "47B — The First Specimen",
+  "footer.bookEbook": "Kindle eBook",
+  "footer.bookPaper": "Paperback",
+  "footer.bookHard": "Hardcover",
+  "footer.disclaimer":
+    "Eden Exotic is a fictional company. This website is a work of fiction created to promote the «47B» narrative universe. Characters, facilities, experiments and results are imaginary.",
 
   // Common (shared)
   "common.settore": "Sector",
